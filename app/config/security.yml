@@ -32,6 +32,6 @@ security:
                 target: liga_typerow_index
                 
     access_control:
-#        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        
          - { path: ^/admin-panel, roles: ROLE_SUPER_ADMIN }
-         - { path: ^/account, roles: ROLE_USER }
+         - { path: ^/, roles: ROLE_USER }

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'admin_meet_index' %}
+
+{% block body %}
+    <h1>Meets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Hostgoals</th>
+                <th>Guestgoals</th>
+                <th>Description</th>
+                <th>Term</th>
+                <th>Position</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for meet in meets %}
+            <tr>
+                <td><a href="{{ path('meet_show', { 'id': meet.id }) }}">{{ meet.id }}</a></td>
+                <td>{{ meet.name }}</td>
+                <td>{{ meet.hostGoals }}</td>
+                <td>{{ meet.guestGoals }}</td>
+                <td>{{ meet.description }}</td>
+                <td>{{ meet.term }}</td>
+                <td>{{ meet.position }}</td>
+                <td>{% if meet.createdAt %}{{ meet.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if meet.updatedAt %}{{ meet.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('meet_show', { 'id': meet.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('meet_edit', { 'id': meet.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('meet_new') }}">Create a new meet</a>
+        </li>
+    </ul>
+{% endblock %}

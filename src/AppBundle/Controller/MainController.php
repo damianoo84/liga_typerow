@@ -35,6 +35,8 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $points = $repository->getPointsPerMatchday();
         
+//        var_dump($points);
+        
         return array('points' => $points);
     }
     

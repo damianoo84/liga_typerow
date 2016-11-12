@@ -24,7 +24,21 @@ class TypeRepository extends EntityRepository
            ->groupBy('u.username, md.id')
         ; 
         
+        /*
+            SELECT SUM(t.number_of_points) AS suma, u.username AS username, u.id AS user_id, u.priority, md.id as matchday 
+            FROM type t 
+            INNER JOIN meet m ON t.meet_id = m.id 
+            INNER JOIN matchday md ON m.matchday_id = md.id 
+            INNER JOIN user u ON t.user_id = u.id 
+            WHERE md.id 
+            BETWEEN 1 AND 15 
+            GROUP BY u.username, md.id
+         */
+        
+        
         $result = $qb->getQuery()->getResult();
+        
+//        var_dump($result);
         
         $users = array();
         

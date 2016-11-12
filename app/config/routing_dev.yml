@@ -12,3 +12,9 @@ _errors:
 
 _main:
     resource: routing.yml
+    
+_check_path:
+    path: /login-check
+    
+_logout:
+    path: /logout

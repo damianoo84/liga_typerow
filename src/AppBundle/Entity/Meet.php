@@ -6,9 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 /**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\MatchRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MeetRepository")
  */
-class Match {
+class Meet {
     
     /**
      * @ORM\Column(type="integer")
@@ -125,7 +125,7 @@ class Match {
      *
      * @param integer $hostGoals
      *
-     * @return Match
+     * @return Meet
      */
     public function setHostGoals($hostGoals)
     {
@@ -149,7 +149,7 @@ class Match {
      *
      * @param integer $guestGoals
      *
-     * @return Match
+     * @return Meet
      */
     public function setGuestGoals($guestGoals)
     {
@@ -173,7 +173,7 @@ class Match {
      *
      * @param string $description
      *
-     * @return Match
+     * @return Meet
      */
     public function setDescription($description)
     {
@@ -197,7 +197,7 @@ class Match {
      *
      * @param string $term
      *
-     * @return Match
+     * @return Meet
      */
     public function setTerm($term)
     {
@@ -221,7 +221,7 @@ class Match {
      *
      * @param integer $position
      *
-     * @return Match
+     * @return Meet
      */
     public function setPosition($position)
     {
@@ -247,7 +247,7 @@ class Match {
      *
      * @param string $name
      *
-     * @return Match
+     * @return Meet
      */
     public function setName($name)
     {
@@ -271,7 +271,7 @@ class Match {
      *
      * @param \AppBundle\Entity\Team $hostTeam
      *
-     * @return Match
+     * @return Meet
      */
     public function setHostTeam(\AppBundle\Entity\Team $hostTeam = null)
     {
@@ -295,7 +295,7 @@ class Match {
      *
      * @param \AppBundle\Entity\Team $guestTeam
      *
-     * @return Match
+     * @return Meet
      */
     public function setGuestTeam(\AppBundle\Entity\Team $guestTeam = null)
     {
@@ -319,7 +319,7 @@ class Match {
      *
      * @param \AppBundle\Entity\Matchday $matchday
      *
-     * @return Match
+     * @return Meet
      */
     public function setMatchday(\AppBundle\Entity\Matchday $matchday = null)
     {
@@ -359,7 +359,7 @@ class Match {
      *
      * @param \DateTime $createdAt
      *
-     * @return Match
+     * @return Meet
      */
     public function setCreatedAt($createdAt)
     {
@@ -373,7 +373,7 @@ class Match {
      *
      * @param \DateTime $updatedAt
      *
-     * @return Match
+     * @return Meet
      */
     public function setUpdatedAt($updatedAt)
     {

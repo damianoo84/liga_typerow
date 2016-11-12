@@ -1,0 +1,164 @@
+body.opl {
+    position:relative;
+    width:60.5em;
+    margin:0 auto;
+    background-color:#c0b99f;
+}
+
+/* foto */
+
+#content_01{
+    position:absolute;
+    z-index: 1;
+    background-color:gray;
+    width:60.5em;
+    height:13em; 
+}
+
+/* panel informacyjny  */
+
+#content_02{
+    position:absolute;
+    z-index: 2;
+    top:13em;
+    background-color:white;
+    width:60.5em;
+    height:2em; 
+}
+
+/* menu  */
+
+#content_03{
+    position:absolute;
+    z-index: 3;
+    top:15em;
+    background-color:gray;
+    width:60.5em;
+    height:3em; 
+}
+
+/* content główny */
+
+#content_04{
+    position:absolute;
+    z-index: 4;
+    top:18em;
+    background-color:white;
+    width:60.5em;
+    height:21em;
+    /*font-size:small;*/
+}
+
+/* zakładka "types" - formularz*/
+
+.coupon_form{
+    background-color:white;
+    width:61em;
+    height:20em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_desc{
+    background-color:grey;
+    width:15em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0; 
+}
+
+.coupon_form_term{
+    background-color:grey;
+    width:15em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_host{
+    background-color:white;
+    width:13em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_host_type{
+    background-color:grey;
+    width:2em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_guest_type{
+    background-color:grey;
+    width:2em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_guest{
+    background-color:white;
+    width:13em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.coupon_form_dash{
+    background-color:white;
+    width:1em;
+    height:2em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+/* zakładka "forum" */
+
+.forum_list_of_comments{
+    background-color:white;
+    width:61em;
+    height:15em;
+    float:left;
+    padding:0;
+    margin:0;
+    overflow-y:scroll;
+}
+
+.forum_comment{
+    background-color:white;
+    width:61em;
+    height:5em;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+
+/* zakładka "ranking" */
+
+
+
+
+
+
+/* stopka */
+
+#content_05{
+    position:absolute;
+    z-index: 5;
+    top:39em;
+    background-color:gray;
+    width:60.5em;
+    height:2em;
+}

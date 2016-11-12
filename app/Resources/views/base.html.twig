@@ -1,18 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Strona Główna | Liga Typerów</title>
+        <title>Strona Główna | Typerka</title>
         <link rel="icon" type="image/png" href="/favicon.png">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
         
-        {% block content %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        {% endblock %}
+
+    </head>
+    <body class='opl' link="gray" vlink="gray" alink="gray">        
+        
+        <div id="content_01">
+            <img src="{{ asset('images/foto.jpg') }}" >
+        </div>
+        <div id="content_02">
+            <img src="{{ asset('images/menu.png') }}" >
+        </div>
+        
+        <div id="content_03">
+            
+        </div>
+        
+        <div id="content_04">
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+        <div id="content_05">
+            <img src="{{ asset('images/footer_tlo.png') }}" >
+        </div>
+        
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+

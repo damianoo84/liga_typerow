@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="coupon_form">
+        {% for key,stat in stats %}
+            
+            {{ key }}&nbsp;&nbsp;&nbsp;
+            
+            {{ stat.match2 }}&nbsp;&nbsp;&nbsp;
+
+            {{ stat.match4 }}&nbsp;&nbsp;&nbsp;
+            
+            {{ stat.match2 + stat.match4}}&nbsp;&nbsp;&nbsp;
+            
+            <br />
+        {% endfor %}
+    </div>
+    
+{% endblock %}

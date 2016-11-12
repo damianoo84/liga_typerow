@@ -6,7 +6,7 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="My\TyperkaBundle\Repository\CommentRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CommentRepository")
  */
 class Comment {
     
@@ -129,7 +129,7 @@ class Comment {
      *
      * @return Comment
      */
-    public function setSeason(\My\TyperkaBundle\Entity\Season $season = null)
+    public function setSeason(\AppBundle\Entity\Season $season = null)
     {
         $this->season = $season;
 

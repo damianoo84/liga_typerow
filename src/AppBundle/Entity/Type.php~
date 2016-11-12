@@ -21,16 +21,16 @@ class Type {
     
     /**
      * @ORM\ManyToOne(
-     *      targetEntity = "Match",
+     *      targetEntity = "Meet",
      * )
      * 
      * @ORM\JoinColumn(
-     *      name = "match_id",
+     *      name = "meet_id",
      *      referencedColumnName = "id",
      *      onDelete = "SET NULL"
      * )
      */
-    private $match;
+    private $meet;
     
 
     /**
@@ -166,27 +166,27 @@ class Type {
     }
 
     /**
-     * Set match
+     * Set meet
      *
-     * @param \AppBundle\Entity\Match $match
+     * @param \AppBundle\Entity\Meet $meet
      *
      * @return Type
      */
-    public function setMatch(\AppBundle\Entity\Match $match = null)
+    public function setMeet(\AppBundle\Entity\Meet $meet = null)
     {
-        $this->match = $match;
+        $this->meet = $meet;
 
         return $this;
     }
 
     /**
-     * Get match
+     * Get meet
      *
-     * @return \AppBundle\Entity\Match
+     * @return \AppBundle\Entity\Meet
      */
-    public function getMatch()
+    public function getMeet()
     {
-        return $this->match;
+        return $this->meet;
     }
 
     /**

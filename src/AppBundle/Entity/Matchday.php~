@@ -132,7 +132,7 @@ class Matchday {
      *
      * @return Matchday
      */
-    public function setSeason(\My\TyperkaBundle\Entity\Season $season = null)
+    public function setSeason(\AppBundle\Entity\Season $season = null)
     {
         $this->season = $season;
 

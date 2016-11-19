@@ -21,11 +21,20 @@
             <img src="{{ asset('images/foto.jpg') }}" >
         </div>
         <div id="content_02">
-            <img src="{{ asset('images/menu.png') }}" >
+            <a href="{{ path('liga_typerow_table') }}">TABELA</a>
+            <a href="{{ path('liga_typerow_types') }}">TYPY</a>
+            <a href="{{ path('liga_typerow_statistics') }}">STATYSTYKI</a>
+            <a href="{{ path('liga_typerow_ranking') }}">RANKING</a>
+            <a href="{{ path('liga_typerow_principles') }}">ZASADY</a>
+            <a href="{{ path('liga_typerow_forum') }}">FORUM</a>
+            
+            {% if app.user %}
+                <a href="{{ path('_logout') }}">Logout</a>
+            {% endif %}
         </div>
         
         <div id="content_03">
-            
+
         </div>
         
         <div id="content_04">

@@ -26,12 +26,13 @@ security:
             form_login:
                 check_path: _check_path
                 login_path: liga_typerow_login
-                default_target_path: liga_typerow_index
+                default_target_path: liga_typerow_table
             logout:
                 path:   _logout
-                target: liga_typerow_index
+                target: liga_typerow_login
                 
     access_control:
-        
+         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+         - { path: ^/, roles: ROLE_USER}
          - { path: ^/admin-panel, roles: ROLE_SUPER_ADMIN }
-         - { path: ^/, roles: ROLE_USER }
+         

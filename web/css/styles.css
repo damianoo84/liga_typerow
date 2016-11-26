@@ -1,164 +1,117 @@
-body.opl {
+body{
     position:relative;
-    width:60.5em;
     margin:0 auto;
-    background-color:#c0b99f;
 }
 
-/* foto */
-
-#content_01{
+#header_01{
     position:absolute;
     z-index: 1;
-    background-color:gray;
-    width:60.5em;
-    height:13em; 
+    width: 100%;
+    height: 200px;
+/*    background-image: url('../images/mainphoto.jpg');
+    background-size: 100% 100%;*/
 }
 
-/* panel informacyjny  */
+#header_01 > img {
+    width: 100%;
+    height: 100%;
+}
 
-#content_02{
+#info_02{
     position:absolute;
     z-index: 2;
-    top:13em;
-    background-color:white;
-    width:60.5em;
-    height:2em; 
+    top:200px;
+    width:100%;
+    height:40px; 
 }
 
-/* menu  */
 
-#content_03{
-    position:absolute;
-    z-index: 3;
-    top:15em;
-    background-color:gray;
-    width:60.5em;
-    height:3em; 
-}
-
-/* content główny */
-
-#content_04{
+#menu_03{
     position:absolute;
     z-index: 4;
-    top:18em;
-    background-color:white;
-    width:60.5em;
-    height:21em;
-    /*font-size:small;*/
+    top:240px;
+    background-color:black;
+    width:100%;
+    text-align: center;
+
 }
 
-/* zakładka "types" - formularz*/
-
-.coupon_form{
-    background-color:white;
-    width:61em;
-    height:20em;
-    float:left;
-    padding:0;
-    margin:0;
+/* Remove margins and padding from the list */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
 }
 
-.coupon_form_desc{
-    background-color:grey;
-    width:15em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0; 
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.coupon_form_term{
-    background-color:grey;
-    width:15em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+ /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+    ul.topnav {display: inherit}
+    ul.topnav li:not(:first-child) {display: none;}
+    ul.topnav li.icon {
+      float: right;
+      display: inline-block;
+    }
 }
 
-.coupon_form_host{
-    background-color:white;
-    width:13em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
-}
-
-.coupon_form_host_type{
-    background-color:grey;
-    width:2em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
-}
-
-.coupon_form_guest_type{
-    background-color:grey;
-    width:2em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
-}
-
-.coupon_form_guest{
-    background-color:white;
-    width:13em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
-}
-
-.coupon_form_dash{
-    background-color:white;
-    width:1em;
-    height:2em;
-    float:left;
-    padding:0;
-    margin:0;
-}
-
-/* zakładka "forum" */
-
-.forum_list_of_comments{
-    background-color:white;
-    width:61em;
-    height:15em;
-    float:left;
-    padding:0;
-    margin:0;
-    overflow-y:scroll;
-}
-
-.forum_comment{
-    background-color:white;
-    width:61em;
-    height:5em;
-    float:left;
-    padding:0;
-    margin:0;
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive li.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    ul.topnav.responsive li {
+      float: none;
+      display: inline;
+    }
+    ul.topnav.responsive li a {
+      display: block;
+      text-align: left;
+    }
 }
 
 
-/* zakładka "ranking" */
 
 
 
-
-
+/* content */
+#content_04{
+    position:relative;
+    z-index: 3;
+    top:290px;
+    width:100%;
+    height:420px;
+}
 
 /* stopka */
-
-#content_05{
+#footer_05{
     position:absolute;
     z-index: 5;
-    top:39em;
-    background-color:gray;
-    width:60.5em;
-    height:2em;
+    top:710px;
+    width:100%;
+    height:100px;
 }

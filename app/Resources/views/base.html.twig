@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Strona Główna | Typerka</title>
+        <title>Liga Typerów</title>
         <link rel="icon" type="image/png" href="/favicon.png">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,28 +13,33 @@
         {% endblock %}
         
         <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') }}"></script>
-    
     </head>
-    <body class='opl' link="gray" vlink="gray" alink="gray">        
+    <body>
         
-        <div id="content_01">
-            <img src="{{ asset('images/foto.jpg') }}" >
-        </div>
-        <div id="content_02">
-            <a href="{{ path('liga_typerow_table') }}">TABELA</a>
-            <a href="{{ path('liga_typerow_types') }}">TYPY</a>
-            <a href="{{ path('liga_typerow_statistics') }}">STATYSTYKI</a>
-            <a href="{{ path('liga_typerow_ranking') }}">RANKING</a>
-            <a href="{{ path('liga_typerow_principles') }}">ZASADY</a>
-            <a href="{{ path('liga_typerow_forum') }}">FORUM</a>
-            
-            {% if app.user %}
-                <a href="{{ path('_logout') }}">Logout</a>
-            {% endif %}
+        <div id="header_01">
+            <img src="{{ asset('images/mainphoto.jpg') }}" />
         </div>
         
-        <div id="content_03">
-
+        <div id="info_02">
+        </div>
+        
+        <div id="menu_03">
+            <ul class="topnav" id="myTopnav">
+                <li><a href="{{ path('liga_typerow_table') }}">TABELA</a></li>
+                <li><a href="{{ path('liga_typerow_types') }}">TYPY</a></li>
+                <li><a href="{{ path('liga_typerow_statistics') }}">STATYSTYKI</a></li>
+                <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
+                <li><a href="{{ path('liga_typerow_principles') }}">ZASADY</a></li>
+                <li><a href="{{ path('liga_typerow_forum') }}">FORUM</a></li>
+                {% if app.user %}
+                <li><a href="{{ path('_logout') }}">Logout</a></li>
+                {% else %}
+                <li><a href="{{ path('liga_typerow_login') }}">Login</a></li>
+                {% endif %}
+                <li class="icon">
+                    <a href="javascript:void(0);" >&#9776;</a>
+                </li>
+            </ul>
         </div>
         
         <div id="content_04">
@@ -42,24 +47,18 @@
             {% endblock %}
         </div>
         
-        <div id="content_05">
-            <img src="{{ asset('images/footer_tlo.png') }}" >
+        <div id="footer_05">
         </div>
         
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('li.icon').click(function() {
+                    $('#myTopnav').toggleClass('responsive');
+                });
+            });
+        </script>
         {% block javascripts %}
             <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-

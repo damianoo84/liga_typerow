@@ -1,36 +1,44 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-<p>Witaj {{ app.user ? app.user.username }} </p>
+
 
 <form id="form">
-    <div class="coupon_form">
+    <table>
         {% for key,meet in meets %}
-            <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">
-            <div class="coupon_form_desc">
-                {{ meet.description }}
-            </div>
-            <div class="coupon_form_host">
-                {{ meet.host }}
-            </div>
-            <div class="coupon_form_host_type">
-               <input type="text" name="hostType[]" maxlength='1'>
-            </div>
-            <div class="coupon_form_dash">-</div>
-            <div class="coupon_form_guest_type">
-                <input type="text" name="guestType[]" maxlength='1'>
-            </div> 
-            <div class="coupon_form_guest">
-                {{ meet.guest }}
-            </div>
-            <div class="coupon_form_term">
-                {{ meet.term }}
-            </div>
+            <tr>
+               
+                    <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">
+              
+                <td>
+                    {{ meet.description }}
+                </td>
+                <td>
+                    {{ meet.host }}
+                </td>
+                <td>
+                    <input type="text" name="hostType[]" maxlength='1' >
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <input type="text" name="guestType[]" maxlength='1'>
+                </td>
+                <td>
+                    {{ meet.guest }}
+                </td>
+                <td>
+                    {{ meet.term }}
+                </td>
+            </tr>
         {% endfor %}
-   </div>
-   <input type="submit"  value="Wyślij"/>
+            <tr>
+                <input type="submit"  value="Wyślij"  class="space"/>
+            </tr>
+    </table>
 </form>
- 
+
 <script type="text/javascript">
     
     $(function(){

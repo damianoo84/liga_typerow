@@ -24,17 +24,18 @@
         </div>
         
         <div id="menu_03">
-            <ul class="topnav" id="myTopnav">
+            <ul class="navigation" id="myNav">
                 <li><a href="{{ path('liga_typerow_table') }}">TABELA</a></li>
                 <li><a href="{{ path('liga_typerow_types') }}">TYPY</a></li>
                 <li><a href="{{ path('liga_typerow_statistics') }}">STATYSTYKI</a></li>
                 <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
+                <li><a href="{{ path('liga_typerow_records') }}">REKORDY</a></li>
                 <li><a href="{{ path('liga_typerow_principles') }}">ZASADY</a></li>
                 <li><a href="{{ path('liga_typerow_forum') }}">FORUM</a></li>
                 {% if app.user %}
-                <li><a href="{{ path('_logout') }}">Logout</a></li>
+                <li><a href="{{ path('_logout') }}">WYLOGUJ</a></li>
                 {% else %}
-                <li><a href="{{ path('liga_typerow_login') }}">Login</a></li>
+                <li><a href="{{ path('liga_typerow_login') }}">ZALOGUJ</a></li>
                 {% endif %}
                 <li class="icon">
                     <a href="javascript:void(0);" >&#9776;</a>
@@ -53,7 +54,7 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $('li.icon').click(function() {
-                    $('#myTopnav').toggleClass('responsive');
+                    $('#myNav').toggleClass('responsive');
                 });
             });
         </script>

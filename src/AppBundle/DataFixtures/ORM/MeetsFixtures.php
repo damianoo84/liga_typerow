@@ -25,7 +25,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 1,
                 'guestgoals' => 1,
                 'description' => 'Liga Hiszpańska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 1,
             ),
             array(
@@ -36,7 +36,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Hiszpańska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 2,
             ),
             array(
@@ -47,7 +47,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Angielska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 3,
             ),  
             array(
@@ -58,7 +58,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Angielska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 4,
             ),  
             array(
@@ -69,7 +69,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Angielska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 5,
             ),         
             array(
@@ -80,7 +80,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Niemiecka',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 6,
             ),  
             array(
@@ -91,7 +91,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Niemiecka',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 7,
             ),    
             array(
@@ -102,7 +102,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Włoska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 8,
             ),  
             array(
@@ -113,7 +113,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Włoska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 9,
             ),  
             array(
@@ -124,7 +124,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'hostgoals' => 2,
                 'guestgoals' => 1,
                 'description' => 'Liga Włoska',
-                'term' => '20-11-2015, Wtorek',
+                'term' => 'Wtorek,12-12-2016,21:00',
                 'position' => 10,
             ), 
             

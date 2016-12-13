@@ -10,25 +10,25 @@
                
                     <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">
               
-                <td>
+                <td class="desc">
                     {{ meet.description }}
                 </td>
                 <td>
                     {{ meet.host }}
                 </td>
                 <td>
-                    <input type="text" name="hostType[]" maxlength='1' >
+                    <input type="text" class="tp" name="hostType[]" maxlength='1' >
                 </td>
                 <td>
                     -
                 </td>
                 <td>
-                    <input type="text" name="guestType[]" maxlength='1'>
+                    <input type="text" class="tp" name="guestType[]" maxlength='1'>
                 </td>
                 <td>
                     {{ meet.guest }}
                 </td>
-                <td>
+                <td class="term">
                     {{ meet.term }}
                 </td>
             </tr>

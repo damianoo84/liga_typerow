@@ -36,8 +36,7 @@ body{
 
 }
 
-/* Remove margins and padding from the list */
-ul.topnav {
+ul.navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -45,11 +44,9 @@ ul.topnav {
     display: inline-block;
 }
 
-/* Float the list items side by side */
-ul.topnav li {float: left;}
+ul.navigation li {float: left;}
 
-/* Style the links inside the list items */
-ul.topnav li a {
+ul.navigation li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
@@ -60,35 +57,31 @@ ul.topnav li a {
     font-weight: bold;
 }
 
-/* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #555;}
+ul.navigation li a:hover {background-color: #555;}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;}
+ul.navigation li.icon {display: none;}
 
- /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
 @media screen and (max-width:680px) {
-    ul.topnav {display: inherit}
-    ul.topnav li:not(:first-child) {display: none;}
-    ul.topnav li.icon {
-      float: right;
+    ul.navigation li:not(:first-child) {display: none;}
+    ul.navigation li.icon {
+      float: right;    
       display: inline-block;
     }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
-    ul.topnav.responsive {position: relative;}
-    ul.topnav.responsive li.icon {
+    ul.navigation.responsive {position: relative;}
+    ul.navigation.responsive li.icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    ul.topnav.responsive li {
+    ul.navigation.responsive li {
       float: none;
       display: inline;
     }
-    ul.topnav.responsive li a {
+    ul.navigation.responsive li a {
       display: block;
       text-align: left;
     }
@@ -107,14 +100,10 @@ ul.topnav li.icon {display: none;}
     height:420px;
 }
 
-/* 
-Generic Styling, for Desktops/Laptops 
-*/
 table { 
   width: 100%; 
   border-collapse: collapse; 
 }
-/* Zebra striping */
 tr:nth-of-type(odd) { 
   background: #eee; 
 }
@@ -126,11 +115,47 @@ th {
 td, th { 
   padding: 6px; 
   border: 1px solid #ccc; 
-  text-align: left; 
+  text-align: center; 
 }
 
 
-input[type="text"] {
+@media screen and (max-width:680px) {
+
+    table, thead, tbody, th, td, tr { 
+	display: block; 
+    }
+	
+    td { 
+	border-bottom: 1px solid #eee; 
+	position: relative;
+        text-align: center;
+    }
+	
+    td:before { 
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 45%; 
+	padding-right: 10px; 
+	white-space: nowrap;
+    }
+        
+    td.term{display: none;}
+    td.desc{display: none;}    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="text"].tp {
     width: 10px;
 }
 

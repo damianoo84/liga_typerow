@@ -147,12 +147,23 @@ class MainController extends Controller{
     
     /**
      * @Route(
-     *      "/principles",
+     *      "/zasady",
      *      name = "liga_typerow_principles"
      * )
      * @Template()
      */
     public function principlesAction(){
+        return array();
+    }
+    
+    /**
+     * @Route(
+     *      "/rekordy",
+     *      name = "liga_typerow_records"
+     * )
+     * @Template()
+     */
+    public function recordsAction(){
         return array();
     }
     

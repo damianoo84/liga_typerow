@@ -169,6 +169,19 @@ class MainController extends Controller{
     
     /**
      * @Route(
+     *      "/historia",
+     *      name = "liga_typerow_history"
+     * )
+     * @Template()
+     */
+    public function historyAction(){
+        return array();
+    }
+
+    
+
+    /**
+     * @Route(
      *      "/forum",
      *      name = "liga_typerow_forum"
      * )

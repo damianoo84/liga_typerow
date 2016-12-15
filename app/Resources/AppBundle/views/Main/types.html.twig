@@ -1,46 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
-
-<form id="form">
-    <table>
-        {% for key,meet in meets %}
-            <tr>
-               
-                    <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">
-              
-                <td class="desc">
-                    {{ meet.description }}
-                </td>
-                <td>
-                    {{ meet.host }}
-                </td>
-                <td>
-                    <input type="text" class="tp" name="hostType[]" maxlength='1' >
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                    <input type="text" class="tp" name="guestType[]" maxlength='1'>
-                </td>
-                <td>
-                    {{ meet.guest }}
-                </td>
-                <td class="term">
-                    {{ meet.term }}
-                </td>
-            </tr>
-        {% endfor %}
-            <tr>
-                <input type="submit"  value="Wyślij"  class="space"/>
-            </tr>
-    </table>
-</form>
-
+    <form id="form">
+        <table>
+            {% for key,meet in meets %}
+                <tr>
+                    <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">           
+                    <td class="desc">{{ meet.description }}</td>
+                    <td>{{ meet.host }}</td>
+                    <td><input type="text" class="tp" name="hostType[]" maxlength='1'></td>
+                    <td>-</td>
+                    <td><input type="text" class="tp" name="guestType[]" maxlength='1'></td>
+                    <td>{{ meet.guest }}</td>
+                    <td class="term">{{ meet.term }}</td>
+                </tr>
+            {% endfor %}
+                <tr><input type="submit"  value="Wyślij"  class="space"/></tr>
+        </table>
+    </form>
+                
 <script type="text/javascript">
-    
     $(function(){
        $("#form").submit(function(e){
             var form=$(this);
@@ -59,8 +38,6 @@
             });
             e.preventDefault();
         });
-    }); 
-    
+    });
 </script>
-        
 {% endblock %}

@@ -1,33 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
-    <div class="coupon_form">
+    <table>
         {% for rank in ranks %}
-            
-            {{ rank.username }}&nbsp;&nbsp;&nbsp;
-            
-
-            {{ rank.avgPtsForMatch }}&nbsp;&nbsp;&nbsp;
-
-
-            {{ rank.seasons }}&nbsp;&nbsp;&nbsp;
-
-
-            {{ rank.numOfQue }}&nbsp;&nbsp;&nbsp;
-
-
-            {{ rank.totalpoints }}&nbsp;&nbsp;&nbsp;
-
-
-            {{ rank.match2 }}&nbsp;&nbsp;&nbsp;
-
-
-            {{ rank.match4 }}&nbsp;&nbsp;&nbsp;
-
-            
-            <br />
+            <tr>
+                <td>{{ rank.username }}</td>
+                <td>{{ rank.avgPtsForMatch }}</td>
+                <td>{{ rank.seasons }}</td>
+                <td>{{ rank.numOfQue }}</td>
+                <td>{{ rank.totalpoints }}</td>
+                <td>{{ rank.match2 }}</td>
+                <td>{{ rank.match4 }}</td>
+            </tr>
         {% endfor %}
-    </div>
-    
+        <tr>
+    </table>
 {% endblock %}

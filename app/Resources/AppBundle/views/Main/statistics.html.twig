@@ -2,6 +2,12 @@
 
 {% block content %}
     <table>
+        <tr>
+            <th>Gracz</th>
+            <th>Mecze 2 pkt</th>
+            <th>Mecze 4 pkt</th>
+            <th>Suma</th>
+        </tr>
         {% for key,stat in stats %}
             <tr>
                 <td>{{ key }}</td>

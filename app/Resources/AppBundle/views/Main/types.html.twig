@@ -3,6 +3,15 @@
 {% block content %}
     <form id="form">
         <table>
+            <tr>
+                <th>Opis</th>
+                <th>Gospodarz</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Gość</th>
+                <th>Termin</th>
+            </tr>
             {% for key,meet in meets %}
                 <tr>
                     <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">           

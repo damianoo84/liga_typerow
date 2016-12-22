@@ -2,6 +2,13 @@
 
 {% block content %}
     <table>
+      <tr>
+        <th>Gracz</th>
+        {% for i in 0..14 %}
+        <th>{{loop.index}}</th>
+        {% endfor %}
+        <th>Suma</th>
+      </tr>
         {% for key,point in points %}
             <tr>
                 {% set sum = 0 %}
@@ -12,8 +19,13 @@
                     {% else %}
                         <td>{{ pt }}</td>
                     {% endif %}
-                        {% set sum = sum + pt %}
+                    {% set sum = sum + pt %}
+                {% endfor %}
+                {% if point.suma|length < 14 %}
+                    {% for i in 0..(14-point.suma|length) %}
+                        <td></td>
                     {% endfor %}
+                {% endif %}
                 <td>{{ sum }}</td>
             </tr>
         {% endfor %}

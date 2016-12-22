@@ -38,8 +38,6 @@ class TypeRepository extends EntityRepository
         
         $result = $qb->getQuery()->getResult();
         
-//        var_dump($result);
-        
         $users = array();
         
         // 1. Sumuję łącznie wszystkie punkty ze wszystkich kolejek dla każdego usera

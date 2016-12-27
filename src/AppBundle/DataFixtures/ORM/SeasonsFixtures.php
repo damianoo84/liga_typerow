@@ -67,7 +67,11 @@ class SeasonsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'dateStart' => '2016-02-01',
                 'dateEnd' => '2016-05-16',
             ),
-            
+            array(
+                'season_name' => 'Sezon 11',
+                'dateStart' => '2016-09-05',
+                'dateEnd' => '2016-12-18',
+            ),
         );
         
         foreach ($seasonsList as $seasonsDetails) {

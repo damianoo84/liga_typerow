@@ -6,9 +6,9 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\StatisticRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\HistoryRepository")
  */
-class Statistic {
+class History {
     
     /**
      * @ORM\Column(type="integer")
@@ -33,6 +33,19 @@ class Statistic {
     
     /**
      * @ORM\ManyToOne(
+     *      targetEntity = "Matchday",
+     * )
+     * 
+     * @ORM\JoinColumn(
+     *      name = "matchday_id",
+     *      referencedColumnName = "id",
+     *      onDelete = "SET NULL"
+     * )
+     */
+    private $matchday;
+    
+    /**
+     * @ORM\ManyToOne(
      *      targetEntity = "Season",
      * )
      * 
@@ -48,31 +61,7 @@ class Statistic {
      *
      * @ORM\Column(type="integer") 
      */
-    private $match2;
-    
-    /**
-     *
-     * @ORM\Column(type="integer") 
-     */
-    private $match4;
-    
-    /**
-     *
-     * @ORM\Column(type="integer") 
-     */
-    private $totalPoints;
-    
-    /**
-     *
-     * @ORM\Column(type="integer") 
-     */
-    private $position;
-    
-    /**
-     * 
-     * @ORM\Column(type="integer")
-     */
-    private $numOfQue;
+    private $numOfPoints;
     
     /**
      * @Gedmo\Timestampable(on="create")
@@ -87,11 +76,10 @@ class Statistic {
     private $updatedAt;
     
 
-
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -99,131 +87,33 @@ class Statistic {
     }
 
     /**
-     * Set match2
+     * Set numOfPoints
      *
-     * @param integer $match2
-     *
-     * @return Statistic
+     * @param integer $numOfPoints
+     * @return History
      */
-    public function setMatch2($match2)
+    public function setNumOfPoints($numOfPoints)
     {
-        $this->match2 = $match2;
+        $this->numOfPoints = $numOfPoints;
 
         return $this;
     }
 
     /**
-     * Get match2
+     * Get numOfPoints
      *
-     * @return integer
+     * @return integer 
      */
-    public function getMatch2()
+    public function getNumOfPoints()
     {
-        return $this->match2;
-    }
-
-    /**
-     * Set match4
-     *
-     * @param integer $match4
-     *
-     * @return Statistic
-     */
-    public function setMatch4($match4)
-    {
-        $this->match4 = $match4;
-
-        return $this;
-    }
-
-    /**
-     * Get match4
-     *
-     * @return integer
-     */
-    public function getMatch4()
-    {
-        return $this->match4;
-    }
-
-    /**
-     * Set totalPoints
-     *
-     * @param integer $totalPoints
-     *
-     * @return Statistic
-     */
-    public function setTotalPoints($totalPoints)
-    {
-        $this->totalPoints = $totalPoints;
-
-        return $this;
-    }
-
-    /**
-     * Get totalPoints
-     *
-     * @return integer
-     */
-    public function getTotalPoints()
-    {
-        return $this->totalPoints;
-    }
-
-    /**
-     * Set position
-     *
-     * @param integer $position
-     *
-     * @return Statistic
-     */
-    public function setPosition($position)
-    {
-        $this->position = $position;
-
-        return $this;
-    }
-
-    /**
-     * Get position
-     *
-     * @return integer
-     */
-    public function getPosition()
-    {
-        return $this->position;
-    }
-
-    /**
-     * Set numOfQue
-     *
-     * @param integer $numOfQue
-     *
-     * @return Statistic
-     */
-    public function setNumOfQue($numOfQue)
-    {
-        $this->numOfQue = $numOfQue;
-
-        return $this;
-    }
-
-    /**
-     * Get numOfQue
-     *
-     * @return integer
-     */
-    public function getNumOfQue()
-    {
-        return $this->numOfQue;
+        return $this->numOfPoints;
     }
 
     /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
-     *
-     * @return Statistic
+     * @return History
      */
     public function setCreatedAt($createdAt)
     {
@@ -235,7 +125,7 @@ class Statistic {
     /**
      * Get createdAt
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getCreatedAt()
     {
@@ -246,8 +136,7 @@ class Statistic {
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     *
-     * @return Statistic
+     * @return History
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -259,7 +148,7 @@ class Statistic {
     /**
      * Get updatedAt
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getUpdatedAt()
     {
@@ -270,8 +159,7 @@ class Statistic {
      * Set user
      *
      * @param \AppBundle\Entity\User $user
-     *
-     * @return Statistic
+     * @return History
      */
     public function setUser(\AppBundle\Entity\User $user)
     {
@@ -283,7 +171,7 @@ class Statistic {
     /**
      * Get user
      *
-     * @return \AppBundle\Entity\User
+     * @return \AppBundle\Entity\User 
      */
     public function getUser()
     {
@@ -291,11 +179,33 @@ class Statistic {
     }
 
     /**
+     * Set matchday
+     *
+     * @param \AppBundle\Entity\Matchday $matchday
+     * @return History
+     */
+    public function setMatchday(\AppBundle\Entity\Matchday $matchday = null)
+    {
+        $this->matchday = $matchday;
+
+        return $this;
+    }
+
+    /**
+     * Get matchday
+     *
+     * @return \AppBundle\Entity\Matchday 
+     */
+    public function getMatchday()
+    {
+        return $this->matchday;
+    }
+
+    /**
      * Set season
      *
      * @param \AppBundle\Entity\Season $season
-     *
-     * @return Statistic
+     * @return History
      */
     public function setSeason(\AppBundle\Entity\Season $season = null)
     {
@@ -307,7 +217,7 @@ class Statistic {
     /**
      * Get season
      *
-     * @return \AppBundle\Entity\Season
+     * @return \AppBundle\Entity\Season 
      */
     public function getSeason()
     {

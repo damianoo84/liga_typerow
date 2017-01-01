@@ -2,17 +2,15 @@
 
 namespace AppBundle\DataFixtures\ORM;
 
-
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use AppBundle\Entity\History;
 
-
 class HistoryFixtures extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder() {
-        return 1;
+        return 2;
     }
     
     public function load(ObjectManager $manager) {
@@ -147,33 +145,20 @@ class HistoryFixtures extends AbstractFixture implements OrderedFixtureInterface
              )  
         );
         
-        $test = array(
-            'Sezon 1' => array('Wojtek'=>array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6),'Mateusz'=>   array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6),'Damian'=>   array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6)),
-            'Sezon 2' => array('Wojtek'=>array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6),'Mateusz'=>   array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6),'Damian'=>   array(12,12,8,18,8,10,16,14,0,20,10,22,12,0,6))
-        );
-        
-        foreach ($test as $key => $value) {
-                echo $key;
-                echo "<br />"; 
-            foreach ($test[$key] as $user => $u) {
-                echo $user;
-                echo "<br />"; 
-                foreach ($test[$key][$user] as $k => $v) {
-                    echo $v;
-                    echo "<br />";
+        foreach ($historyList as $season => $users) {
+            foreach ($users as $user => $points) {
+                foreach ($points as $matchday => $point) {
+                    $History = new History();
+                    $History->setSeason($this->getReference('season-'.$season))
+                            ->setMatchday($this->getReference('matchday-Kolejka '.($matchday+1)))
+                            ->setUser($this->getReference('user-'.$user))
+                            ->setNumOfPoints($point)
+                            ;
+                    
+                    $manager->persist($History);
                 }
             }
         }
-        
-        
-//        foreach ($historyList as $historyDetails) {
-//            echo $historyDetails;
-//            echo "<br />"; 
-//            foreach ($historyDetails as $key => $value){
-//                echo $key;
-//                echo "<br />"; 
-//            }
-//        }
-
+        $manager->flush();
     }
 }

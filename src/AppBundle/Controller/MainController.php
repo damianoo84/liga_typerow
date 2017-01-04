@@ -203,9 +203,9 @@ class MainController extends Controller{
     public function historyAction(){
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:History');
-        $history = $repository->getHistory(1);
+        $history = $repository->getHistory(11);
         
-        return array();
+        return array('points' => $history);
     }
 
     

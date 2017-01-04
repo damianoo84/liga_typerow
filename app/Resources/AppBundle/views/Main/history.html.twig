@@ -1,7 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
-    <p>Username: {{ app.user ? app.user.username }} </p>
-       
+    <table>
+      <tr>
+        <th>Gracz</th>
+        {% for i in 0..14 %}
+        <th>{{loop.index}}</th>
+        {% endfor %}
+        <th>Suma</th>
+      </tr>
+        {% for key,point in points %}
+            <tr>
+                {% set sum = 0 %}
+                    <td>{{ loop.index }}.{{ point.username }}</td>
+                {% for pt in point.suma %}
+                    {% if loop.index % 2 %}
+                        <td>{{ pt }}</td>
+                    {% else %}
+                        <td>{{ pt }}</td>
+                    {% endif %}
+                    {% set sum = sum + pt %}
+                {% endfor %}
+                {% if point.suma|length < 14 %}
+                    {% for i in 0..(14-point.suma|length) %}
+                        <td></td>
+                    {% endfor %}
+                {% endif %}
+                <td>{{ sum }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

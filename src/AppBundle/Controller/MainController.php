@@ -37,6 +37,7 @@ class MainController extends Controller{
         $points = $repository->getPointsPerMatchday();
         
         return array('points' => $points);
+        
     }
     
     

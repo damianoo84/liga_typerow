@@ -155,20 +155,20 @@ class MainController extends Controller{
     public function principlesAction(){
         
         $principles = array(
-            'gramy przez 15 kolejnych tygodni. Typujemy co tydzień 10 meczy. '
+            'Gramy przez 15 kolejnych tygodni. Typujemy co tydzień 10 meczy. '
             . 'Należy pamietać że czas na typ to 7 dni liczony od poniedziałku '
             . 'godz.00:00 do niedzieli godz. 23:59',
-            'za prawidłowe wytypowanie rozstrzygnięcia meczu otrzymuje się 2 pkt. '
+            'Za prawidłowe wytypowanie rozstrzygnięcia meczu otrzymuje się 2 pkt. '
             . 'Za prawidłowe wytypowanie wyniku bramkowego otrzymuje się 4 pkt.',
-            'jeżeli w meczu dojdzie do dogrywki lub rzutów karnych to liczy się '
+            'Jeżeli w meczu dojdzie do dogrywki lub rzutów karnych to liczy się '
             . 'wynik meczu regulaminowych 90 minut.',
-            'jeżeli mecz niezostanie rozegrany w danej kolejce lub przerwany (i nie dokończony) '
+            'Jeżeli mecz niezostanie rozegrany w danej kolejce lub przerwany (i nie dokończony) '
             . 'lub zostanie uznany jako walkower, wtedy typy na ten mecz zostają anulowane.',
-            'jeżeli zwycięzcą po 15 kolejkach okażą się dwie lub więcej osób, '
+            'Jeżeli zwycięzcą po 15 kolejkach okażą się dwie lub więcej osób, '
             . 'które będą miały taką samą ilość punktów to zostanie przeprowadzona dogrywka między nimi.'
         );
         
-        return array();
+        return array('principles' => $principles);
     }
     
     /**
@@ -187,11 +187,9 @@ class MainController extends Controller{
             'Najwięcej trafionych meczy za 2 punkty' => '82 - Marcin',
             'Najwięcej trafionych meczy za 4 punkty' => '28 - Piotrek 3',
             'Najwięcej trafionych meczy w sumie w jednym sezonie' => '93 - Łukasz'
-            
         );
         
-        
-        return array();
+        return array('records' => $records);
     }
     
     /**
@@ -255,7 +253,11 @@ class MainController extends Controller{
      * @Template()
      */
     public function accountAction(){
-        return array();
+        
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
+        $udatas = $repository->getUserData($this->getUser());
+        
+        return array('udatas' => $udatas);
     }
 
 

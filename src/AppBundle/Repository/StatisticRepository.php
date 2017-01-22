@@ -40,4 +40,55 @@ ORDER BY avgPtsForMatch DESC
         return $result;
         
     }
+    
+    public function getUserData($user){
+        $qb = $this->createQueryBuilder('s');
+        $qb->select(
+                    '(s.totalPoints/s.numOfQue) AS avgPtsForMatch'
+                    ,'se.name AS season'
+                    ,'s.numOfQue AS numOfQue'
+                    ,'s.totalPoints AS totalpoints'
+                    ,'s.match2 AS match2'
+                    ,'s.match4 AS match4'
+                )
+           ->innerJoin('s.season', 'se')
+           ->where('s.user = :user')
+           ->orderBy('s.season', 'DESC')
+           ->setParameter('user', $user)
+        ;
+        
+        /**
+         * SELECT (total_points/num_of_que) AS avgPtsForMatch, season_id AS season, 
+         * num_of_que AS numOfQue, total_points AS totalpoints, match2 AS match2, 
+         * match4 AS match4 FROM statistic WHERE user_id = 1 ORDER BY avgPtsForMatch DESC 
+         * 
+         */
+        
+        $result = $qb->getQuery()->getResult();
+        
+        return $result;
+    }
+    
+    
+    public function getTheMost($user){
+        $qb = $this->createQueryBuilder('s');
+        $qb->select(
+                    'max(h.numOfPoints) AS maxMatchdayPoints'
+                    ,'max(s.match_2) AS maxMatch2'
+                    ,'max(s.match_4) AS maxMatch4'
+                    ,'max(s.match_2 + s.match_4) AS maxBetMatchSeason'
+                    ,'max(s.totalPoints) AS maxSeasonTotalPoints'
+                )
+           ->innerJoin('s.season', 'se')
+           ->where('s.user = :user')
+           ->orderBy('s.season', 'DESC')
+           ->setParameter('user', $user)
+        ;
+        
+        $result = $qb->getQuery()->getResult();
+        
+        return $result;
+    }
+    
+    
 }

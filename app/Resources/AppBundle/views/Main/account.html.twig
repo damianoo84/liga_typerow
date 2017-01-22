@@ -1,7 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
-    <p>Username: {{ app.user ? app.user.username }} </p>
-       
+    <table>
+        <tr>
+            <th>Śr. pkt na kol.</th>
+            <th>Sezony</th>
+            <th>Kolejki</th>
+            <th>Punkty</th>
+            <th>Mecze 2pkt</th>
+            <th>Mecze 4pkt</th>
+            <th>Wygrane</th>
+        </tr>
+        {% for udata in udatas %}
+            <tr>
+                <td>{{ udata.avgPtsForMatch }}</td>
+                <td>{{ udata.season }}</td>
+                <td>{{ udata.numOfQue }}</td>
+                <td>{{ udata.totalpoints }}</td>
+                <td>{{ udata.match2 }}</td>
+                <td>{{ udata.match4 }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+    </table>
+        
+        <br />
+        
+        
+        
 {% endblock %}

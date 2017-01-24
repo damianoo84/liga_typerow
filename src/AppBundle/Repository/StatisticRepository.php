@@ -3,6 +3,7 @@
 namespace AppBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use AppBundle\Entity\History;
 
 class StatisticRepository extends EntityRepository
 {
@@ -73,19 +74,23 @@ ORDER BY avgPtsForMatch DESC
     public function getTheMost($user){
         $qb = $this->createQueryBuilder('s');
         $qb->select(
-                    'max(h.numOfPoints) AS maxMatchdayPoints'
-                    ,'max(s.match_2) AS maxMatch2'
-                    ,'max(s.match_4) AS maxMatch4'
-                    ,'max(s.match_2 + s.match_4) AS maxBetMatchSeason'
+//                    'max(h.numOfPoints) AS maxMatchdayPoints'
+                    'max(s.match2) AS maxMatch2'
+                    ,'max(s.match4) AS maxMatch4'
+                    ,'max(s.match2 + s.match4) AS maxBetMatchSeason'
                     ,'max(s.totalPoints) AS maxSeasonTotalPoints'
                 )
-           ->innerJoin('s.season', 'se')
            ->where('s.user = :user')
            ->orderBy('s.season', 'DESC')
            ->setParameter('user', $user)
         ;
         
         $result = $qb->getQuery()->getResult();
+        
+//        var_dump($result);
+        
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
+        $udatas = $repository->getUserData($this->getUser());
         
         return $result;
     }

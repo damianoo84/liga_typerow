@@ -135,16 +135,17 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
         );
             
         
-        foreach ($statisticsList as $statisticDetails) {
+        foreach ($statisticsList as $statisticDetails => $stat) {
             $Statistic = new Statistic();
-            $Statistic->setMatch2($statisticDetails['m2'])
-                    ->setMatch4($statisticDetails['m4'])
-                    ->setTotalPoints($statisticDetails['tP'])
-                    ->setPosition($statisticDetails['p'])
-                    ->setNumOfQue($statisticDetails['q'])
-                    ->setUser($this->getReference('user-'.$statisticDetails['n']))
-                    ->setSeason($this->getReference('season-'.$statisticDetails['s']))
+            $Statistic->setMatch2($stat['m2'])
+                    ->setMatch4($stat['m4'])
+                    ->setTotalPoints($stat['tP'])
+                    ->setPosition($stat['p'])
+                    ->setNumOfQue($stat['q'])
+                    ->setUser($this->getReference('user-'.$stat['n']))
+                    ->setSeason($this->getReference('season-'.$stat['s']))
                     ;
+            $this->addReference('statistic-'.($statisticDetails+1), $Statistic);
             
             $manager->persist($Statistic);
         }

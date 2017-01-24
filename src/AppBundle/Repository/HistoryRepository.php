@@ -13,12 +13,12 @@ class HistoryRepository extends EntityRepository
                      'u.username AS username'
                     ,'u.id AS user_id'
                     ,'h.numOfPoints AS suma'
-                    ,'s.name AS season'
+                    ,'se.name AS season'
                 )
-           ->innerJoin('h.user', 'u')
-           ->innerJoin('h.season', 's')
-           ->where('s.id = :param')
-//           ->groupBy('u.username')
+           ->innerJoin('h.statistic', 's')
+           ->innerJoin('s.user', 'u')
+           ->innerJoin('s.season', 'se')
+           ->where('se.id = :param')
            ->setParameter('param', $season)
         ;
         

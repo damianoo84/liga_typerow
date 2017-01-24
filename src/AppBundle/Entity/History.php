@@ -19,20 +19,6 @@ class History {
     
     /**
      * @ORM\ManyToOne(
-     *      targetEntity = "AppBundle\Entity\User",
-     * )
-     * 
-     * @ORM\JoinColumn(
-     *      name = "user_id",
-     *      referencedColumnName = "id",
-     *      nullable = false,
-     *      onDelete = "CASCADE"
-     * )
-     */
-    private $user;
-    
-    /**
-     * @ORM\ManyToOne(
      *      targetEntity = "Matchday",
      * )
      * 
@@ -46,16 +32,16 @@ class History {
     
     /**
      * @ORM\ManyToOne(
-     *      targetEntity = "Season",
+     *      targetEntity = "Statistic",
      * )
      * 
      * @ORM\JoinColumn(
-     *      name = "season_id",
+     *      name = "statistic_id",
      *      referencedColumnName = "id",
      *      onDelete = "SET NULL"
      * )
      */
-    private $season;
+    private $statistic;
     
     /**
      *
@@ -155,28 +141,7 @@ class History {
         return $this->updatedAt;
     }
 
-    /**
-     * Set user
-     *
-     * @param \AppBundle\Entity\User $user
-     * @return History
-     */
-    public function setUser(\AppBundle\Entity\User $user)
-    {
-        $this->user = $user;
 
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \AppBundle\Entity\User 
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
 
     /**
      * Set matchday
@@ -201,26 +166,27 @@ class History {
         return $this->matchday;
     }
 
+
     /**
-     * Set season
+     * Set statistic
      *
-     * @param \AppBundle\Entity\Season $season
+     * @param \AppBundle\Entity\Statistic $statistic
      * @return History
      */
-    public function setSeason(\AppBundle\Entity\Season $season = null)
+    public function setStatistic(\AppBundle\Entity\Statistic $statistic = null)
     {
-        $this->season = $season;
+        $this->statistic = $statistic;
 
         return $this;
     }
 
     /**
-     * Get season
+     * Get statistic
      *
-     * @return \AppBundle\Entity\Season 
+     * @return \AppBundle\Entity\Statistic 
      */
-    public function getSeason()
+    public function getStatistic()
     {
-        return $this->season;
+        return $this->statistic;
     }
 }

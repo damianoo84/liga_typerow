@@ -45,7 +45,7 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Damian',   'm2'=>58,'m4'=>16,'tP'=>180,'p'=>7, 'q'=> 15,'s'=>'Sezon 3'),
             array('n'=>'Adam 1',   'm2'=>61,'m4'=>14,'tP'=>178,'p'=>8, 'q'=> 15,'s'=>'Sezon 3'),
             array('n'=>'Michał',   'm2'=>56,'m4'=>15,'tP'=>172,'p'=>9, 'q'=> 15,'s'=>'Sezon 3'),
-            array('n'=>'Piotrek 2','m2'=>52,'m4'=>16,'tP'=>168,'p'=>10,'q'=> 14,'s'=>'Sezon 3'),
+            array('n'=>'Piotrek 2','m2'=>52,'m4'=>16,'tP'=>168,'p'=>10,'q'=> 15,'s'=>'Sezon 3'),
             
             array('n'=>'Piotrek 1','m2'=>50,'m4'=>23,'tP'=>192,'p'=>1, 'q'=> 15,'s'=>'Sezon 4'),
             array('n'=>'Damian',   'm2'=>41,'m4'=>25,'tP'=>182,'p'=>2, 'q'=> 15,'s'=>'Sezon 4'),

@@ -55,5 +55,20 @@ class HistoryRepository extends EntityRepository
     }
     
     
+    public function getTheMost($user){
+        $qb = $this->createQueryBuilder('h');
+        $qb->select(
+                    'max(h.numOfPoints) AS maxMatchdayPoints'
+                )
+           ->innerJoin('h.statistic', 's')
+           ->where('s.user = :user')
+           ->setParameter('user', $user)
+        ;
+        
+        $result = $qb->getQuery()->getResult();
+        
+        return $result;
+    }
+    
     
 }

@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
@@ -64,7 +65,24 @@ class User implements AdvancedUserInterface, \Serializable {
     private $priority;
 
     
+    /**
+     *
+     * @ORM\Column(type="datetime", nullable = true) 
+     */
+    private $lastActivityAt;
+    
+    
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
 
+    /**
+     * @ORM\Column(type="datetime")
+     * @Gedmo\Timestampable(on="update")
+     */
+    private $updatedAt;
     
     /**
      * @ORM\Column(name="account_non_expired" , type="boolean")
@@ -539,5 +557,84 @@ class User implements AdvancedUserInterface, \Serializable {
     public function getPlainPassword()
     {
         return $this->plainPassword;
+    }
+
+    /**
+     * Set lastActivityAt
+     *
+     * @param \DateTime $lastActivityAt
+     * @return User
+     */
+    public function setLastActivityAt($lastActivityAt)
+    {
+        $this->lastActivityAt = $lastActivityAt;
+
+        return $this;
+    }
+
+    /**
+     * Get lastActivityAt
+     *
+     * @return \DateTime 
+     */
+    public function getLastActivityAt()
+    {
+        return $this->lastActivityAt;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return User
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return User
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+    
+    /**
+    * @return Bool Whether the user is active or not
+    */
+    public function isActiveNow()
+    {
+        // Delay during wich the user will be considered as still active
+	$delay = new \DateTime('2 minutes ago');
+	return ( $this->getLastActivityAt() > $delay );
     }
 }

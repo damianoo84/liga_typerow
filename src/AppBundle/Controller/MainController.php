@@ -10,6 +10,7 @@ use AppBundle\Entity\Meet;
 use AppBundle\Entity\Comment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class MainController extends Controller{
     
@@ -36,7 +37,9 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $points = $repository->getPointsPerMatchday();
         
-        return array('points' => $points);
+        $users = $this->usersLogged();
+        
+        return array('points' => $points, 'users' => $users);
         
     }
     
@@ -53,7 +56,9 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getTypesPerMeet(1);
         
-        return array('types' => $types);
+        $users = $this->usersLogged();
+        
+        return array('types' => $types, 'users' => $users);
     }
 
     
@@ -142,9 +147,19 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
         $ranks = $repository->getRanking();
         
-        return array('ranks' => $ranks);
+        $users = $this->usersLogged();
+        
+        return array('ranks' => $ranks, 'users' => $users);
     }
     
+    private function usersLogged(){
+        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
+        $users = $repository->getActive();
+        
+        return $users;
+    }
+
+
     /**
      * @Route(
      *      "/zasady",

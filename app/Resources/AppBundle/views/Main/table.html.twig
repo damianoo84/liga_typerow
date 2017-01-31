@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block info %}
+    {% for user in users %}
+        {{ user.username }}
+    {% endfor %}
+{% endblock %} 
+
 {% block content %}
     <table>
       <tr>

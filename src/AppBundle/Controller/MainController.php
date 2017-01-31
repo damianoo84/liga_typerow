@@ -152,12 +152,7 @@ class MainController extends Controller{
         return array('ranks' => $ranks, 'users' => $users);
     }
     
-    private function usersLogged(){
-        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
-        $users = $repository->getActive();
-        
-        return $users;
-    }
+
 
 
     /**
@@ -275,8 +270,6 @@ class MainController extends Controller{
         return array('udatas' => $udatas);
     }
 
-
-    
     /**
      * @Route(
      *      "/validation",
@@ -286,5 +279,14 @@ class MainController extends Controller{
      */
     public function validationAction(){
         return array();
+    }
+    
+    
+    private function usersLogged(){
+        
+        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
+        $users = $repository->getActive();
+        
+        return $users;
     }
 }

@@ -7,3 +7,8 @@ services:
         arguments: [@security.context, @doctrine.orm.entity_manager]
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onCoreController }
+            
+    result_listener:
+        class: AppBundle\EventListener\ResultListener 
+        tags:
+            - { name: doctrine.event_listener, event: postUpdate }

@@ -7,7 +7,6 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use AppBundle\Entity\Type;
 
-
 class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder() {
@@ -15,7 +14,6 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
     }
 
     public function load(ObjectManager $manager) {
-        
         
         $usersList = array(
             'Damian',
@@ -28,27 +26,20 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             'Michał',
             'Adam 1',
             'Przemek 1'
-       );
+        );
         
-        $elements = array(0, 2, 4);
-        $los = array_rand($elements);
-        
+        $goals = array(0, 1, 2);
             for($i=0;$i<40;$i++){
                 for($j=0;$j<10;$j++){
-                    $los = array_rand($elements);
                     $Type = new Type();
-                    $Type->setHostType(0)
-                            ->setGuestType(1)
+                    $Type->setHostType(array_rand($goals))
+                            ->setGuestType(array_rand($goals))
                             ->setUser($this->getReference('user-'.$usersList[$j]))
                             ->setMeet($this->getReference('meet-Mecz '.$i))
-                            ->setNumberOfPoints($elements[$los])
                             ;
                     $manager->persist($Type);
                 }
             }
-        
-        $manager->flush();
-        
+        $manager->flush();   
     }
-    
 }

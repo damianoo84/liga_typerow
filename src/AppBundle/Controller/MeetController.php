@@ -55,6 +55,8 @@ class MeetController extends Controller
             return $this->redirectToRoute('meet_show', array('id' => $meet->getId()));
         }
 
+//        print_r($meet);
+        
         return $this->render('meet/new.html.twig', array(
             'meet' => $meet,
             'form' => $form->createView(),

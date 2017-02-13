@@ -55,6 +55,9 @@ class MainController extends Controller{
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getTypesPerMeet(1);
+
+        // debug
+//      exit(\Doctrine\Common\Util\Debug::dump($types));
         
         $users = $this->usersLogged();
         

@@ -258,20 +258,14 @@ class MainController extends Controller{
 
     }
     
-    /**
-     * @Route(
-     *      "/account",
-     *      name = "liga_typerow_account"
-     * )
-     * @Template()
-     */
-    public function accountAction(){
-        
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
-        $udatas = $repository->getUserData($this->getUser());
-        
-        return array('udatas' => $udatas);
-    }
+
+//    public function accountAction(){
+//        
+//        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
+//        $udatas = $repository->getUserData($this->getUser());
+//        
+//        return array('udatas' => $udatas);
+//    }
 
     /**
      * @Route(

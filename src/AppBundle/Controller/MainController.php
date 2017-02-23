@@ -11,6 +11,9 @@ use AppBundle\Entity\Comment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use AppBundle\Form\ChangePasswordType;
+use AppBundle\Exception\UserException;
+
 
 class MainController extends Controller{
     
@@ -286,4 +289,49 @@ class MainController extends Controller{
         
         return $users;
     }
+    
+    
+    /**
+     * @Route(
+     *      "/account",
+     *      name = "liga_typerow_account"
+     * )
+     * 
+     * @Template()
+     */
+    public function accountSettingsAction(Request $Request)
+    {        
+        $User = $this->getUser();
+        
+        // Change Password
+        $changePasswdForm = $this->createForm(new ChangePasswordType(), $User);
+        
+        if($Request->isMethod('POST') && $Request->request->has('changePassword')){
+            $changePasswdForm->handleRequest($Request);
+            
+            if($changePasswdForm->isValid()){
+                
+                try {
+                    $userManager = $this->get('user_manager');
+                    $userManager->changePassword($User);
+
+                    $this->get('session')->getFlashBag()->add('success', 'Twoje hasło zostało zmienione!');
+                    return $this->redirect($this->generateUrl('liga_typerow_account'));
+                    
+                } catch (UserException $ex) {
+                    $this->get('session')->getFlashBag()->add('error', $ex->getMessage());
+                }
+                
+            }else{
+                $this->get('session')->getFlashBag()->add('error', 'Popraw błędy formularza2!');
+            }
+        }
+        
+        
+        return array(
+            'user' => $User,
+            'changePasswdForm' => $changePasswdForm->createView()
+        );
+    }
+    
 }

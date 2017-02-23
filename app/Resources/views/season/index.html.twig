@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Seasons list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Datestart</th>
+                <th>Dateend</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for season in seasons %}
+            <tr>
+                <td><a href="{{ path('season_show', { 'id': season.id }) }}">{{ season.id }}</a></td>
+                <td>{{ season.name }}</td>
+                <td>{% if season.dateStart %}{{ season.dateStart|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if season.dateEnd %}{{ season.dateEnd|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if season.createdAt %}{{ season.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if season.updatedAt %}{{ season.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('season_show', { 'id': season.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('season_edit', { 'id': season.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('season_new') }}">Create a new season</a>
+        </li>
+    </ul>
+{% endblock %}

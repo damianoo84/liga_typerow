@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Statistics list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Match2</th>
+                <th>Match4</th>
+                <th>Totalpoints</th>
+                <th>Position</th>
+                <th>Numofque</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for statistic in statistics %}
+            <tr>
+                <td><a href="{{ path('statistic_show', { 'id': statistic.id }) }}">{{ statistic.id }}</a></td>
+                <td>{{ statistic.match2 }}</td>
+                <td>{{ statistic.match4 }}</td>
+                <td>{{ statistic.totalPoints }}</td>
+                <td>{{ statistic.position }}</td>
+                <td>{{ statistic.numOfQue }}</td>
+                <td>{% if statistic.createdAt %}{{ statistic.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if statistic.updatedAt %}{{ statistic.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('statistic_show', { 'id': statistic.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('statistic_edit', { 'id': statistic.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('statistic_new') }}">Create a new statistic</a>
+        </li>
+    </ul>
+{% endblock %}

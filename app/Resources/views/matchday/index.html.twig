@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Matchdays list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Datefrom</th>
+                <th>Dateto</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for matchday in matchdays %}
+            <tr>
+                <td><a href="{{ path('matchday_show', { 'id': matchday.id }) }}">{{ matchday.id }}</a></td>
+                <td>{{ matchday.name }}</td>
+                <td>{% if matchday.dateFrom %}{{ matchday.dateFrom|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if matchday.dateTo %}{{ matchday.dateTo|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if matchday.createdAt %}{{ matchday.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if matchday.updatedAt %}{{ matchday.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('matchday_show', { 'id': matchday.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('matchday_edit', { 'id': matchday.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('matchday_new') }}">Create a new matchday</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -48,6 +48,12 @@ class User implements AdvancedUserInterface, \Serializable {
     
     /**
      *
+     * @ORM\Column(type="string", length=9 , unique = true)
+     */
+    private $phone;
+    
+    /**
+     *
      * @ORM\Column(type="integer")
      */
     private $numberOfWins;
@@ -636,5 +642,28 @@ class User implements AdvancedUserInterface, \Serializable {
         // Delay during wich the user will be considered as still active
 	$delay = new \DateTime('2 minutes ago');
 	return ( $this->getLastActivityAt() > $delay );
+    }
+
+    /**
+     * Set phone
+     *
+     * @param integer $phone
+     * @return User
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return integer 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
     }
 }

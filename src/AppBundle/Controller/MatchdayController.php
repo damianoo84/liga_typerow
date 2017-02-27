@@ -5,12 +5,15 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Matchday;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * Matchday controller.
  *
  * @Route("/admin-panel/matchday")
+ * @Security("has_role('ROLE_ADMIN')")
  */
 class MatchdayController extends Controller
 {

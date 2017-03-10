@@ -41,8 +41,15 @@ class MainController extends Controller{
         $points = $repository->getPointsPerMatchday();
         
         $users = $this->usersLogged();
+        $matchday = $this->getCurrentMatchday();
         
-        return array('points' => $points, 'users' => $users);
+        $today = new \DateTime('now');
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]->getName()));
+        
+        return array('points' => $points, 
+                     'users' => $users, 
+                     'matchday' => $matchday);
         
     }
     
@@ -282,7 +289,7 @@ class MainController extends Controller{
     }
     
     
-    private function usersLogged(){
+    protected function usersLogged(){
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:User');
         $users = $repository->getActive();
@@ -290,7 +297,18 @@ class MainController extends Controller{
         return $users;
     }
     
+    protected function getCurrentMatchday(){
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Matchday');
+        $matchday = $repository->getMatchday();
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]['name']));
+        return $matchday;  
+    }
     
+    
+
+
+
     /**
      * @Route(
      *      "/account",

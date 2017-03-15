@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use AppBundle\Entity\Type;
 use AppBundle\Entity\Meet;
 use AppBundle\Entity\Comment;
+use AppBundle\Entity\Season;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -42,8 +43,6 @@ class MainController extends Controller{
         
         $users = $this->usersLogged();
         $matchday = $this->getCurrentMatchday();
-        
-        $today = new \DateTime('now');
         
 //        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]->getName()));
         
@@ -241,21 +240,24 @@ class MainController extends Controller{
      */
     public function forumAction(Request $request){
         
-        $repository = $this->getDoctrine()->getRepository("AppBundle:Comment");
-        $comments = $repository->findAll();
-        
-        $repoSeason = $this->getDoctrine()->getRepository("AppBundle:Season");
-        $season = $repoSeason->find(10);
+        $matchday = $this->getCurrentMatchday();
+        $repoComment = $this->getDoctrine()->getRepository('AppBundle:Comment');
+        $comments = $repoComment->getCommentsBySeason($matchday['season_id']);
+        $repoSeason = $this->getDoctrine()->getRepository('AppBundle:Season');
         
         if ($request->getMethod() == 'POST') {
             
             $request = $this->getRequest();
-            $req = $request->request->get("user_comment");
+            $user_comment = $request->request->get('user_comment');
+            $season_id = $request->request->get('season_id');
+            
+            $season = new Season();
+            $season = $repoSeason->findOneById($season_id);
             
             $comment = new Comment();
             $comment->setUser($this->getUser());
             $comment->setSeason($season);
-            $comment->setText($req);
+            $comment->setText($user_comment);
             
             $em = $this->getDoctrine()->getManager();
             $em->persist($comment);
@@ -264,8 +266,7 @@ class MainController extends Controller{
             return new JsonResponse(array('message' => 'Success!'), 200);
         }
         
-        return array('comments' => $comments);
-
+        return array('comments' => $comments, 'matchday' => $matchday);
     }
     
 

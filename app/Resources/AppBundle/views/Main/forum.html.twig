@@ -14,13 +14,13 @@
     </div>
     <div class="forum_comment">
         <form id="form">
+            <input type="hidden" name="season_id" value="{{ matchday.season_id }}"> 
             <input type="text" name="user_comment">
             <input type="submit"  value="Wyślij"/>
         </form>
     </div>
     
 <script type="text/javascript">
-    
     $(function(){
        $("#form").submit(function(e){
             var form=$(this);
@@ -32,7 +32,6 @@
                 success:function(){
                     form.get(0).reset();
                     console.log("jest ok");
-                    location.reload();
                 },
                 error: function() {
                     console.log("Wystąpił błąd");

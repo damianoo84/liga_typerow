@@ -13,7 +13,10 @@ class MatchdayRepository extends EntityRepository
         $qb->select(
                     'm.name AS name'
                     ,'m.dateFrom AS dateFrom'
-                    ,'m.dateTo AS dateTo')
+                    ,'m.dateTo AS dateTo'
+                    ,'s.id AS season_id'
+                )
+           ->innerJoin('m.season', 's')
            ->where('(m.dateFrom < :today) AND (m.dateTo > :today)')
            ->setParameter('today', $today->format('Y-m-d H:i:s'))
         ;

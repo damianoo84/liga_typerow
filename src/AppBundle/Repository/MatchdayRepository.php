@@ -10,8 +10,8 @@ class MatchdayRepository extends EntityRepository
     public function getMatchday(){
         $today = new \DateTime('now');
         $qb = $this->createQueryBuilder('m');
-        $qb->select(
-                    'm.name AS name'
+        $qb->select('m.id AS id'
+                    ,'m.name AS name'
                     ,'m.dateFrom AS dateFrom'
                     ,'m.dateTo AS dateTo'
                     ,'s.id AS season_id'

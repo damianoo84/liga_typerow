@@ -1,18 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block info %}
-    {% for user in users %}
-        {{ user.username }}
-        
-        {{ matchday.name }} {{ matchday.dateFrom|date('d-m-Y') }} {{ matchday.dateTo|date('d-m-Y') }}
-        
-    {% endfor %}
-    
-    
-    
-    
-{% endblock %} 
-
 {% block content %}
     <table>
       <tr>

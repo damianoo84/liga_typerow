@@ -22,6 +22,15 @@
         
         <div id="info_02">
             {% block info %}
+                {% if app.user %}
+                    {% for user in log_users() %}
+                        {{ user.username }}
+                    {% endfor %}
+                {% endif %}
+                
+                {{ curr_matchday().name }}
+                {{ curr_matchday().dateFrom|date('d-m-Y') }} 
+                {{ curr_matchday().dateTo|date('d-m-Y') }}
             {% endblock %}  
         </div>
         

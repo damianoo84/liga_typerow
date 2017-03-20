@@ -16,3 +16,11 @@ services:
     user_manager:
         class: AppBundle\Manager\UserManager
         arguments: [@doctrine, @security.encoder_factory]
+        
+    app.twig_extension:
+        class: AppBundle\Twig\AppExtension
+        public: false
+        arguments: 
+            doctrine : '@doctrine'
+        tags:
+            - { name: twig.extension }

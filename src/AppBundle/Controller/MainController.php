@@ -38,39 +38,27 @@ class MainController extends Controller{
      * @Template()
      */
     public function tableAction(){
+        
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $points = $repository->getPointsPerMatchday();
-        
-        $users = $this->usersLogged();
-        $matchday = $this->getCurrentMatchday();
-        
 //        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]->getName()));
         
-        return array('points' => $points, 
-                     'users' => $users, 
-                     'matchday' => $matchday);
-        
+        return array('points' => $points);
     }
-    
     
     /**
      * @Route(
-     *      "/userstypes",
+     *      "/wszystkietypy",
      *      name = "liga_typerow_userstypes"
      * )
      * @Template()
      */
     public function userstypesAction(){
-        
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $types = $repository->getTypesPerMeet(1);
 
-        // debug
-//      exit(\Doctrine\Common\Util\Debug::dump($types));
-        
-        $users = $this->usersLogged();
-        
-        return array('types' => $types, 'users' => $users);
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $types = $repository->getTypesPerMeet($matchday['id']);
+
+        return array('types' => $types);
     }
 
     
@@ -85,9 +73,10 @@ class MainController extends Controller{
      */
     public function typesAction(Request $request){
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
-        $meets = $repository->getMeetsPerMatchday(1);
+        $matchday = $this->getCurrentMatchday();
         
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
+        $meets = $repository->getMeetsPerMatchday($matchday['id']);
         if ($request->getMethod() == 'POST') {
             
             $request = $this->getRequest();
@@ -159,14 +148,9 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
         $ranks = $repository->getRanking();
         
-        $users = $this->usersLogged();
-        
-        return array('ranks' => $ranks, 'users' => $users);
+        return array('ranks' => $ranks);
     }
     
-
-
-
     /**
      * @Route(
      *      "/zasady",
@@ -289,27 +273,16 @@ class MainController extends Controller{
         return array();
     }
     
-    
-    protected function usersLogged(){
-        
-        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
-        $users = $repository->getActive();
-        
-        return $users;
-    }
-    
-    protected function getCurrentMatchday(){
+    /*
+     * get current matchday
+    */
+    public function getCurrentMatchday(){
         $repository = $this->getDoctrine()->getRepository('AppBundle:Matchday');
         $matchday = $repository->getMatchday();
         
-//        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]['name']));
-        return $matchday;  
+        return $matchday;
     }
     
-    
-
-
-
     /**
      * @Route(
      *      "/account",

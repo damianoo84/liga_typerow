@@ -150,6 +150,30 @@ class TypeRepository extends EntityRepository
         return $stats;
     }
     
+    // sprawdzenie czy użytkownik wytypował już w danej kolejce
+    public function whoDidNotTyped($matchday){
+        
+        $qb = $this->createQueryBuilder('t');
+        $qb->select(
+                    'u.id AS user_id'
+                )
+           ->innerJoin('t.meet', 'm')
+           ->innerJoin('m.matchday', 'md')     
+           ->innerJoin('t.user', 'u')
+           ->where('md.id = :matchday')
+           ->andWhere('hostType <> null')
+           ->setParameter('matchday', $matchday)
+        ;
+        
+        // pobranie użytkowników, którzy wytypowali w danej kolejce
+        $result = $qb->getQuery()->getSingleResult();
+        
+        // pobranie wszystkich użytkowników obecnego sezonu ligi typerów (IDków)
+        
+        // zwrócenie użytkowików, którzy nie wytypowali jeszcze
+        
+        return $result;
+    }
     
     
 }

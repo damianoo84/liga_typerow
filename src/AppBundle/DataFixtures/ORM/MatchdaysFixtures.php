@@ -19,92 +19,92 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => 'Kolejka 1',
-                'dateFrom' => '2017-03-01',
-                'dateTo' => '2017-03-03',
+                'dateFrom' => '2017-04-01',
+                'dateTo' => '2017-04-03',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 2',
-                'dateFrom' => '2017-03-03',
-                'dateTo' => '2017-03-05',
+                'dateFrom' => '2017-04-03',
+                'dateTo' => '2017-04-05',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 3',
-                'dateFrom' => '2017-03-05',
-                'dateTo' => '2017-03-07',
+                'dateFrom' => '2017-04-05',
+                'dateTo' => '2017-04-07',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 4',
-                'dateFrom' => '2017-03-07',
-                'dateTo' => '2017-03-09',
+                'dateFrom' => '2017-04-07',
+                'dateTo' => '2017-04-09',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 5',
-                'dateFrom' => '2017-03-09',
-                'dateTo' => '2017-03-11',
+                'dateFrom' => '2017-04-09',
+                'dateTo' => '2017-04-11',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 6',
-                'dateFrom' => '2017-03-11',
-                'dateTo' => '2017-03-13',
+                'dateFrom' => '2017-04-11',
+                'dateTo' => '2017-04-13',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 7',
-                'dateFrom' => '2017-03-13',
-                'dateTo' => '2017-03-15',
+                'dateFrom' => '2017-04-13',
+                'dateTo' => '2017-04-15',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 8',
-                'dateFrom' => '2017-03-15',
-                'dateTo' => '2017-03-17',
+                'dateFrom' => '2017-04-15',
+                'dateTo' => '2017-04-17',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 9',
-                'dateFrom' => '2017-03-17',
-                'dateTo' => '2017-03-19',
+                'dateFrom' => '2017-04-17',
+                'dateTo' => '2017-04-19',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 10',
-                'dateFrom' => '2017-03-19',
-                'dateTo' => '2017-03-21',
+                'dateFrom' => '2017-04-19',
+                'dateTo' => '2017-04-21',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 11',
-                'dateFrom' => '2017-03-21',
-                'dateTo' => '2017-03-23',
+                'dateFrom' => '2017-04-21',
+                'dateTo' => '2017-04-23',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 12',
-                'dateFrom' => '2017-03-23',
-                'dateTo' => '2017-03-25',
+                'dateFrom' => '2017-04-23',
+                'dateTo' => '2017-04-25',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 13',
-                'dateFrom' => '2017-03-25',
-                'dateTo' => '2017-03-27',
+                'dateFrom' => '2017-04-25',
+                'dateTo' => '2017-04-27',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 14',
-                'dateFrom' => '2017-03-27',
-                'dateTo' => '2017-03-29',
+                'dateFrom' => '2017-04-27',
+                'dateTo' => '2017-04-29',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => 'Kolejka 15',
-                'dateFrom' => '2017-03-29',
-                'dateTo' => '2017-03-31',
+                'dateFrom' => '2017-04-29',
+                'dateTo' => '2017-04-31',
                 'season_name' => 'Sezon 12'
             )
             

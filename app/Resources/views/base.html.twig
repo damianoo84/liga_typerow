@@ -27,12 +27,12 @@
                         {{ user.username }}
                     {% endfor %}
                 {% endif %}
-                {% if curr_matchday() %}
+                {% if curr_matchday() is empty %}
+                    Kolejny sezon już wkrótce
+                {% else %}
                     {{ curr_matchday().name }}
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 
                     {{ curr_matchday().dateTo|date('d-m-Y') }}
-                {% else %}
-                    Kolejny sezon już wkrótce
                 {% endif %}
             {% endblock %}
         </div>

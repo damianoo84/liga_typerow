@@ -19,7 +19,7 @@ services:
         
     app.twig_extension:
         class: AppBundle\Twig\AppExtension
-        public: false
+        public: true
         arguments: 
             doctrine : '@doctrine'
         tags:

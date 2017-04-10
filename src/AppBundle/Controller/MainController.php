@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use AppBundle\Form\ChangePasswordType;
 use AppBundle\Exception\UserException;
-
+//use AppBundle\Twig\AppExtension;
 
 class MainController extends Controller{
     
@@ -55,9 +55,14 @@ class MainController extends Controller{
      */
     public function userstypesAction(){
 
+        $matchday = $this->get('app.twig_extension')->getCurrentMatchday(); 
+
+        
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getTypesPerMeet($matchday['id']);
 
+//        exit(\Doctrine\Common\Util\Debug::dump($types));
+        
         return array('types' => $types);
     }
 
@@ -73,7 +78,7 @@ class MainController extends Controller{
      */
     public function typesAction(Request $request){
         
-        $matchday = $this->getCurrentMatchday();
+        $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
@@ -224,7 +229,7 @@ class MainController extends Controller{
      */
     public function forumAction(Request $request){
         
-        $matchday = $this->getCurrentMatchday();
+        $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
         $repoComment = $this->getDoctrine()->getRepository('AppBundle:Comment');
         $comments = $repoComment->getCommentsBySeason($matchday['season_id']);
         $repoSeason = $this->getDoctrine()->getRepository('AppBundle:Season');
@@ -271,16 +276,6 @@ class MainController extends Controller{
      */
     public function validationAction(){
         return array();
-    }
-    
-    /*
-     * get current matchday
-    */
-    public function getCurrentMatchday(){
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Matchday');
-        $matchday = $repository->getMatchday();
-        
-        return $matchday;
     }
     
     /**

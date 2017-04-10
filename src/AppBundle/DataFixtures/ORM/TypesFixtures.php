@@ -29,7 +29,7 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
         );
         
         $goals = array(0, 1, 2);
-            for($i=0;$i<40;$i++){
+            for($i=1;$i<=10;$i++){
                 for($j=0;$j<10;$j++){
                     $Type = new Type();
                     $Type->setHostType(array_rand($goals))

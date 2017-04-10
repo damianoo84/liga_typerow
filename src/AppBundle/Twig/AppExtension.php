@@ -8,7 +8,6 @@ class AppExtension extends \Twig_Extension{
     
     protected $doctrine;
     
-
     
     public function __construct(RegistryInterface $doctrine)
     {

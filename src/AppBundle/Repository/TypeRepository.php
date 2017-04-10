@@ -101,16 +101,20 @@ class TypeRepository extends EntityRepository
         
         $type_per_meet = array();
         
+        
+        
         // Pobranie wszystkich typów
         foreach($meets as $key => $value){
             foreach ($result as $details){
                 if($key == $details['meet_id']){
                     $type_per_meet[$details['meet_id']]['meet'] = $meets[$details['meet_id']];
                     $type_per_meet[$details['meet_id']]['types'][] = $details['hostType'].' - '.$details['guestType'];
+                    $type_per_meet[$details['meet_id']]['username'][] = $details['username'];
+                    
                 }
             }
         }
-        
+//        exit(\Doctrine\Common\Util\Debug::dump($type_per_meet));
         return $type_per_meet;
     }
     

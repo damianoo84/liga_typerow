@@ -23,8 +23,8 @@ class MatchdayRepository extends EntityRepository
         
         $result = $qb->getQuery()->getSingleResult();
 //        exit(\Doctrine\Common\Util\Debug::dump($result));
-//        var_dump($matchday);
         return $result;
         
     }
+    
 }

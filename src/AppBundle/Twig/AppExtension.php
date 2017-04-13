@@ -19,6 +19,7 @@ class AppExtension extends \Twig_Extension{
         return array(
             new \Twig_SimpleFunction('curr_matchday', array($this, 'getCurrentMatchday')),
             new \Twig_SimpleFunction('log_users', array($this, 'usersLogged')),
+            new \Twig_SimpleFunction('find_matchday', array($this, 'getMatchdayByName')),
         );
     }
     
@@ -33,6 +34,14 @@ class AppExtension extends \Twig_Extension{
         return $matchday;
     }
     
+    public function getMatchdayByName($name){
+        $repository = $this->doctrine->getRepository('AppBundle:Matchday');
+        $matchday = $repository->findOneByName($name);
+
+        return $matchday;
+    }
+    
+
     /*
      * get logged users
      */

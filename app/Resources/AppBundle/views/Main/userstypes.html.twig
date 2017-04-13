@@ -3,16 +3,37 @@
 {% block content %}
     <table>
         
+{#        {{ dump(curr_matchday().name) }}#}
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 1}) }}">Kolejka 1</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 2}) }}">Kolejka 2</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 3}) }}">Kolejka 3</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 4}) }}">Kolejka 4</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 5}) }}">Kolejka 5</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 6}) }}">Kolejka 6</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 7}) }}">Kolejka 7</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 8}) }}">Kolejka 8</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 9}) }}">Kolejka 9</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 10}) }}">Kolejka 10</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 11}) }}">Kolejka 11</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 12}) }}">Kolejka 12</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 13}) }}">Kolejka 13</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 14}) }}">Kolejka 14</a>
+    <a href="{{ path('liga_typerow_userstypes', {'matchday' : 15}) }}">Kolejka 15</a>
+
         {% for key,type in types %}
             <tr>
                 <td>{{ type.meet }}</td>
-                {% for tp in type.types %}
-                    {% if loop.index % 2 %}
-                        <td>{{ tp }}</td>
-                    {% else %}
-                        <td>{{ tp }}</td>
-                    {% endif %}
-                {% endfor %}
+                {% if 'now'|date('d-m-Y') <  curr_matchday().dateFrom|date('d-m-Y') and 'now'|date('d-m-Y') <  curr_matchday().dateTo|date('d-m-Y') %}
+                    <td>*</td>
+                {% else %}
+                    {% for tp in type.types %}
+                        {% if loop.index % 2 %}
+                            <td>{{ tp }}</td>
+                        {% else %}
+                            <td>{{ tp }}</td>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             </tr>
         {% endfor %}
     </table>

@@ -48,25 +48,19 @@ class MainController extends Controller{
     
     /**
      * @Route(
-     *      "/wszystkietypy",
-     *      name = "liga_typerow_userstypes"
+     *      "/wszystkietypy/{matchday}",
+     *      name = "liga_typerow_userstypes",
+     *      requirements={"matchday": "\d+"},
      * )
      * @Template()
      */
-    public function userstypesAction(){
-
-        $matchday = $this->get('app.twig_extension')->getCurrentMatchday(); 
-
+    public function userstypesAction(Request $request){
         
+        $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $types = $repository->getTypesPerMeet($matchday['id']);
-
-//        exit(\Doctrine\Common\Util\Debug::dump($types));
-        
+        $types = $repository->getTypesPerMeet($matchdayRepo->getName());
         return array('types' => $types);
     }
-
-    
     
     /**
      * @Route(

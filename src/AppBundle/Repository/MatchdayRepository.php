@@ -17,14 +17,16 @@ class MatchdayRepository extends EntityRepository
                     ,'s.id AS season_id'
                 )
            ->innerJoin('m.season', 's')
-           ->where('(m.dateFrom < :today) AND (m.dateTo > :today)')
+           ->where('m.dateFrom > :today')
+           ->setMaxResults(1)
            ->setParameter('today', $today->format('Y-m-d H:i:s'))
         ;
         
-        $result = $qb->getQuery()->getSingleResult();
-//        exit(\Doctrine\Common\Util\Debug::dump($result));
-        return $result;
+//        exit(\Doctrine\Common\Util\Debug::dump($qb));
         
+        $result = $qb->getQuery()->getSingleResult();
+        
+        return $result;
     }
     
 }

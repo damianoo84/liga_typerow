@@ -21,12 +21,14 @@
         </div>
         
         <div id="info_02">
-            {% block info %}
+            {% block info %} 
                 {% if app.user %}
                     {% for user in log_users() %}
                         {{ user.username }}
                     {% endfor %}
                 {% endif %}
+                {#    {{ dump('now'|date('d-m-Y')) }}#}
+                
                 {% if curr_matchday() is empty %}
                     Kolejny sezon już wkrótce
                 {% else %}

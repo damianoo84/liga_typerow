@@ -1,32 +1,36 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    
+    {% if 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y') and 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y') %}
+        {% set nextMatchday = true %}
+    {% else %}
+        {% set nextMatchday = false %}
+    {% endif %}
+    
+    {% for i in 1..15 %}
+        <a href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
+    {% endfor %}
+    
     <table>
-        {% if 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y') and 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y') %}
-            {% set nextMatchday = true %}
-        {% else %}
-            {% set nextMatchday = false %}
-        {% endif %}
-        
-        {% for i in 1..15 %}
-           <a href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
-        {% endfor %}
-        
+        <tr>
+            <th>Mecz/Gracze</th>
+            {% for user in get_users() %}
+            <th>{{ user }}</th>
+            {% endfor %}
+        </tr>
         {% for key,type in types %}
-            <tr>
-                <td>{{ type.meet }}</td>
-                    {% for tp in type.types %}
-                        {% if nextMatchday == true %}
-                            <td>*</td>
-                        {% else %}
-                            {% if loop.index % 2 %}
-                                <td>{{ tp }}</td>
-                            {% else %}
-                                <td>{{ tp }}</td>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-            </tr>
+        <tr>
+            <td>{{ type.meet }}</td>
+            {% for tp in type.types %}
+            {% if nextMatchday == true %}
+            <td>*</td>
+            {% else %}
+            <td>{{ tp }}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
         {% endfor %}
     </table>
+ 
 {% endblock %}

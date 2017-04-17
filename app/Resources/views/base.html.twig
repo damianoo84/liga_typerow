@@ -27,8 +27,8 @@
                         {{ user.username }}
                     {% endfor %}
                 {% endif %}
+                
                 {% if curr_matchday() is empty %}
-{#                {% if curr_matchday() == 0 or curr_matchday() is empty or curr_matchday() == NULL %}#}
                     Kolejny sezon już wkrótce
                 {% else %}
                     Kolejka {{ curr_matchday().name }}
@@ -41,7 +41,11 @@
         <div id="menu_03">
             <ul class="navigation" id="myNav">
                 <li><a href="{{ path('liga_typerow_table') }}">TABELA</a></li>
+                {% if curr_matchday() is not empty %}
+{#                <li><a href="">KUPON</a></li>#}
+{#                {% else %}#}
                 <li><a href="{{ path('liga_typerow_types') }}">KUPON</a></li>
+                {% endif %}
                 <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : 1}) }}">TYPY</a></li>
                 <li><a href="{{ path('liga_typerow_statistics') }}">STATYSTYKI</a></li>
                 <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>

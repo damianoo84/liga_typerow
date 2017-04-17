@@ -92,6 +92,8 @@ class TypeRepository extends EntityRepository
         
         $result = $qb->getQuery()->getResult();
         
+//        exit(\Doctrine\Common\Util\Debug::dump($result));
+        
         $meets = array();
         
         // Pobranie meczy z kolejki
@@ -101,19 +103,42 @@ class TypeRepository extends EntityRepository
         
         $type_per_meet = array();
         
+//        exit(\Doctrine\Common\Util\Debug::dump($meets));
         
+        // Pobranie użytkowników grających w obecnym sezonie
+//        $repoUser = $this->getEntityManager()->getRepository('AppBundle:User');
+//        $users = $repoUser->findBy(array('status' => 1), array('id' => 'ASC'));
+        
+//        exit(\Doctrine\Common\Util\Debug::dump(count($users)));
+        
+//        $my = array();
+//        
+//        foreach($users as $user){
+//            foreach ($result as $details){
+//                if($user->getUsername() == $details['username']){
+//                    $my[$user->getUsername()][] = $details['hostType'].' - '.$details['guestType'];
+//                }
+//            }
+//        }
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($my));
         
         // Pobranie wszystkich typów
         foreach($meets as $key => $value){
             foreach ($result as $details){
                 if($key == $details['meet_id']){
                     $type_per_meet[$details['meet_id']]['meet'] = $meets[$details['meet_id']];
-                    $type_per_meet[$details['meet_id']]['types'][] = $details['hostType'].' - '.$details['guestType'];
-                    $type_per_meet[$details['meet_id']]['username'][] = $details['username'];
+                    $type_per_meet[$details['meet_id']]['types'][] = $details['hostType'].' - '.$details['guestType']; 
+                    $type_per_meet[$details['meet_id']]['username'] = $details['username'];
                     
                 }
+                
             }
         }
+        
+
+        
+        
 //        exit(\Doctrine\Common\Util\Debug::dump($type_per_meet));
         return $type_per_meet;
     }

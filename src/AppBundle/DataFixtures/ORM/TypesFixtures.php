@@ -16,30 +16,32 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager) {
         
         $usersList = array(
-            'Damian',
+            'Piotrek 3',
+            'Kuba',
             'Wojtek',
-            'Mateusz',
-            'Marcin',
+            'Piotrek 2',
             'Krystian',
             'Piotrek 1',
-            'Tomek',
-            'Michał',
-            'Adam 1',
-            'Przemek 1'
+//            'Przemek 2',
+//            'Adam 2',
+            'Marcin',
+            'Damian'
         );
         
         $goals = array(0, 1, 2);
+        
+        foreach ($usersList as $user){
             for($i=1;$i<=10;$i++){
-                for($j=0;$j<10;$j++){
-                    $Type = new Type();
-                    $Type->setHostType(array_rand($goals))
-                            ->setGuestType(array_rand($goals))
-                            ->setUser($this->getReference('user-'.$usersList[$j]))
-                            ->setMeet($this->getReference('meet-Mecz '.$i))
-                            ;
-                    $manager->persist($Type);
-                }
+                $Type = new Type();
+                $Type->setHostType(array_rand($goals))
+                     ->setGuestType(array_rand($goals))
+                     ->setUser($this->getReference('user-'.$user))
+                     ->setMeet($this->getReference('meet-Mecz '.$i))
+                    ;
+                $manager->persist($Type);
             }
+        }   
+            
         $manager->flush();   
     }
 }

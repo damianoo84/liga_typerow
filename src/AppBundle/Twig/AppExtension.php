@@ -19,7 +19,8 @@ class AppExtension extends \Twig_Extension{
             new \Twig_SimpleFunction('curr_matchday', array($this, 'getCurrentMatchday')),
             new \Twig_SimpleFunction('log_users', array($this, 'usersLogged')),
             new \Twig_SimpleFunction('find_matchday', array($this, 'getMatchdayByName')),
-            new \Twig_SimpleFunction('get_users', array($this, 'getUsers'))
+            new \Twig_SimpleFunction('get_users', array($this, 'getUsers')),
+            new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday'))
         );
     }
     
@@ -44,7 +45,15 @@ class AppExtension extends \Twig_Extension{
         $repoUser = $this->doctrine->getRepository('AppBundle:User');
         $users = $repoUser->findBy(array('status' => 1), array('id' => 'ASC'));
 
-        return $users;
+        $usersList = array();
+        
+        foreach($users as $user){
+            $usersList[] = $user->getUsername();
+        }
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($users));
+        
+        return $usersList;
     }
     
     // get current logged users
@@ -54,4 +63,13 @@ class AppExtension extends \Twig_Extension{
         
         return $users;
     }
+    
+    // get current meets
+    public function meetsByMatchday($matchday){
+        $repository = $this->doctrine->getRepository('AppBundle:Meet');
+        $meets = $repository->findBy(array('matchday' => $matchday));
+        
+        return $meets;
+    }
+    
 }

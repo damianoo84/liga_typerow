@@ -19,92 +19,92 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2017-04-01',
-                'dateTo' => '2017-04-03',
+                'dateFrom' => '2017-04-29',
+                'dateTo' => '2017-05-01',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2017-04-03',
-                'dateTo' => '2017-04-05',
+                'dateFrom' => '2017-05-02',
+                'dateTo' => '2017-05-04',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2017-04-05',
-                'dateTo' => '2017-04-07',
+                'dateFrom' => '2017-05-05',
+                'dateTo' => '2017-05-07',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2017-04-07',
-                'dateTo' => '2017-04-09',
+                'dateFrom' => '2017-05-08',
+                'dateTo' => '2017-05-10',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2017-04-09',
-                'dateTo' => '2017-04-11',
+                'dateFrom' => '2017-05-11',
+                'dateTo' => '2017-05-13',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2017-04-11',
-                'dateTo' => '2017-04-13',
+                'dateFrom' => '2017-05-14',
+                'dateTo' => '2017-05-16',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2017-04-13',
-                'dateTo' => '2017-04-15',
+                'dateFrom' => '2017-05-17',
+                'dateTo' => '2017-05-19',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2017-04-15',
-                'dateTo' => '2017-04-17',
+                'dateFrom' => '2017-05-20',
+                'dateTo' => '2017-05-22',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2017-04-17',
-                'dateTo' => '2017-04-19',
+                'dateFrom' => '2017-05-23',
+                'dateTo' => '2017-05-25',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2017-04-19',
-                'dateTo' => '2017-04-21',
+                'dateFrom' => '2017-05-26',
+                'dateTo' => '2017-05-28',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2017-04-21',
-                'dateTo' => '2017-04-23',
+                'dateFrom' => '2017-05-29',
+                'dateTo' => '2017-05-31',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2017-04-23',
-                'dateTo' => '2017-04-25',
+                'dateFrom' => '2017-06-01',
+                'dateTo' => '2017-06-03',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2017-04-25',
-                'dateTo' => '2017-04-27',
+                'dateFrom' => '2017-06-04',
+                'dateTo' => '2017-06-06',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2017-04-27',
-                'dateTo' => '2017-04-29',
+                'dateFrom' => '2017-06-07',
+                'dateTo' => '2017-06-09',
                 'season_name' => 'Sezon 12'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2017-04-29',
-                'dateTo' => '2017-04-31',
+                'dateFrom' => '2017-06-10',
+                'dateTo' => '2017-06-12',
                 'season_name' => 'Sezon 12'
             )
             

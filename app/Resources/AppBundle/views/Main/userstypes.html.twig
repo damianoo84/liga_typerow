@@ -11,26 +11,16 @@
     {% for i in 1..15 %}
         <a href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
     {% endfor %}
-    
+
     <table>
-        <tr>
-            <th>Mecz/Gracze</th>
-            {% for user in get_users() %}
-            <th>{{ user }}</th>
-            {% endfor %}
-        </tr>
         {% for key,type in types %}
         <tr>
-            <td>{{ type.meet }}</td>
+            <td>{{ type.host }} - {{ type.guest }}</td>
             {% for tp in type.types %}
-            {% if nextMatchday == true %}
-            <td>*</td>
-            {% else %}
-            <td>{{ tp }}</td>
-            {% endif %}
+                <td>{{ tp }}</td>
             {% endfor %}
         </tr>
         {% endfor %}
     </table>
- 
+        
 {% endblock %}

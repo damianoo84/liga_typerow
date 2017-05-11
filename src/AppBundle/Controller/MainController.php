@@ -60,6 +60,8 @@ class MainController extends Controller{
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getTypesPerMeet($matchdayRepo->getName());
         
+//        exit(\Doctrine\Common\Util\Debug::dump($types));
+        
         return array('types' => $types);
     }
     

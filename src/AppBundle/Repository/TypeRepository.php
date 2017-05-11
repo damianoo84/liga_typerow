@@ -6,7 +6,7 @@ use Doctrine\ORM\EntityRepository;
 
 class TypeRepository extends EntityRepository
 {
-    /* Pobranie sumy punktów każdego użytkownika dla każdej kolejki */
+    // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
     public function getPointsPerMatchday(){
         
         $qb = $this->createQueryBuilder('t');
@@ -67,7 +67,7 @@ class TypeRepository extends EntityRepository
         return $points_per_matchday; 
     }
     
-    /* Pobranie typów każdego usera w danej kolejce  */
+    // Pobranie typów każdego usera w danej kolejce
     public function getTypesPerMeet($matchday){
         
         $qb = $this->createQueryBuilder('t');
@@ -92,55 +92,37 @@ class TypeRepository extends EntityRepository
         
         $result = $qb->getQuery()->getResult();
         
-//        exit(\Doctrine\Common\Util\Debug::dump($result));
+        $types = array();
         
-        $meets = array();
-        
-        // Pobranie meczy z kolejki
-        foreach ($result as $details){
-            $meets[$details['meet_id']] = $details['term'].':  '.$details['host'].' - '.$details['guest'];
-        }
-        
-        $type_per_meet = array();
-        
-//        exit(\Doctrine\Common\Util\Debug::dump($meets));
-        
-        // Pobranie użytkowników grających w obecnym sezonie
-//        $repoUser = $this->getEntityManager()->getRepository('AppBundle:User');
-//        $users = $repoUser->findBy(array('status' => 1), array('id' => 'ASC'));
-        
-//        exit(\Doctrine\Common\Util\Debug::dump(count($users)));
-        
-//        $my = array();
+//        $userstypes = array();
+//        $usersnotypes = array();
+//        $usersList = array();
 //        
-//        foreach($users as $user){
-//            foreach ($result as $details){
-//                if($user->getUsername() == $details['username']){
-//                    $my[$user->getUsername()][] = $details['hostType'].' - '.$details['guestType'];
-//                }
-//            }
+//        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+//        $users = $userRepo->findBy(array('status' => 1));
+//        
+//        foreach ($users as $user){
+//            $usersList[] = $user->getUsername();
 //        }
         
-//        exit(\Doctrine\Common\Util\Debug::dump($my));
-        
-        // Pobranie wszystkich typów
-        foreach($meets as $key => $value){
-            foreach ($result as $details){
-                if($key == $details['meet_id']){
-                    $type_per_meet[$details['meet_id']]['meet'] = $meets[$details['meet_id']];
-                    $type_per_meet[$details['meet_id']]['types'][] = $details['hostType'].' - '.$details['guestType']; 
-                    $type_per_meet[$details['meet_id']]['username'] = $details['username'];
-                    
-                }
+        foreach ($result as $detail) {
+            
+            if(!in_array($detail['meet_id'],$types)) {
                 
+                $types[$detail['meet_id']]['meet_id'] = $detail['meet_id'];
+                $types[$detail['meet_id']]['host'] = $detail['host'];
+                $types[$detail['meet_id']]['guest'] = $detail['guest'];
+                $types[$detail['meet_id']]['types'][] = $detail['hostType'].' - '.$detail['guestType'];
             }
+            
+//            $userstypes[] = $detail['username'];
         }
         
-
+//        $usersnotypes = array_diff($usersList, $userstypes);
         
+//        exit(\Doctrine\Common\Util\Debug::dump($types));
         
-//        exit(\Doctrine\Common\Util\Debug::dump($type_per_meet));
-        return $type_per_meet;
+        return $types;
     }
     
     // pobranie sumy meczy za 2pkt i meczy za 4pkt (dla statystyk)

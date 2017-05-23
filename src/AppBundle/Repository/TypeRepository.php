@@ -94,16 +94,21 @@ class TypeRepository extends EntityRepository
         
         $types = array();
         
-//        $userstypes = array();
-//        $usersnotypes = array();
-//        $usersList = array();
-//        
-//        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
-//        $users = $userRepo->findBy(array('status' => 1));
-//        
-//        foreach ($users as $user){
-//            $usersList[] = $user->getUsername();
-//        }
+        $userstypes = array();
+        $usersnotypes = array();
+        $usersList = array();
+        
+        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+        $users = $userRepo->findBy(array('status' => 1));
+        
+        foreach ($users as $user){
+            $usersList[] = $user->getUsername();
+        }
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($usersList));
+        
+//        $i = 0;
+//        $length = count($result);
         
         foreach ($result as $detail) {
             
@@ -112,12 +117,27 @@ class TypeRepository extends EntityRepository
                 $types[$detail['meet_id']]['meet_id'] = $detail['meet_id'];
                 $types[$detail['meet_id']]['host'] = $detail['host'];
                 $types[$detail['meet_id']]['guest'] = $detail['guest'];
-                $types[$detail['meet_id']]['types'][] = $detail['hostType'].' - '.$detail['guestType'];
+                
+                $userKey = array_search($detail['username'], $usersList);
+                
+                $types[$detail['meet_id']]['types'][$userKey] = $detail['hostType'].' - '.$detail['guestType'];
+                
+                
             }
             
+//            $i++;
+            
 //            $userstypes[] = $detail['username'];
+//            
+//            if($i == $length){
+//                
+//                $usersnotypes = array_diff($usersList, $userstypes);
+//                $types['notypes'] = $usersnotypes;
+//                
+//            }
         }
         
+//        var_dump($types);
 //        $usersnotypes = array_diff($usersList, $userstypes);
         
 //        exit(\Doctrine\Common\Util\Debug::dump($types));
@@ -185,6 +205,43 @@ class TypeRepository extends EntityRepository
         
         return $result;
     }
+    
+    // Uwaga! tutaj musiał być NativeSQL ponieważ zwykły QueryBuilder zwracał złe dane, 
+    // a potrzeba była złączenia entity User z entity Type w celu znalezienia tych userów 
+    // którzy jeszcze nie wytypowali
+    public function getUsersTypes($matchday){
+        
+        // 1. Pobieram typy użytkowników
+        $sql = 'SELECT t.meet_id,t.host_type AS hostType,t.guest_type AS guestType,u.username AS username '
+                . 'FROM user u LEFT JOIN type t ON t.user_id = u.id '
+                . 'WHERE u.STATUS = :status ORDER BY u.id';
+        $params = array('status' => 1);
+        $usersTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
+        
+        // 2. Pobieram mecze w danej kolejce
+        $meetRepo = $this->getEntityManager()->getRepository('AppBundle:Meet');
+        $meets = $meetRepo->getMeetsPerMatchday($matchday);
+        
+        $result = array();
+        
+        // 3. Złączenie dwóch powyzszych zapytań
+        foreach($meets as $meet){
+            foreach ($usersTypes as $types){
+                if($meet['meet_id'] == $types['meet_id']) {
+                    $result[$types['meet_id']]['types'][] = $types['hostType'].' - '.$types['guestType'];
+                }
+                if($types['meet_id'] == NULL){
+                        $result[$meet['meet_id']]['types'][] = '-';
+                }
+            }
+            $result[$meet['meet_id']]['meet_id'] = $meet['meet_id'];
+            $result[$meet['meet_id']]['host'] = $meet['host'];
+            $result[$meet['meet_id']]['guest'] = $meet['guest'];
+        }
+        
+        return $result;
+    }
+    
     
     
 }

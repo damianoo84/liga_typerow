@@ -19,4 +19,5 @@ class UserRepository extends EntityRepository
         ;
         return $qb->getQuery()->getResult();
     }
+    
 }

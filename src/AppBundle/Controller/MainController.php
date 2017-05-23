@@ -58,7 +58,7 @@ class MainController extends Controller{
         
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $types = $repository->getTypesPerMeet($matchdayRepo->getName());
+        $types = $repository->getUsersTypes($matchdayRepo->getName());
         
 //        exit(\Doctrine\Common\Util\Debug::dump($types));
         

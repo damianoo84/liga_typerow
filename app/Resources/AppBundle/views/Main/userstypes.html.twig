@@ -13,6 +13,12 @@
     {% endfor %}
 
     <table>
+      <tr>
+        <th>Mecze/Gracze</th>
+        {% for user in get_users() %}
+            <th>{{ user }}</th>
+        {% endfor %}
+      </tr>
         {% for key,type in types %}
         <tr>
             <td>{{ type.host }} - {{ type.guest }}</td>

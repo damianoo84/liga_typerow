@@ -187,7 +187,7 @@ class MainController extends Controller{
     public function recordsAction(){
         
         $records = array(
-            'Najwięcej punktów w jednej kolejce' => '26 - Piotrek 1(2x),Krystian,Kuba,Wojtek',
+            'Najwięcej punktów w jednej kolejce' => '26 - Piotrek 1(2x),Krystian,Kuba,Wojtek,Przemek 2',
             'Najwięcej punktów w sezonie' => '224 - Łukasz',
             'Największa przewaga punktowa zwycięzcy' => '18 - Piotrek 3',
             'Najwięcej trafionych meczy za 2 punkty' => '82 - Marcin',

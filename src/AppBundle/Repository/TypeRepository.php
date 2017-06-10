@@ -9,38 +9,21 @@ class TypeRepository extends EntityRepository
     // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
     public function getPointsPerMatchday(){
         
-        $qb = $this->createQueryBuilder('t');
-        $qb->select(
-                    'SUM(t.numberOfPoints) AS suma'
-                    ,'u.username AS username'
-                    ,'u.id AS user_id'
-                    ,'u.priority'
-                    ,'md.id as matchday'
-                )
-           ->innerJoin('t.meet', 'm')
-           ->innerJoin('m.matchday', 'md')     
-           ->innerJoin('t.user', 'u')
-           ->where('md.id BETWEEN 1 AND 15')
-           ->groupBy('u.username, md.id')
-        ; 
-        
-        /*
-            SELECT SUM(t.number_of_points) AS suma, u.username AS username, u.id AS user_id, u.priority, md.id as matchday 
-            FROM type t 
-            INNER JOIN meet m ON t.meet_id = m.id 
-            INNER JOIN matchday md ON m.matchday_id = md.id 
-            INNER JOIN user u ON t.user_id = u.id 
-            WHERE md.id 
-            BETWEEN 1 AND 15 
-            GROUP BY u.username, md.id
-         */
-        
-        
-        $result = $qb->getQuery()->getResult();
+        // 1. Pobieram sumę punktów każdego użytkownika w każdej kolejce
+        $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, md.id AS matchday '
+                . 'FROM user u '
+                . 'LEFT JOIN type t ON t.user_id = u.id '
+                . 'LEFT JOIN meet m ON t.meet_id = m.id '
+                . 'LEFT JOIN matchday md ON m.matchday_id = md.id '
+                . 'WHERE u.STATUS = :status '
+                . 'GROUP BY u.username, md.id '
+                . 'ORDER BY md.id, u.id ';
+        $params = array('status' => 1);
+        $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
         
         $users = array();
         
-        // 1. Sumuję łącznie wszystkie punkty ze wszystkich kolejek dla każdego usera
+        // 2. Sumuję łącznie wszystkie punkty ze wszystkich kolejek dla każdego usera
         foreach($result as $details){
             if(!isset($users[$details['user_id']])){
                 $users[$details['user_id']] = 0;
@@ -48,12 +31,12 @@ class TypeRepository extends EntityRepository
             $users[$details['user_id']] += (int)$details['suma'];
         }
         
-        // 2. Sortuję aby wiedzieć kto ma najwięcej punktów 
+        // 3. Sortuję aby wiedzieć kto ma najwięcej punktów 
         arsort($users);
         
         $points_per_matchday = array();
         
-        // 3. Przypisuję punkty dla każdej kolejki osobno dla posortowanych już userów
+        // 4. Przypisuję punkty dla każdej kolejki osobno dla posortowanych już userów
         //    według łącznej sumy wszystkich punktów ze wszystkich kolejek
         foreach($users as $key => $value){
             foreach ($result as $details){
@@ -64,85 +47,7 @@ class TypeRepository extends EntityRepository
             }
         }
         
-        return $points_per_matchday; 
-    }
-    
-    // Pobranie typów każdego usera w danej kolejce
-    public function getTypesPerMeet($matchday){
-        
-        $qb = $this->createQueryBuilder('t');
-        $qb->select(
-                     'm.id AS meet_id'
-                    ,'tm1.name AS host'
-                    ,'tm2.name AS guest'
-                    ,'t.hostType'
-                    ,'t.guestType'
-                    ,'u.username'
-                    ,'m.term'
-                )
-           ->innerJoin('t.meet', 'm')
-           ->innerJoin('m.hostTeam', 'tm1')
-           ->innerJoin('m.guestTeam', 'tm2')
-           ->innerJoin('m.matchday', 'md')     
-           ->innerJoin('t.user', 'u')
-           ->where('md.id = :matchday')
-           ->orderBy('u.id,m.id')
-           ->setParameter('matchday', $matchday)
-        ;
-        
-        $result = $qb->getQuery()->getResult();
-        
-        $types = array();
-        
-        $userstypes = array();
-        $usersnotypes = array();
-        $usersList = array();
-        
-        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
-        $users = $userRepo->findBy(array('status' => 1));
-        
-        foreach ($users as $user){
-            $usersList[] = $user->getUsername();
-        }
-        
-//        exit(\Doctrine\Common\Util\Debug::dump($usersList));
-        
-//        $i = 0;
-//        $length = count($result);
-        
-        foreach ($result as $detail) {
-            
-            if(!in_array($detail['meet_id'],$types)) {
-                
-                $types[$detail['meet_id']]['meet_id'] = $detail['meet_id'];
-                $types[$detail['meet_id']]['host'] = $detail['host'];
-                $types[$detail['meet_id']]['guest'] = $detail['guest'];
-                
-                $userKey = array_search($detail['username'], $usersList);
-                
-                $types[$detail['meet_id']]['types'][$userKey] = $detail['hostType'].' - '.$detail['guestType'];
-                
-                
-            }
-            
-//            $i++;
-            
-//            $userstypes[] = $detail['username'];
-//            
-//            if($i == $length){
-//                
-//                $usersnotypes = array_diff($usersList, $userstypes);
-//                $types['notypes'] = $usersnotypes;
-//                
-//            }
-        }
-        
-//        var_dump($types);
-//        $usersnotypes = array_diff($usersList, $userstypes);
-        
-//        exit(\Doctrine\Common\Util\Debug::dump($types));
-        
-        return $types;
+        return $points_per_matchday;
     }
     
     // pobranie sumy meczy za 2pkt i meczy za 4pkt (dla statystyk)

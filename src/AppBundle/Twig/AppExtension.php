@@ -20,7 +20,8 @@ class AppExtension extends \Twig_Extension{
             new \Twig_SimpleFunction('log_users', array($this, 'usersLogged')),
             new \Twig_SimpleFunction('find_matchday', array($this, 'getMatchdayByName')),
             new \Twig_SimpleFunction('get_users', array($this, 'getUsers')),
-            new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday'))
+            new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday')),
+            new \Twig_SimpleFunction('is_typed', array($this, 'isTyped'))
         );
     }
     
@@ -51,8 +52,6 @@ class AppExtension extends \Twig_Extension{
             $usersList[] = $user->getUsername();
         }
         
-//        exit(\Doctrine\Common\Util\Debug::dump($users));
-        
         return $usersList;
     }
     
@@ -70,6 +69,19 @@ class AppExtension extends \Twig_Extension{
         $meets = $repository->findBy(array('matchday' => $matchday));
         
         return $meets;
+    }
+    
+    // is typed 
+    public function isTyped($matchday, $user){
+        
+        $repository = $this->doctrine->getRepository('AppBundle:Type');
+        $isTyped = $repository->getUserTypes($matchday, $user);
+        
+        if(count($isTyped) != 0){
+            return true;
+        }
+        
+        return false;
     }
     
 }

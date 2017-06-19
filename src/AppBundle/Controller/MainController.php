@@ -57,8 +57,13 @@ class MainController extends Controller{
     public function userstypesAction(Request $request){
         
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($matchdayRepo));
+        
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getUsersTypes($matchdayRepo->getName());
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($types));
         
         return array('types' => $types);
     }
@@ -74,6 +79,18 @@ class MainController extends Controller{
     public function typesAction(Request $request){
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
+        
+        $repoType = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $types = $repoType->getUserTypes($matchday['id'], $this->getUser()->getId());
+        
+        $isTyped = false;
+        if(count($types) != 0){
+            $isTyped = true;
+        }
+        
+        if($isTyped == true){
+            return array('types' => $types);
+        }
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
@@ -118,9 +135,7 @@ class MainController extends Controller{
         
         return array('meets' => $meets);
     }
-    
-   
-    
+
     /**
      * @Route(
      *      "/statystyki",
@@ -212,8 +227,6 @@ class MainController extends Controller{
         
         return array('points' => $history);
     }
-
-    
 
     /**
      * @Route(

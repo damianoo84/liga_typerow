@@ -86,31 +86,6 @@ class TypeRepository extends EntityRepository
         return $stats;
     }
     
-    // sprawdzenie czy użytkownik wytypował już w danej kolejce
-    public function whoDidNotTyped($matchday){
-        
-        $qb = $this->createQueryBuilder('t');
-        $qb->select(
-                    'u.id AS user_id'
-                )
-           ->innerJoin('t.meet', 'm')
-           ->innerJoin('m.matchday', 'md')     
-           ->innerJoin('t.user', 'u')
-           ->where('md.id = :matchday')
-           ->andWhere('hostType <> null')
-           ->setParameter('matchday', $matchday)
-        ;
-        
-        // pobranie użytkowników, którzy wytypowali w danej kolejce
-        $result = $qb->getQuery()->getSingleResult();
-        
-        // pobranie wszystkich użytkowników obecnego sezonu ligi typerów (IDków)
-        
-        // zwrócenie użytkowików, którzy nie wytypowali jeszcze
-        
-        return $result;
-    }
-    
     // Uwaga! tutaj musiał być NativeSQL ponieważ zwykły QueryBuilder zwracał złe dane, 
     // a potrzeba była złączenia entity User z entity Type w celu znalezienia tych userów 
     // którzy jeszcze nie wytypowali
@@ -119,13 +94,18 @@ class TypeRepository extends EntityRepository
         // 1. Pobieram typy użytkowników
         $sql = 'SELECT t.meet_id,t.host_type AS hostType,t.guest_type AS guestType,u.username AS username '
                 . 'FROM user u LEFT JOIN type t ON t.user_id = u.id '
-                . 'WHERE u.STATUS = :status ORDER BY u.id';
+                . 'WHERE u.status = :status '
+                . 'ORDER BY u.id';
         $params = array('status' => 1);
         $usersTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($usersTypes));
         
         // 2. Pobieram mecze w danej kolejce
         $meetRepo = $this->getEntityManager()->getRepository('AppBundle:Meet');
         $meets = $meetRepo->getMeetsPerMatchday($matchday);
+        
+//        exit(\Doctrine\Common\Util\Debug::dump($meets));
         
         $result = array();
         
@@ -148,5 +128,23 @@ class TypeRepository extends EntityRepository
     }
     
     
-    
+    function getUserTypes($matchday,$user){
+        
+        // Pobranie typów użytkownika
+        $sql = 'SELECT tm1.name AS host, tm2.name AS guest,t.host_type AS hostType,t.guest_type AS guestType, l.name, m.term '
+                . 'FROM user u '
+                . 'LEFT JOIN type t ON t.user_id = u.id '
+                . 'LEFT JOIN meet m ON m.id = t.meet_id '
+                . 'LEFT JOIN team tm1 ON m.hostTeam_id = tm1.id '
+                . 'LEFT JOIN team tm2 ON m.guestTeam_id = tm2.id '
+                . 'LEFT JOIN league l ON m.league_id = l.id '
+                . 'LEFT JOIN matchday md ON md.id = m.matchday_id '
+                . 'WHERE u.id = :user '
+                . 'AND md.id = :matchday '
+                . 'ORDER BY m.id ';
+        $params = array('user' => $user, 'matchday' => $matchday);
+        $userTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
+        
+        return $userTypes;
+    }
 }

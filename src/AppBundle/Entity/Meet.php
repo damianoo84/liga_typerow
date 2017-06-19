@@ -62,6 +62,19 @@ class Meet {
     private $matchday;
     
     /**
+     * @ORM\ManyToOne(
+     *      targetEntity = "League",
+     * )
+     * 
+     * @ORM\JoinColumn(
+     *      name = "league_id",
+     *      referencedColumnName = "id",
+     *      onDelete = "SET NULL"
+     * )
+     */
+    private $league;
+    
+    /**
      *
      * @ORM\Column(type="integer", nullable=true) 
      */
@@ -75,17 +88,12 @@ class Meet {
     
     /**
      * @ORM\Column(type="string", length=160, nullable=true)
-     */
-    private $description;
-    
-    /**
-     * @ORM\Column(type="string", length=160, nullable=true)
      */    
     private $term;
     
     /**
      *
-     * @ORM\Column(type="integer", nullable=true) 
+     * @ORM\Column(type="integer") 
      */
     private $position;
 
@@ -166,30 +174,6 @@ class Meet {
     public function getGuestGoals()
     {
         return $this->guestGoals;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Meet
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
     }
 
     /**
@@ -380,5 +364,28 @@ class Meet {
         $this->updatedAt = $updatedAt;
 
         return $this;
+    }
+
+    /**
+     * Set league
+     *
+     * @param \AppBundle\Entity\League $league
+     * @return Meet
+     */
+    public function setLeague(\AppBundle\Entity\League $league = null)
+    {
+        $this->league = $league;
+
+        return $this;
+    }
+
+    /**
+     * Get league
+     *
+     * @return \AppBundle\Entity\League 
+     */
+    public function getLeague()
+    {
+        return $this->league;
     }
 }

@@ -38,6 +38,46 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'league' => 'Liga Hiszpańska'
             ),
             array(
+                'team_name' => 'Villareal CF',
+                'shortname' => 'Villareal CF',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Real Sociedad',
+                'shortname' => 'Real Sociedad',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Athletic Bilbao',
+                'shortname' => 'Athletic Bilbao',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Valencia CF',
+                'shortname' => 'Valencia CF',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Celta Vigo',
+                'shortname' => 'Celta Vigo',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Espaniol Barcelona',
+                'shortname' => 'Espaniol Barcelona',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Deportivo La Coruna',
+                'shortname' => 'Deportivo La Coruna',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Betis Sevilla',
+                'shortname' => 'Betis Sevilla',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
                 'team_name' => 'Manchester United',
                 'shortname' => 'Manchester United',
                 'league' => 'Liga Angielska'
@@ -67,6 +107,9 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'shortname' => 'Tottenham Londyn',
                 'league' => 'Liga Niemiecka'
             ), 
+            
+            
+            
             array(
                 'team_name' => 'Bayern Monachium',
                 'shortname' => 'Bayern Monachium',

@@ -13,11 +13,12 @@ class MeetRepository extends EntityRepository
                      'm.id AS meet_id'
                     ,'tm1.name AS host'
                     ,'tm2.name AS guest'
-                    ,'m.description'
+                    ,'l.name AS league'
                     ,'m.term'
             )
             ->innerJoin('m.hostTeam', 'tm1')
             ->innerJoin('m.guestTeam', 'tm2')
+            ->innerJoin('m.league', 'l')
             ->innerJoin('m.matchday', 'md')     
             ->where('md.id = :matchday')
             ->orderBy('m.id')

@@ -207,23 +207,23 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
             
         );
         
-//        $i = 1;
-//            foreach ($meetsList as $meetsDetails) {
-//                $Meet = new Meet();
-//                $Meet->setPosition($meetsDetails['position'])
-//                        ->setTerm($meetsDetails['term'])
-//                        ->setMatchday($this->getReference('matchday-'.$meetsDetails['matchday_name']))
-//                        ->setHostTeam($this->getReference('team-'.$meetsDetails['team_name_1']))
-//                        ->setGuestTeam($this->getReference('team-'.$meetsDetails['team_name_2']))
-//                        ->setName('Mecz '.$i)
-//                        ->setLeague($this->getReference('League 1'));
-//                        ;
-//                $this->addReference('meet-Mecz '.$i, $Meet);
-//                
-//                $manager->persist($Meet);
-//                $i++;
-//            }
-//        $manager->flush();
+        $i = 1;
+            foreach ($meetsList as $meetsDetails) {
+                $Meet = new Meet();
+                $Meet->setPosition($meetsDetails['position'])
+                        ->setTerm($meetsDetails['term'])
+                        ->setMatchday($this->getReference('matchday-'.$meetsDetails['matchday_name']))
+                        ->setHostTeam($this->getReference('team-'.$meetsDetails['team_name_1']))
+                        ->setGuestTeam($this->getReference('team-'.$meetsDetails['team_name_2']))
+                        ->setName('Mecz '.$i)
+                        ->setLeague($this->getReference('League 1'));
+                        ;
+                $this->addReference('meet-Mecz '.$i, $Meet);
+                
+                $manager->persist($Meet);
+                $i++;
+            }
+        $manager->flush();
         
     }
     

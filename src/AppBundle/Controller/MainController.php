@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use AppBundle\Form\ChangePasswordType;
 use AppBundle\Exception\UserException;
-//use AppBundle\Twig\AppExtension;
 
 class MainController extends Controller{
     
@@ -41,8 +40,7 @@ class MainController extends Controller{
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $points = $repository->getPointsPerMatchday();
-//        exit(\Doctrine\Common\Util\Debug::dump($matchday[0]->getName()));
-        
+
         return array('points' => $points);
     }
     
@@ -58,12 +56,8 @@ class MainController extends Controller{
         
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         
-//        exit(\Doctrine\Common\Util\Debug::dump($matchdayRepo));
-        
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
         $types = $repository->getUsersTypes($matchdayRepo->getName());
-        
-//        exit(\Doctrine\Common\Util\Debug::dump($types));
         
         return array('types' => $types);
     }
@@ -283,6 +277,18 @@ class MainController extends Controller{
      * @Template()
      */
     public function validationAction(){
+        return array();
+    }
+    
+    /**
+     * @Route(
+     *      "/mytest",
+     *      name = "liga_typerow_mytest"
+     * )
+     * 
+     * @Template()
+     */
+    public function myTestAction(){
         return array();
     }
     

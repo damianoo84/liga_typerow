@@ -2,55 +2,85 @@
 
 {% block content %}
     
-        <table>
-            <tr>
-                <th>Opis</th>
-                <th>Gospodarz</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Gość</th>
-                <th>Termin</th>
-            </tr>
+
             
+            {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
             {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
                 
+                <table class="tab_types">
+                    <tr class="col_name">
+                        <th>Opis</th>
+                        <th>Gospodarz</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Gość</th>
+                        <th>Termin</th>
+                    </tr>
+                
                 {% for key,type in types %}
-                    <tr>          
-                        <td class="desc">{{ type.league }}</td>
-                        <td>{{ type.host }}</td>
-                        <td>{{ type.hostType }}</td>
-                        <td>-</td>
-                        <td>{{ type.guestType }}</td>
-                        <td>{{ type.guest }}</td>
+                    <tr class="big_screen">          
+                        <td class="desc">{{ type.name }}</td>
+                        <td class="type">{{ type.host }}</td>
+                        <td class="host">{{ type.hostType }}</td>
+                        <td class="gap">-</td>
+                        <td class="guest">{{ type.guestType }}</td>
+                        <td class="type">{{ type.guest }}</td>
                         <td class="term">{{ type.term }}</td>
                     </tr>
+                    
+                    <tr class="small_screen"><td>{{ type.name }}</td></tr>
+                    <tr class="small_screen"><td>{{ type.host }}</td></tr>
+                    <tr class="small_screen"><td>-</td></tr>
+                    <tr class="small_screen"><td>{{ type.guestType }}</td></tr>
+                    <tr class="small_screen"><td>{{ type.term }}</td></tr>
+                    
                 {% endfor %}
                 
+                </table>
             {% else %}
                 
                 <form id="form">
+                <table class="tab_types">
                 {% for key,meet in meets %}
-                    <tr>
-                        <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}">           
+                    <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  
+                    <tr class="big_screen">
                         <td class="desc">{{ meet.league }}</td>
-                        <td>{{ meet.host }}</td>
-                        <td><input type="text" class="tp" name="hostType[]" maxlength='1'></td>
-                        <td>-</td>
-                        <td><input type="text" class="tp" name="guestType[]" maxlength='1'></td>
-                        <td>{{ meet.guest }}</td>
+                        <td class="host">{{ meet.host }}</td>
+                        <td class="type"><input type="text" class="tp" name="hostType[]" maxlength='1'></td>
+                        <td class="gap">-</td>
+                        <td class="type"><input type="text" class="tp" name="guestType[]" maxlength='1'></td>
+                        <td class="guest">{{ meet.guest }}</td>
                         <td class="term">{{ meet.term }}</td>
                     </tr>
+                    
+                    <tr class="small_screen">
+                        <td class="position">{{loop.index}}.</td>
+                        <td class="team_name">
+                            {{ meet.host }}
+                        </td>
+                        <td class="user_type">
+                            <input type="text" class="tp" name="hostType[]" maxlength='1' />
+                        </td>
+                    </tr>
+                    
+                    <tr class="small_screen">
+                        <td class="position"></td>
+                        <td class="team_name">
+                            {{ meet.guest }}
+                        </td>
+                        <td class="user_type">
+                            <input type="text" class="tp" name="guestType[]" maxlength='1' />
+                        </td>
+                    </tr>
                 {% endfor %}
-                    <tr><input type="submit"  value="Wyślij"  class="space"/></tr>
+                    <tr>
+                        <td><input type="submit"  value="Wyślij"  class="space"/></td>
+                    </tr>
+                </table>
                 </form>
-                
             {% endif %}
-            
-        </table>
-            
-        
-                
+                 
         <script type="text/javascript">
             $(function(){
                $("#form").submit(function(e){

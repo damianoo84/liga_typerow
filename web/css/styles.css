@@ -87,10 +87,6 @@ ul.navigation li.icon {display: none;}
     }
 }
 
-
-
-
-
 /* content */
 #content_04{
     position:relative;
@@ -99,77 +95,6 @@ ul.navigation li.icon {display: none;}
     width:100%;
     height:520px;
 }
-
-table { 
-  width: 100%; 
-  border-collapse: collapse; 
-}
-tr:nth-of-type(odd) { 
-  background: #eee; 
-}
-th { 
-  background: #333; 
-  color: white; 
-  font-weight: bold; 
-}
-td, th { 
-  padding: 6px; 
-  border: 1px solid #ccc; 
-  text-align: center; 
-}
-
-
-@media screen and (max-width:680px) {
-
-    table, thead, tbody, th, td, tr { 
-	display: block; 
-    }
-	
-    td { 
-	border-bottom: 1px solid #eee; 
-	position: relative;
-        text-align: center;
-    }
-	
-    td:before { 
-	position: absolute;
-	top: 6px;
-	left: 6px;
-	width: 45%; 
-	padding-right: 10px; 
-	white-space: nowrap;
-    }
-        
-    td.term{display: none;}
-    td.desc{display: none;}    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-input[type="text"].tp {
-    width: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* stopka */
 #footer_05{
@@ -184,4 +109,79 @@ input[type="text"].tp {
 #footer_05 > img {
     width: 100%;
     height: 100%;
+}
+
+
+/* USTAWIENIA DLA KAŻDEGO EKRANU   */
+
+table.tab_types { 
+    width: 100%; 
+    /*border-collapse: collapse;*/ 
+}
+
+
+
+
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+}
+
+
+ input[type="text"].tp {
+    width: 10px;
+}
+
+
+
+/* USTAWIENIA DLA DUŻEGO EKRANU   */
+
+@media screen and (min-width:680px) {
+
+    /* niewidoczne */
+    tr.small_screen{
+        display: none;
+    }
+    
+    tr:nth-of-type(odd) { 
+        background: #eee; 
+    }
+    
+}
+
+/* USTAWIENIA DLA MAŁEGO EKRANU   */
+
+@media screen and (max-width:680px) {
+
+    /* niewidoczne */
+    tr.big_screen,td.term,td.desc,
+    tr.col_name,td.gap,td.host,
+    td.guest,td.type {
+        display: none;
+    }
+    
+    /* widoczne */
+    td.position{
+        width: 10%;
+    }
+    
+    td.team_name{
+        text-align: left;
+        width: 80%;
+    }
+    
+    td.user_type{
+        width: 10%;
+    }
+    
+    tr.small_screen:nth-of-type(3n) { 
+        background: #eee; 
+    }
 }

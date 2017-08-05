@@ -18,95 +18,94 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2017-06-25',
-                'dateTo' => '2017-06-27',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-09-11',
+                'dateTo' => '2017-09-17',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2017-06-28',
-                'dateTo' => '2017-06-30',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-09-18',
+                'dateTo' => '2017-09-24',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2017-07-01',
-                'dateTo' => '2017-07-03',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-09-25',
+                'dateTo' => '2017-10-01',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2017-07-04',
-                'dateTo' => '2017-07-06',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-10-02',
+                'dateTo' => '2017-10-08',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2017-06-26',
-                'dateTo' => '2017-06-28',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-10-09',
+                'dateTo' => '2017-10-15',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2017-06-29',
-                'dateTo' => '2017-07-01',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-10-16',
+                'dateTo' => '2017-10-22',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2017-07-03',
-                'dateTo' => '2017-07-05',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-10-23',
+                'dateTo' => '2017-10-29',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2017-07-04',
-                'dateTo' => '2017-07-06',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-10-30',
+                'dateTo' => '2017-11-05',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2017-07-07',
-                'dateTo' => '2017-07-09',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-11-06',
+                'dateTo' => '2017-11-12',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2017-07-10',
-                'dateTo' => '2017-07-12',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-11-13',
+                'dateTo' => '2017-11-19',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2017-07-13',
-                'dateTo' => '2017-07-15',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-11-20',
+                'dateTo' => '2017-11-26',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2017-07-16',
-                'dateTo' => '2017-07-18',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-11-27',
+                'dateTo' => '2017-12-03',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2017-07-19',
-                'dateTo' => '2017-07-21',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-12-04',
+                'dateTo' => '2017-12-10',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2017-07-22',
-                'dateTo' => '2017-07-24',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-12-11',
+                'dateTo' => '2017-12-17',
+                'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2017-07-25',
-                'dateTo' => '2017-07-27',
-                'season_name' => 'Sezon 12'
+                'dateFrom' => '2017-12-18',
+                'dateTo' => '2017-12-24',
+                'season_name' => 'Sezon 13'
             )
-            
         );
         
         foreach ($matchdaysList as $matchdaysDetails) {

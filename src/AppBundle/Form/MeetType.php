@@ -6,6 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use AppBundle\Entity\League;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Doctrine\ORM\EntityRepository;
 
 class MeetType extends AbstractType
 {
@@ -25,13 +27,13 @@ class MeetType extends AbstractType
                 ->add('guestTeam')
                 ->add('matchday')
                 ->add('league')
-//                ->add('league', 'collection', array(
-//                    'type' => new League(),
-//                    'allow_add' => true,
-//                    'allow_delete' => true,
-//                    'by_reference' => false,)
-//                )
-            ;
+//                ->add('league', EntityType::class, array(
+//                    'class' => 'AppBundle:League',
+//                    'query_builder' => function (EntityRepository $er) {
+//                            return $er->createQueryBuilder('l');
+//                    },
+//                    'choice_label' => 'league',
+                ;
         
 //        exit(\Doctrine\Common\Util\Debug::dump($builder));
     }

@@ -2,84 +2,56 @@
 
 {% block content %}
     
-
-            
-            {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
-            {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
-                
-                <table class="tab_types">
-                    <tr class="col_name">
-                        <th>Opis</th>
-                        <th>Gospodarz</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th>Gość</th>
-                        <th>Termin</th>
-                    </tr>
-                
-                {% for key,type in types %}
-                    <tr class="big_screen">          
-                        <td class="desc">{{ type.name }}</td>
-                        <td class="type">{{ type.host }}</td>
-                        <td class="host">{{ type.hostType }}</td>
-                        <td class="gap">-</td>
-                        <td class="guest">{{ type.guestType }}</td>
-                        <td class="type">{{ type.guest }}</td>
-                        <td class="term">{{ type.term }}</td>
-                    </tr>
-                    
-                    <tr class="small_screen"><td>{{ type.name }}</td></tr>
-                    <tr class="small_screen"><td>{{ type.host }}</td></tr>
-                    <tr class="small_screen"><td>-</td></tr>
-                    <tr class="small_screen"><td>{{ type.guestType }}</td></tr>
-                    <tr class="small_screen"><td>{{ type.term }}</td></tr>
-                    
-                {% endfor %}
-                
-                </table>
-            {% else %}
-                
-                <form id="form">
-                <table class="tab_types">
-                {% for key,meet in meets %}
-                    <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  
-                    <tr class="big_screen">
-                        <td class="desc">{{ meet.league }}</td>
-                        <td class="host">{{ meet.host }}</td>
-                        <td class="type"><input type="text" class="tp" name="hostType[]" maxlength='1'></td>
-                        <td class="gap">-</td>
-                        <td class="type"><input type="text" class="tp" name="guestType[]" maxlength='1'></td>
-                        <td class="guest">{{ meet.guest }}</td>
-                        <td class="term">{{ meet.term }}</td>
-                    </tr>
-                    
-                    <tr class="small_screen">
-                        <td class="position">{{loop.index}}.</td>
-                        <td class="team_name">
-                            {{ meet.host }}
-                        </td>
-                        <td class="user_type">
-                            <input type="text" class="tp" name="hostType[]" maxlength='1' />
-                        </td>
-                    </tr>
-                    
-                    <tr class="small_screen">
-                        <td class="position"></td>
-                        <td class="team_name">
-                            {{ meet.guest }}
-                        </td>
-                        <td class="user_type">
-                            <input type="text" class="tp" name="guestType[]" maxlength='1' />
-                        </td>
-                    </tr>
-                {% endfor %}
-                    <tr>
-                        <td><input type="submit"  value="Wyślij"  class="space"/></td>
-                    </tr>
-                </table>
-                </form>
-            {% endif %}
+    {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
+    {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
+        <table class="tab_types">
+            <tr class="col_name">
+                <th>Opis</th>
+                <th>Gospodarz</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Gość</th>
+                <th>Termin</th>
+            </tr>
+            {% for key,type in types %}
+            <tr class="big_screen">          
+                <td class="league">{{ type.name }}</td>
+                <td class="team_name">{{ type.host }}</td>
+                <td class="user_type">{{ type.hostType }}</td>
+                <td class="gap">-</td>
+                <td class="user_type">{{ type.guestType }}</td>
+                <td class="team_name">{{ type.guest }}</td>
+                <td class="term">{{ type.term }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {# w innym przypadku wyświetl formularz do wypełnienia #} 
+    {% else %}
+        <form id="form">
+        <table class="tab_types">
+            {% for key,meet in meets %}
+            <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  
+            <tr class="big_screen">
+                <td class="league">{{ meet.league }}</td>
+                <td class="team_name">{{ meet.host }}</td>
+                <td class="user_type">
+                    <input type="text" class="tp" name="hostType[]" maxlength='1' />
+                </td>
+                <td class="gap">-</td>
+                <td class="user_type">
+                    <input type="text" class="tp" name="guestType[]" maxlength='1' />
+                </td>
+                <td class="team_name">{{ meet.guest }}</td>
+                <td class="term">{{ meet.term }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td><input type="submit"  value="Wyślij"/></td>
+            </tr>
+        </table>
+        </form>
+    {% endif %}
                  
         <script type="text/javascript">
             $(function(){

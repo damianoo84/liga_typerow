@@ -119,9 +119,6 @@ table.tab_types {
     /*border-collapse: collapse;*/ 
 }
 
-
-
-
 th { 
     background: #333; 
     color: white; 
@@ -134,26 +131,19 @@ td, th {
     text-align: center; 
 }
 
-
- input[type="text"].tp {
+input[type="text"].tp {
     width: 10px;
 }
 
-
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
 
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 
 @media screen and (min-width:680px) {
 
-    /* niewidoczne */
-    tr.small_screen{
-        display: none;
-    }
-    
-    tr:nth-of-type(odd) { 
-        background: #eee; 
-    }
-    
+
 }
 
 /* USTAWIENIA DLA MAŁEGO EKRANU   */
@@ -161,27 +151,8 @@ td, th {
 @media screen and (max-width:680px) {
 
     /* niewidoczne */
-    tr.big_screen,td.term,td.desc,
-    tr.col_name,td.gap,td.host,
-    td.guest,td.type {
+    tr.col_name,td.gap,td.term,td.league{
         display: none;
     }
     
-    /* widoczne */
-    td.position{
-        width: 10%;
-    }
-    
-    td.team_name{
-        text-align: left;
-        width: 80%;
-    }
-    
-    td.user_type{
-        width: 10%;
-    }
-    
-    tr.small_screen:nth-of-type(3n) { 
-        background: #eee; 
-    }
 }

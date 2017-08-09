@@ -19,92 +19,92 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
         $teamsList = array(
             array(
                 'team_name' => 'FC Barcelona',
-                'shortname' => 'FC Barcelona',
+                'shortname' => 'FCB',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Real Madryt',
-                'shortname' => 'Real Madryt',
+                'shortname' => 'REA',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Atletico Madryt',
-                'shortname' => 'Atletico Madryt',
+                'shortname' => 'ATL',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Sevilla FC',
-                'shortname' => 'Sevilla FC',
+                'shortname' => 'SEV',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Villareal CF',
-                'shortname' => 'Villareal CF',
+                'shortname' => 'VIL',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Real Sociedad',
-                'shortname' => 'Real Sociedad',
+                'shortname' => 'SOC',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Athletic Bilbao',
-                'shortname' => 'Athletic Bilbao',
+                'shortname' => 'ATH',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Valencia CF',
-                'shortname' => 'Valencia CF',
+                'shortname' => 'VAL',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Celta Vigo',
-                'shortname' => 'Celta Vigo',
+                'shortname' => 'VIG',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Espaniol Barcelona',
-                'shortname' => 'Espaniol Barcelona',
+                'shortname' => 'ESP',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Deportivo La Coruna',
-                'shortname' => 'Deportivo La Coruna',
+                'shortname' => 'DEP',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Betis Sevilla',
-                'shortname' => 'Betis Sevilla',
+                'shortname' => 'BET',
                 'league' => 'Liga Hiszpańska'
             ),
             array(
                 'team_name' => 'Manchester United',
-                'shortname' => 'Manchester United',
+                'shortname' => 'MAN',
                 'league' => 'Liga Angielska'
             ),
             array(
                 'team_name' => 'Manchester City',
-                'shortname' => 'Manchester City',
+                'shortname' => 'CIT',
                 'league' => 'Liga Angielska'
             ),
             array(
                 'team_name' => 'Arsenal Londyn',
-                'shortname' => 'Arsenal Londyn',
+                'shortname' => 'ARS',
                 'league' => 'Liga Angielska'
             ),
             array(
                 'team_name' => 'Liverpool FC',
-                'shortname' => 'Liverpool FC',
+                'shortname' => 'LIV',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Chelsea Londyn',
-                'shortname' => 'Chelsea Londyn',
+                'shortname' => 'CHS',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Tottenham Londyn',
-                'shortname' => 'Tottenham Londyn',
+                'shortname' => 'TOT',
                 'league' => 'Liga Niemiecka'
             ), 
             
@@ -112,52 +112,52 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
             
             array(
                 'team_name' => 'Bayern Monachium',
-                'shortname' => 'Bayern Monachium',
+                'shortname' => 'BAY',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Borussia Dortmund',
-                'shortname' => 'Borussia Dortmund',
+                'shortname' => 'BVB',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Bayer Leverkusen',
-                'shortname' => 'Bayer Leverkusen',
+                'shortname' => 'LEV',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Schalke 04 Gelsenkirchen',
-                'shortname' => 'Schalke 04',
+                'shortname' => 'SCH',
                 'league' => 'Liga Niemiecka'
             ), 
             array(
                 'team_name' => 'Juventus Turyn',
-                'shortname' => 'Juventus Turyn',
+                'shortname' => 'JUV',
                 'league' => 'Liga Włoska'
             ),   
             array(
                 'team_name' => 'AC Milan',
-                'shortname' => 'AC Milan',
+                'shortname' => 'ACM',
                 'league' => 'Liga Włoska'
             ), 
             array(
                 'team_name' => 'AS Roma',
-                'shortname' => 'AS Roma',
+                'shortname' => 'ASR',
                 'league' => 'Liga Włoska'
             ), 
              array(
                 'team_name' => 'Lazio Rzym',
-                'shortname' => 'Lazio Rzym',
+                'shortname' => 'LAZ',
                 'league' => 'Liga Włoska'
             ), 
             array(
                 'team_name' => 'Inter Mediolan',
-                'shortname' => 'Inter Mediolan',
+                'shortname' => 'INT',
                 'league' => 'Liga Włoska'
             ), 
             array(
                 'team_name' => 'SSC Napoli',
-                'shortname' => 'SSC Napoli',
+                'shortname' => 'NAP',
                 'league' => 'Liga Włoska'
             ), 
             

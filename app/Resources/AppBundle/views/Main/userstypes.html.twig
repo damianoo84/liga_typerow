@@ -9,11 +9,12 @@
     {% endif %}
     
     {% for i in 1..15 %}
-        <a href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
+        <a class="type_matchday_big_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
+        <a class="type_matchday_small_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">{{ i }}</a> 
     {% endfor %}
 
     <table>
-      <tr>
+      <tr class="type_header">
         <th>Mecze/Gracze</th>
         {% for user in get_users() %}
             <th>{{ user }}</th>
@@ -21,9 +22,14 @@
       </tr>
         {% for key,type in types %}
         <tr>
-            <td>{{ type.host }} - {{ type.guest }}</td>
+            <td class="team_fullname">{{ type.host }} - {{ type.guest }}</td>
+            <td class="team_shortname">{{ type.host_shortname }} - {{ type.guest_shortname }}</td>
             {% for tp in type.types %}
-                <td>{{ tp }}</td>
+                {% if nextMatchday == true and tp != '-' %}
+                    <td>*</td>
+                {% else %}
+                    <td>{{ tp }}</td> 
+                {% endif %}
             {% endfor %}
         </tr>
         {% endfor %}

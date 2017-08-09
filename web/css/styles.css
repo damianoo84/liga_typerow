@@ -143,7 +143,9 @@ tr:nth-of-type(odd) {
 
 @media screen and (min-width:680px) {
 
-
+    td.team_shortname,a.type_matchday_small_screen{
+        display: none;
+    }
 }
 
 /* USTAWIENIA DLA MAŁEGO EKRANU   */
@@ -151,7 +153,9 @@ tr:nth-of-type(odd) {
 @media screen and (max-width:680px) {
 
     /* niewidoczne */
-    tr.col_name,td.gap,td.term,td.league{
+    tr.col_name,td.gap,td.term,
+    td.league,td.team_fullname,
+    tr.type_header,a.type_matchday_big_screen{
         display: none;
     }
     

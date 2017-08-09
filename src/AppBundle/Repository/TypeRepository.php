@@ -122,6 +122,8 @@ class TypeRepository extends EntityRepository
             $result[$meet['meet_id']]['meet_id'] = $meet['meet_id'];
             $result[$meet['meet_id']]['host'] = $meet['host'];
             $result[$meet['meet_id']]['guest'] = $meet['guest'];
+            $result[$meet['meet_id']]['host_shortname'] = $meet['host_shortname'];
+            $result[$meet['meet_id']]['guest_shortname'] = $meet['guest_shortname'];
         }
         
         return $result;

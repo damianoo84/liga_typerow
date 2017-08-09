@@ -12,7 +12,9 @@ class MeetRepository extends EntityRepository
         $qb->select(
                      'm.id AS meet_id'
                     ,'tm1.name AS host'
+                    ,'tm1.shortname AS host_shortname'
                     ,'tm2.name AS guest'
+                    ,'tm2.shortname AS guest_shortname'
                     ,'l.name AS league'
                     ,'m.term'
             )

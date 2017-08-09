@@ -24,7 +24,7 @@
             {% block info %} 
                 {% if app.user %}
                     {% for user in log_users() %}
-                        {{ user.username }}
+                        Obecnie zalogowani: {{ user.username }}
                     {% endfor %}
                 {% endif %}
                 

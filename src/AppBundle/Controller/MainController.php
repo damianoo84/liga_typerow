@@ -209,15 +209,15 @@ class MainController extends Controller{
     
     /**
      * @Route(
-     *      "/historia",
+     *      "/historia/{season}",
      *      name = "liga_typerow_history"
      * )
      * @Template()
      */
-    public function historyAction(){
+    public function historyAction(Request $request){
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:History');
-        $history = $repository->getHistory(11);
+        $history = $repository->getHistory($request->get('season'));
         
         return array('points' => $history);
     }

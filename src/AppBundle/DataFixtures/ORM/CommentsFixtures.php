@@ -47,7 +47,7 @@ class CommentsFixtures extends AbstractFixture implements OrderedFixtureInterfac
             $manager->persist($Comment);
         }
         
-        $manager->flush();
+//        $manager->flush();
         
         
         

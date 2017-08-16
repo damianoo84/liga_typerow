@@ -1,26 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <table>
+    <table class="tab_types">
         <tr>
-            <th>Gracz</th>
-            <th>Śr. pkt na kol.</th>
-            <th>Sezony</th>
-            <th>Kolejki</th>
-            <th>Punkty</th>
-            <th>Mecze 2pkt</th>
-            <th>Mecze 4pkt</th>
-            <th>Wygrane</th>
+            <th></th>
+            <th class="th_rank_username">Gracz</th>
+            <th class="th_rank_pkt">Śr. pkt na kol.</th>
+            <th class="th_rank_seasons">Sezony</th>
+            <th class="th_rank_queue">Kolejki</th>
+            <th class="th_rank_total">Punkty</th>
+            <th class="th_rank_match_2">Mecze 2pkt</th>
+            <th class="th_rank_match_4">Mecze 4pkt</th>
+            <th class="th_rank_win">Wygrane</th>
         </tr>
         {% for rank in ranks %}
             <tr>
-                <td>{{ rank.username }}</td>
-                <td>{{ rank.avgPtsForMatch }}</td>
-                <td>{{ rank.seasons }}</td>
-                <td>{{ rank.numOfQue }}</td>
-                <td>{{ rank.totalpoints }}</td>
-                <td>{{ rank.match2 }}</td>
-                <td>{{ rank.match4 }}</td>
+                <td>{{ loop.index }}.</td>
+                <td class="rank_username">{{ rank.username }}</td>
+                <td class="rank_ptk">{{ rank.avgPtsForMatch|round(2,'floor') }}</td>
+                <td class="rank_seasons">{{ rank.seasons }}</td>
+                <td class="rank_queue">{{ rank.numOfQue }}</td>
+                <td class="rank_total">{{ rank.totalpoints }}</td>
+                <td class="rank_match_2">{{ rank.match2 }}</td>
+                <td class="rank_match_4">{{ rank.match4 }}</td>
+                <td class="rank_win"></td>
             </tr>
         {% endfor %}
         <tr>

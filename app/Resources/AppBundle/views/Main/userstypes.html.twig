@@ -8,12 +8,9 @@
         {% set nextMatchday = false %}
     {% endif %}
     
-    {% for i in 1..15 %}
-        <a class="type_matchday_big_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
-        <a class="type_matchday_small_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">{{ i }}</a> 
-    {% endfor %}
 
-    <table>
+
+    <table class="tab_types">
       <tr class="type_header">
         <th>Mecze/Gracze</th>
         {% for user in get_users() %}
@@ -25,14 +22,23 @@
             <td class="team_fullname">{{ type.host }} - {{ type.guest }}</td>
             <td class="team_shortname">{{ type.host_shortname }} - {{ type.guest_shortname }}</td>
             {% for tp in type.types %}
-                {% if nextMatchday == true and tp != '-' %}
-                    <td>*</td>
+                {% if nextMatchday == false and tp != '-' %}
+                    <td class="type_type">*</td>
                 {% else %}
-                    <td>{{ tp }}</td> 
+                    <td class="type_type">{{ tp }}</td> 
                 {% endif %}
             {% endfor %}
         </tr>
         {% endfor %}
     </table>
-        
+    
+    <div class="list">
+         <br />
+         <p class="queque_number">Nr. kolejki</p>
+    {% for i in 1..15 %}
+        <a class="type_matchday_big_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
+        <a class="type_matchday_small_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">{{ i }}</a> 
+    {% endfor %} 
+    </div>   
+    
 {% endblock %}

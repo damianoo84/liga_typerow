@@ -21,7 +21,9 @@ class AppExtension extends \Twig_Extension{
             new \Twig_SimpleFunction('find_matchday', array($this, 'getMatchdayByName')),
             new \Twig_SimpleFunction('get_users', array($this, 'getUsers')),
             new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday')),
-            new \Twig_SimpleFunction('is_typed', array($this, 'isTyped'))
+            new \Twig_SimpleFunction('is_typed', array($this, 'isTyped')),
+            new \Twig_SimpleFunction('sum_comments', array($this, 'getSumComments')),
+            new \Twig_SimpleFunction('get_season', array($this, 'getSeasonId'))
         );
     }
     
@@ -82,6 +84,24 @@ class AppExtension extends \Twig_Extension{
         }
         
         return false;
+    }
+    
+    public function getSumComments($season){
+        
+        $repository = $this->doctrine->getRepository('AppBundle:Comment');
+        $comment = $repository->findBySeason($season);
+        $sum = count($comment);
+        
+        return $sum;
+    }
+    
+    public function getSeasonId(){
+        
+        $repository = $this->doctrine->getRepository('AppBundle:Season');
+        $season = $repository->find(13);
+        
+        return $season->getId();
+        
     }
     
 }

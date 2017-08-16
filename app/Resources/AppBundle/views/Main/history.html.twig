@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <table>
+    
+    <table class="tab_types">
       <tr>
+        <th></th>
         <th>Gracz</th>
         {% for i in 0..14 %}
         <th>{{loop.index}}</th>
@@ -11,8 +13,9 @@
       </tr>
         {% for key,point in points %}
             <tr>
+                <td>{{ loop.index }}.</td>
                 {% set sum = 0 %}
-                    <td>{{ loop.index }}.{{ point.username }}</td>
+                    <td class="rank_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
                         <td>{{ pt }}</td>
@@ -30,4 +33,14 @@
             </tr>
         {% endfor %}
     </table>
+      
+    <div class="list">
+        <br />
+        <p class="queque_number">Nr. sezonu</p>
+    {% for i in 1..12 %}
+        <a class="history_season_big_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">Sezon {{ i }}</a> 
+        <a class="history_season_small_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ i }}</a> 
+    {% endfor %}
+    </div>
+        
 {% endblock %}

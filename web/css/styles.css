@@ -139,11 +139,41 @@ tr:nth-of-type(odd) {
     background: #eee; 
 }
 
+td.team_fullname,td.team_shortname,td.rank_username{
+    text-align: left;
+}
+
+td.table_loop{
+    width: 1%;
+}
+
+td.table_username{
+    text-align: left;
+    width: 15%;
+}
+
+td.table_pkt{
+    width: 5%;
+}
+
+td.table_sum{
+    width: 9%;
+}
+
+div.list{
+    text-align: center;
+    font-size: x-small;
+    height: 40px;
+    vertical-align: bottom;
+    bottom: 0;
+}
+
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 
 @media screen and (min-width:680px) {
 
-    td.team_shortname,a.type_matchday_small_screen{
+    td.team_shortname,a.type_matchday_small_screen,
+    a.history_season_small_screen,p.queque_number{
         display: none;
     }
 }
@@ -155,7 +185,13 @@ tr:nth-of-type(odd) {
     /* niewidoczne */
     tr.col_name,td.gap,td.term,
     td.league,td.team_fullname,
-    tr.type_header,a.type_matchday_big_screen{
+    tr.type_header,a.type_matchday_big_screen,
+    a.history_season_big_screen,
+    td.rank_seasons,td.rank_queue,td.rank_total,
+    td.rank_match_2,td.rank_match_4,
+    th.th_rank_seasons,th.th_rank_queue,
+    th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
+    th.th_rank_total,th.th_rank_win{
         display: none;
     }
     

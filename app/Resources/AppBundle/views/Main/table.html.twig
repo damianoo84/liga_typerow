@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <table>
+    <table class="tab_types">
       <tr>
+        <th></th>
         <th>Gracz</th>
         {% for i in 0..14 %}
         <th>{{loop.index}}</th>
@@ -11,22 +12,23 @@
       </tr>
         {% for key,point in points %}
             <tr>
+                <td class="table_loop">{{ loop.index }}.</td>
                 {% set sum = 0 %}
-                    <td>{{ loop.index }}.{{ point.username }}</td>
+                    <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
-                        <td>{{ pt }}</td>
+                        <td class="table_pkt">{{ pt }}</td>
                     {% else %}
-                        <td>{{ pt }}</td>
+                        <td class="table_pkt">{{ pt }}</td>
                     {% endif %}
                     {% set sum = sum + pt %}
                 {% endfor %}
                 {% if point.suma|length < 14 %}
                     {% for i in 0..(14-point.suma|length) %}
-                        <td></td>
+                        <td class="table_pkt"></td>
                     {% endfor %}
                 {% endif %}
-                <td>{{ sum }}</td>
+                <td class="table_sum">{{ sum }}</td>
             </tr>
         {% endfor %}
     </table>

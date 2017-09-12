@@ -31,7 +31,7 @@
                 {% if curr_matchday() is empty %}
                     Kolejny sezon już wkrótce
                 {% else %}
-                    Kolejka {{ curr_matchday().name }}
+                    Kolejka {{ curr_matchday().name }}/15
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 
                     {{ curr_matchday().dateTo|date('d-m-Y') }}
                 {% endif %}

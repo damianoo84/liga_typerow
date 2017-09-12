@@ -6,9 +6,9 @@
         <th></th>
         <th>Gracz</th>
         {% for i in 0..14 %}
-        <th>{{loop.index}}</th>
+        <th class="th_table_pkt">{{loop.index}}</th>
         {% endfor %}
-        <th>Suma</th>
+        <th class="th_table_sum">Suma</th>
       </tr>
         {% for key,point in points %}
             <tr>

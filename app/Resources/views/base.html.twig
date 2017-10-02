@@ -62,16 +62,17 @@
             {% endblock %}
         </div>
         
-        <div id="footer_05">
-            <ul class="ul_footer">
-                <li><a href="{{ path('liga_typerow_principles') }}">ZASADY</a></li>
-                <li><a href="{{ path('liga_typerow_account') }}">KONTO</a></li>
-                {% if app.user %}
-                <li><a href="{{ path('_logout') }}">WYLOGUJ</a></li>
-                {% else %}
-                <li><a href="{{ path('liga_typerow_login') }}">ZALOGUJ</a></li>
-                {% endif %}
-            </ul>
+        <div id="info_bar_05">
+            {% block infobar %}
+            {% endblock %}
+        </div>
+        
+        <div id="footer_06">
+            <a class="a_footer" href="{{ path('liga_typerow_principles') }}">ZASADY</a>
+            <a class="a_footer" href="{{ path('liga_typerow_account') }}">KONTO</a>
+            {% if app.user %}
+            <a class="a_footer" href="{{ path('_logout') }}">WYLOGUJ</a>
+            {% endif %}
         </div>
         
         <script type="text/javascript">

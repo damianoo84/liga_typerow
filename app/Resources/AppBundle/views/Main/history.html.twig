@@ -33,14 +33,16 @@
             </tr>
         {% endfor %}
     </table>
-      
+ 
+{% endblock %}
+
+{% block infobar %}
     <div class="list">
         <br />
         <p class="queque_number">Nr. sezonu</p>
-    {% for i in 1..12 %}
-        <a class="history_season_big_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">Sezon {{ i }}</a> 
-        <a class="history_season_small_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ i }}</a> 
-    {% endfor %}
+        {% for i in 1..12 %}
+            <a class="history_season_big_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">Sezon {{ i }}</a> 
+            <a class="history_season_small_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ i }}</a> 
+        {% endfor %}
     </div>
-        
-{% endblock %}
+{% endblock infobar %}

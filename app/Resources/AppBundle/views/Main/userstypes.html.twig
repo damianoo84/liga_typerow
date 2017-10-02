@@ -32,13 +32,17 @@
         {% endfor %}
     </table>
     
+ 
+    
+{% endblock %}
+
+{% block infobar %}
     <div class="list">
-         <br />
-         <p class="queque_number">Nr. kolejki</p>
+        <br />
+        <p class="queque_number">Nr. kolejki</p>
     {% for i in 1..15 %}
         <a class="type_matchday_big_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
         <a class="type_matchday_small_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">{{ i }}</a> 
     {% endfor %} 
     </div>   
-    
-{% endblock %}
+{% endblock infobar %}

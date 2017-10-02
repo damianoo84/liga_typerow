@@ -294,7 +294,7 @@ class MainController extends Controller{
     
     /**
      * @Route(
-     *      "/account",
+     *      "/konto",
      *      name = "liga_typerow_account"
      * )
      * 

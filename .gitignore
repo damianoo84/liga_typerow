@@ -11,3 +11,9 @@
 /bin/
 /composer.phar
 /nbproject
+/public_html
+/private_ftp
+/private_html
+/logs
+.htpasswd
+REDME.md

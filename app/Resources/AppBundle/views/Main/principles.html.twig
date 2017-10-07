@@ -2,13 +2,10 @@
 
 {% block content %}
 
-    <table>
+    <ul class="ul_principles">
     {% for principle in principles %}
-        <tr>
-            <td>-</td>
-            <td class="rank_username">{{ principle }}</td>
-        </tr>
+            <li class="ul_principles">{{ loop.index }} . {{ principle }}</li>
     {% endfor %}
-    </table>
+    </ul>
 
 {% endblock %}

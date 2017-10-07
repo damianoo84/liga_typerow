@@ -170,8 +170,8 @@ class MainController extends Controller{
     public function principlesAction(){
         
         $principles = array(
-            'Gramy przez 15 kolejnych tygodni. Typujemy co tydzień 10 meczy. '
-            . 'Należy pamietać że czas na typ to 7 dni liczony od poniedziałku '
+            'Liga trwa 15 kolejnych tygodni.', 'W każdym tygodniu typujemy 10 wybranych meczy, które odbędą się w tygodniu następnym. '
+            , 'Czas na typy to 7 dni liczony od poniedziałku '
             . 'godz.00:00 do niedzieli godz. 23:59',
             'Za prawidłowe wytypowanie rozstrzygnięcia meczu otrzymuje się 2 pkt. '
             . 'Za prawidłowe wytypowanie wyniku bramkowego otrzymuje się 4 pkt.',

@@ -120,7 +120,9 @@ input.input_comment{
     /*height:100px;*/
 }
 
-
+ul.ul_principles{
+    list-style-type: none;
+}
 
 /* belka informacyjna */
 #info_bar_05{
@@ -130,9 +132,18 @@ input.input_comment{
     height: 100%;
 }
 
-/* stopka */
-#footer_06{
+#logged_users_06{
     z-index: 6;
+    width:100%;
+    height: 20px;
+    background-color: grey;
+    color: green;
+    font-size: small;
+}
+
+/* stopka */
+#footer_07{
+    z-index: 7;
     width:100%;
     background-color: black;
     height: 100%;

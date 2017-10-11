@@ -61,7 +61,7 @@
         <div id="logged_users_06">
             {% if app.user %}
                 {% for user in log_users() %}
-                    Obecnie zalogowani: {{ user.username }}
+                    <b>Obecnie zalogowani</b>: {{ user.username }}
                 {% endfor %}
             {% endif %}
         </div>

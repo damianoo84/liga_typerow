@@ -134,15 +134,15 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Adam 2',   'm2'=>53,'m4'=>9, 'tP'=>142,'p'=>10,'q'=> 13,'s'=>'Sezon 11'),
             
             array('n'=>'Przemek 2','m2'=>64,'m4'=>21,'tP'=>212,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Damian',   'm2'=>65,'m4'=>20,'tP'=>210,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Piotrek 1','m2'=>72,'m4'=>16,'tP'=>208,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Krystian', 'm2'=>70,'m4'=>15,'tP'=>200,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Arek',     'm2'=>65,'m4'=>17,'tP'=>198,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Łukasz',   'm2'=>59,'m4'=>19,'tP'=>194,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Kuba',     'm2'=>64,'m4'=>14,'tP'=>184,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Marcin',   'm2'=>66,'m4'=>12,'tP'=>180,'p'=>1, 'q'=> 15,'s'=>'Sezon 12'),
-            array('n'=>'Piotrek 3','m2'=>62,'m4'=>10,'tP'=>164,'p'=>1, 'q'=> 14,'s'=>'Sezon 12'),
-            array('n'=>'Wojtek',   'm2'=>44,'m4'=>10,'tP'=>128,'p'=>1, 'q'=> 10,'s'=>'Sezon 12'),
+            array('n'=>'Damian',   'm2'=>65,'m4'=>20,'tP'=>210,'p'=>2, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Piotrek 1','m2'=>72,'m4'=>16,'tP'=>208,'p'=>3, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Krystian', 'm2'=>70,'m4'=>15,'tP'=>200,'p'=>4, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Arek',     'm2'=>65,'m4'=>17,'tP'=>198,'p'=>5, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Łukasz',   'm2'=>59,'m4'=>19,'tP'=>194,'p'=>6, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Kuba',     'm2'=>64,'m4'=>14,'tP'=>184,'p'=>7, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Marcin',   'm2'=>66,'m4'=>12,'tP'=>180,'p'=>8, 'q'=> 15,'s'=>'Sezon 12'),
+            array('n'=>'Piotrek 3','m2'=>62,'m4'=>10,'tP'=>164,'p'=>9, 'q'=> 14,'s'=>'Sezon 12'),
+            array('n'=>'Wojtek',   'm2'=>44,'m4'=>10,'tP'=>128,'p'=>10, 'q'=> 10,'s'=>'Sezon 12'),
         );
             
         

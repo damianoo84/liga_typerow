@@ -3,11 +3,11 @@
 {% block content %}
     <div class="forum_list_of_comments">
         {% for comment in comments %}
-{#            {% if loop.index % 2 %}#}
-                <p class="new_comment_left">{{ comment.text }}</p>
-{#            {% else %}#}
-{#                <p class="new_comment_right">{{ comment.text }}</p>  #}
-{#            {% endif %}#}
+            {% if loop.index % 2 %}
+                <p class="new_comment_left">{{ comment.text }}  ---  {{ comment.username }}</p>
+            {% else %}
+                <p class="new_comment_right">{{ comment.text }}  ---  {{ comment.username }}</p>  
+            {% endif %}
         {% endfor %}
     </div>
     
@@ -39,8 +39,8 @@
 {% block infobar %}
     <div class="forum_comment">
         <form id="form">
-            <input type="hidden" name="season_id" value="{{ matchday.season_id }}"> 
-            <input type="text" name="user_comment" class="input_comment">
+            <input type="hidden" name="season_id" value="{{ matchday.season_id }}" /> 
+            <input type="text" name="user_comment" class="input_comment" />
             <input type="submit"  value="Wyślij"/>
         </form>
     </div>

@@ -12,8 +12,10 @@ class CommentRepository extends EntityRepository
         $qb->select(
                      'c.text AS text'
                     ,'s.id AS season_id'
+                    ,'u.username AS username'
                 )
            ->innerJoin('c.season', 's')
+           ->innerJoin('c.user', 'u')
            ->where('s.id = :season')
            ->setParameter('season', $season)
         ;

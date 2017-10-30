@@ -9,7 +9,7 @@ class StatisticRepository extends EntityRepository
 {
    // pobranie statystyk łączynych ze wszystkich sezonów - RANKING
     public function getRanking(){
-        $qb = $this->createQueryBuilder('s');
+      $qb = $this->createQueryBuilder('s');
         $qb->select(
                     'u.username AS username'
                     ,'(sum(s.totalPoints)/sum(s.numOfQue)) AS avgPtsForMatch'
@@ -18,11 +18,12 @@ class StatisticRepository extends EntityRepository
                     ,'sum(s.totalPoints) AS totalpoints'
                     ,'sum(s.match2) AS match2'
                     ,'sum(s.match4) AS match4'
-//                    ,'sum(IF(s.position = :win, s.position, 0)) AS wins'
+//                    ,'count(s.position) AS wins'
                 )
            ->innerJoin('s.user', 'u')
            ->groupBy('u.username')
            ->orderBy('avgPtsForMatch', 'DESC')
+//           ->where('s.position = :win')
 //           ->setParameter('win', 1)
         ;
         

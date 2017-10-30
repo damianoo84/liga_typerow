@@ -154,7 +154,7 @@ class MainController extends Controller{
      */
     public function rankingAction(){
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
+        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
         $ranks = $repository->getRanking();
         
         return array('ranks' => $ranks);

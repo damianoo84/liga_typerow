@@ -19,17 +19,17 @@ class ResultListener {
             
             foreach ($types as $type){
                 if(($type->getHostType() == $entity->getHostGoals()) && ($type->getGuestType() == $entity->getGuestGoals())){
-                    $type->setNumberOfPoints(4);
-                }elseif(
-                     (($entity->getGuestGoals() == $entity->getHostGoals()) && 
-                      ($type->getGuestType() == $type->getHostType())) || 
-                     (($entity->getGuestGoals() >= $entity->getHostGoals()) && 
-                      ($type->getGuestType() >= $type->getHostType())) || 
-                     (($entity->getGuestGoals() <= $entity->getHostGoals()) && 
-                      ($type->getGuestType() <= $type->getHostType()))
-                    ){
-                    $type->setNumberOfPoints(2);
+                        $type->setNumberOfPoints(4);
+                }elseif(($type->getHostType() > $type->getGuestType()) && ($entity->getHostGoals() > $entity->getGuestGoals()) && ($type->getHostType() <> $entity->getHostGoals())){
+                        $type->setNumberOfPoints(2);
+                }elseif(($type->getHostType() < $type->getGuestType()) && ($entity->getHostGoals() < $entity->getGuestGoals()) && ($type->getHostType() <> $entity->getHostGoals())){
+                        $type->setNumberOfPoints(2);
+                }elseif(($type->getHostType() == $type->getGuestType()) && ($entity->getHostGoals() == $entity->getGuestGoals()) && ($type->getHostType() <> $entity->getHostGoals())){
+                        $type->setNumberOfPoints(2);
+                }else{
+                        $type->setNumberOfPoints(0);
                 }
+                
                 $em->persist($type);
             }
             $em->flush();

@@ -20,11 +20,9 @@ class CronCommand extends ContainerAwareCommand{
     {
         $doctrine = $this->getContainer()->get('doctrine');
         $em = $doctrine->getEntityManager();
-        // pobranie listy użytkowników, którzy nie wytypowali jeszcze
-        $users = $em->getRepository('AppBundle:Type')->whoDidNotTyped($matchday);
         
-        // pobranie listy numerów telefonów
-        $usersPhones = array();
+        // pobranie listy numerów tel. użytkowników, którzy jeszcze nie wytypowali 
+        $usersPhones = $em->getRepository('AppBundle:Type')->getNoTypedUsersList(1);
         
         $output->writeln("Doctrine worked, it didn't crashed :) ");
         
@@ -32,7 +30,7 @@ class CronCommand extends ContainerAwareCommand{
         $client = new SoapClient("http://api.gsmservice.pl/soap/v2/gateway.php?wsdl");
         $arAccount = array("login" => "damcio","pass" => "gutek246");
         $arMessages = array(array(
-            "recipients" => array($usersPhones),
+            "recipients" => $usersPhones,
             "message" => "Siema ... przypominam o typerce ... dzięki, pozdro",
             "sender"=> "Damian",
             "msgType" => 1,
@@ -40,8 +38,10 @@ class CronCommand extends ContainerAwareCommand{
             "sandbox" => false
         ));
         
+        var_dump($arMessages);
+        
         // wysłanie smsów o ustalonym w CRON terminie
-        $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;
+//        $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;
         
         // PLAN
         // 1) sprawdzenie czy sezon jest aktywny

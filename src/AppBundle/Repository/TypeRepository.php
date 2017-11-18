@@ -149,4 +149,23 @@ class TypeRepository extends EntityRepository
         
         return $userTypes;
     }
+    
+    public function getNoTypedUsersList($matchday){
+        
+        // Pobranie listy telefonów użytkowników, którzy jeszcze nie podali typów
+        $sql = 'SELECT u.phone '
+                .'FROM type t '
+                .'INNER JOIN user u ON t.user_id = u.id '
+                .'INNER JOIN meet m ON t.meet_id = m.id '
+                .'INNER JOIN matchday md ON m.matchday_id = md.id '
+                .'WHERE md.id = :matchday '
+                .'AND u.status = 1 '
+                .'GROUP BY u.id '
+                .'HAVING COUNT(t.user_id) > 0 ';
+        $params = array('matchday' => $matchday);
+        $userTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
+        
+        return $userTypes;
+        
+    }
 }

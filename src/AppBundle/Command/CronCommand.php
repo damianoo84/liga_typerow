@@ -39,7 +39,7 @@ class CronCommand extends ContainerAwareCommand{
         ));
         
         // wysłanie smsów o ustalonym w CRON terminie
-//        $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;
+        $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;
         
         // PLAN
         // 1) sprawdzenie czy sezon jest aktywny

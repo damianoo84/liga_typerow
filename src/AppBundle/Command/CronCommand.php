@@ -21,10 +21,10 @@ class CronCommand extends ContainerAwareCommand{
         $doctrine = $this->getContainer()->get('doctrine');
         $em = $doctrine->getEntityManager();
         
-        // pobranie listy numerów tel. użytkowników, którzy jeszcze nie wytypowali 
-        $usersPhones = $em->getRepository('AppBundle:Type')->getNoTypedUsersList(1);
+        $matchdayObject = $em->getRepository('AppBundle:Matchday')->getMatchday();
         
-        $output->writeln("Doctrine worked, it didn't crashed :) ");
+        // pobranie listy numerów tel. użytkowników, którzy jeszcze nie wytypowali 
+        $usersPhones = $em->getRepository('AppBundle:Type')->getNoTypedUsersList($matchdayObject['name']);
         
         ini_set("soap.wsdl_cache_enabled", "0");
         $client = new SoapClient("http://api.gsmservice.pl/soap/v2/gateway.php?wsdl");
@@ -37,8 +37,6 @@ class CronCommand extends ContainerAwareCommand{
             "unicode" => false,
             "sandbox" => false
         ));
-        
-        var_dump($arMessages);
         
         // wysłanie smsów o ustalonym w CRON terminie
 //        $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;

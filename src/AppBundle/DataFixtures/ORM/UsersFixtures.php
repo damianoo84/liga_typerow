@@ -50,7 +50,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 3,
                 'status' => 1,
                 'priority' => 2,
-                'phone' => '616119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -61,7 +61,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 0,
                 'priority' => 3,
-                'phone' => '626119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -72,7 +72,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 2,
                 'status' => 1,
                 'priority' => 4,
-                'phone' => '636119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -83,7 +83,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 1,
                 'status' => 1,
                 'priority' => 5,
-                'phone' => '646119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -127,7 +127,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 0,
                 'priority' => 9,
-                'phone' => '686119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -138,7 +138,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 0,
                 'priority' => 10,
-                'phone' => '696119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -149,7 +149,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 1,
                 'status' => 0,
                 'priority' => 11,
-                'phone' => '607119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -160,7 +160,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 1,
                 'priority' => 12,
-                'phone' => '608119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -171,7 +171,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 1,
                 'status' => 1,
                 'priority' => 13,
-                'phone' => '609119978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -182,7 +182,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 1,
                 'status' => 1,
                 'priority' => 14,
-                'phone' => '606129978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -193,7 +193,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 1,
                 'priority' => 15,
-                'phone' => '606139978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -204,7 +204,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 1,
                 'status' => 1,
                 'priority' => 16,
-                'phone' => '606149978',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ),
             array(
@@ -215,7 +215,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'numberofwins' => 0,
                 'status' => 0,
                 'priority' => 17,
-                'phone' => '606149970',
+                'phone' => '606119978',
                 'role' => 'ROLE_USER'
             ), 
         );

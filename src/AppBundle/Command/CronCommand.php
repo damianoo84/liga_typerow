@@ -27,8 +27,6 @@ class CronCommand extends ContainerAwareCommand{
         // pobranie listy numerów tel. użytkowników, którzy jeszcze nie wytypowali 
         $usersPhones = $em->getRepository('AppBundle:Type')->getNoTypedUsersList($matchdayObject['name']);
         
-        var_dump($usersPhones);
-        
         ini_set("soap.wsdl_cache_enabled", "0");
         $client = new \SoapClient("http://api.gsmservice.pl/soap/v2/gateway.php?wsdl");
         $arAccount = array("login" => "damcio","pass" => "gutek246");

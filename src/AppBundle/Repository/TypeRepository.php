@@ -165,7 +165,15 @@ class TypeRepository extends EntityRepository
         $params = array('matchday' => $matchday);
         $userTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
         
-        return $userTypes;
+        $phones = array();
+        
+//        var_dump($phones);
+        
+        foreach ($userTypes as $phone){
+           $phones[] = $phone['phone'];
+        }
+        
+        return $phones;
         
     }
 }

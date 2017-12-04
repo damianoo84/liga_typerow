@@ -18,38 +18,38 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2017-12-01',
-                'dateTo' => '2017-12-03',
-                'season_name' => 'Sezon 13'
-            ),
-            array(
-                'matchday_name' => '2',
-                'dateFrom' => '2017-12-04',
-                'dateTo' => '2017-12-06',
-                'season_name' => 'Sezon 13'
-            ),
-            array(
-                'matchday_name' => '3',
-                'dateFrom' => '2017-09-07',
-                'dateTo' => '2017-10-09',
-                'season_name' => 'Sezon 13'
-            ),
-            array(
-                'matchday_name' => '4',
                 'dateFrom' => '2017-12-10',
                 'dateTo' => '2017-12-12',
                 'season_name' => 'Sezon 13'
             ),
             array(
-                'matchday_name' => '5',
+                'matchday_name' => '2',
                 'dateFrom' => '2017-12-13',
                 'dateTo' => '2017-12-15',
                 'season_name' => 'Sezon 13'
             ),
             array(
-                'matchday_name' => '6',
+                'matchday_name' => '3',
                 'dateFrom' => '2017-12-16',
                 'dateTo' => '2017-12-18',
+                'season_name' => 'Sezon 13'
+            ),
+            array(
+                'matchday_name' => '4',
+                'dateFrom' => '2017-12-19',
+                'dateTo' => '2017-12-21',
+                'season_name' => 'Sezon 13'
+            ),
+            array(
+                'matchday_name' => '5',
+                'dateFrom' => '2017-12-22',
+                'dateTo' => '2017-12-24',
+                'season_name' => 'Sezon 13'
+            ),
+            array(
+                'matchday_name' => '6',
+                'dateFrom' => '2017-12-25',
+                'dateTo' => '2017-12-27',
                 'season_name' => 'Sezon 13'
             ),
             array(

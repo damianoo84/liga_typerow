@@ -22,7 +22,7 @@
             <td class="team_fullname">{{ type.host }} - {{ type.guest }}</td>
             <td class="team_shortname">{{ type.host_shortname }} - {{ type.guest_shortname }}</td>
             {% for tp in type.types %}
-                {% if nextMatchday == false and tp != '-' %}
+                {% if nextMatchday == true and tp != '-' %}
                     <td class="type_type">*</td>
                 {% else %}
                     <td class="type_type">{{ tp }}</td> 

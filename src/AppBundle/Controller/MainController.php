@@ -254,7 +254,8 @@ class MainController extends Controller{
             $em->persist($comment);
             $em->flush();
             
-            return new JsonResponse(array('message' => 'Success!'), 200);
+//            return new JsonResponse(array('message' => 'Success!'), 200);
+            return $this->redirect($this->generateUrl('liga_typerow_forum'));
         }
         
         return array('comments' => $comments, 'matchday' => $matchday);

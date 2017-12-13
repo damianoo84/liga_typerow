@@ -238,21 +238,19 @@ class MainController extends Controller{
         
         if ($request->getMethod() == 'POST') {
             
-            $request = $this->getRequest();
-            $user_comment = $request->request->get('user_comment');
-            $season_id = $request->request->get('season_id');
-            
-            $season = new Season();
-            $season = $repoSeason->findOneById($season_id);
-            
-            $comment = new Comment();
-            $comment->setUser($this->getUser());
-            $comment->setSeason($season);
-            $comment->setText($user_comment);
-            
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($comment);
-            $em->flush();
+            if($request->request->get('user_comment') != null && $request->request->get('user_comment') != ''){
+                
+                $season = $repoSeason->findOneById($request->request->get('season_id'));
+                
+                $comment = new Comment();
+                $comment->setUser($this->getUser());
+                $comment->setSeason($season);
+                $comment->setText($request->request->get('user_comment'));
+                
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($comment);
+                $em->flush();     
+            }
             
 //            return new JsonResponse(array('message' => 'Success!'), 200);
             return $this->redirect($this->generateUrl('liga_typerow_forum'));

@@ -88,7 +88,12 @@ ul.navigation li.icon {display: none;}
 }
 
 div.div_login{
-    padding-top: 50px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+div.div_change_pass{
+    padding-top: 40px;
     text-align: center;
 }
 
@@ -308,4 +313,11 @@ div.list{
         display: none;
     }
     
+}
+
+p.notification_error{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
 }

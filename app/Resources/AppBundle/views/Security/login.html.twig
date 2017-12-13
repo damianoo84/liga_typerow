@@ -3,7 +3,7 @@
 {% block content %}
  
 {% if loginError is defined and loginError is not null %}
-    <div class="notification error"> {{ loginError.message }} </div>
+    <p class="notification_error"> Podano zły login lub hasło </p>
 {% endif %}
 
 <div class="div_login">

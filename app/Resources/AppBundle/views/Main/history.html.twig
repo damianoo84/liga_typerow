@@ -7,20 +7,20 @@
         <th></th>
         <th>Gracz</th>
         {% for i in 0..14 %}
-        <th>{{loop.index}}</th>
+        <th class="th_table_pkt">{{loop.index}}</th>
         {% endfor %}
-        <th>Suma</th>
+        <th class="th_table_sum">Suma</th>
       </tr>
         {% for key,point in points %}
             <tr>
-                <td>{{ loop.index }}.</td>
+                <td class="table_loop">{{ loop.index }}.</td>
                 {% set sum = 0 %}
-                    <td class="rank_username">{{ point.username }}</td>
+                    <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
-                        <td>{{ pt }}</td>
+                        <td class="table_pkt">{{ pt }}</td>
                     {% else %}
-                        <td>{{ pt }}</td>
+                        <td class="table_pkt">{{ pt }}</td>
                     {% endif %}
                     {% set sum = sum + pt %}
                 {% endfor %}
@@ -29,7 +29,7 @@
                         <td></td>
                     {% endfor %}
                 {% endif %}
-                <td>{{ sum }}</td>
+                <td class="table_sum">{{ sum }}</td>
             </tr>
         {% endfor %}
     </table>

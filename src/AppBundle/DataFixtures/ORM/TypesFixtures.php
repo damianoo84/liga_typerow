@@ -22,9 +22,9 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             'Piotrek 2',
             'Krystian',
             'Piotrek 1',
-//            'Przemek 2',
-//            'Adam 2',
-            'Marcin',
+            'Przemek 2',
+            'Adam 2',
+            'Mateusz',
             'Damian'
         );
         

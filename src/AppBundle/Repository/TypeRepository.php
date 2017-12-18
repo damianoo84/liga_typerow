@@ -92,7 +92,7 @@ class TypeRepository extends EntityRepository
     public function getUsersTypes($matchday){
         
         // 1. Pobieram typy użytkowników
-        $sql = 'SELECT t.meet_id,t.host_type AS hostType,t.guest_type AS guestType,u.username AS username '
+        $sql = 'SELECT t.meet_id,t.host_type AS hostType,t.guest_type AS guestType,u.username AS username, u.shortname '
                 . 'FROM user u LEFT JOIN type t ON t.user_id = u.id '
                 . 'WHERE u.status = :status '
                 . 'ORDER BY u.id';

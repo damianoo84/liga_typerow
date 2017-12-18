@@ -239,6 +239,10 @@ th {
     font-weight: bold; 
 }
 
+th.team_user{
+    
+}
+
 td, th { 
     padding: 6px; 
     border: 1px solid #ccc; 
@@ -291,7 +295,7 @@ div.list{
 @media screen and (min-width:680px) {
 
     td.team_shortname,a.type_matchday_small_screen,
-    a.history_season_small_screen,p.queque_number{
+    a.history_season_small_screen,p.queque_number,th.team_user_shortname,th.team_matchday_short{
         display: none;
     }
 }
@@ -303,14 +307,18 @@ div.list{
     /* niewidoczne */
     tr.col_name,td.gap,td.term,
     td.league,td.team_fullname,
-    tr.type_header,a.type_matchday_big_screen,
+    a.type_matchday_big_screen,
     a.history_season_big_screen,
     td.rank_seasons,td.rank_queue,td.rank_total,
     td.rank_match_2,td.rank_match_4,
     th.th_rank_seasons,th.th_rank_queue,
     th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
-    th.th_rank_total,th.th_rank_win,td.table_pkt, th.th_table_pkt{
+    th.th_rank_total,th.th_rank_win,td.table_pkt, th.th_table_pkt,th.team_user,th.team_matchday{
         display: none;
+    }
+    
+    td.team_shortname,th.team_user_shortname, th.team_matchday_short{
+       font-size: xx-small;
     }
     
 }

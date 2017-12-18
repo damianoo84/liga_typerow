@@ -18,44 +18,44 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2017-12-10',
-                'dateTo' => '2017-12-12',
+                'dateFrom' => '2017-12-20',
+                'dateTo' => '2017-12-22',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2017-12-13',
-                'dateTo' => '2017-12-15',
+                'dateFrom' => '2017-12-23',
+                'dateTo' => '2017-12-25',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2017-12-16',
-                'dateTo' => '2017-12-18',
+                'dateFrom' => '2017-12-26',
+                'dateTo' => '2017-12-28',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2017-12-19',
-                'dateTo' => '2017-12-21',
+                'dateFrom' => '2017-12-29',
+                'dateTo' => '2017-12-31',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2017-12-22',
-                'dateTo' => '2017-12-24',
+                'dateFrom' => '2018-01-01',
+                'dateTo' => '2018-01-03',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2017-12-25',
-                'dateTo' => '2017-12-27',
+                'dateFrom' => '2018-01-04',
+                'dateTo' => '2018-01-06',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2017-12-19',
-                'dateTo' => '2017-12-21',
+                'dateFrom' => '2018-01-07',
+                'dateTo' => '2018-01-09',
                 'season_name' => 'Sezon 13'
             ),
             array(

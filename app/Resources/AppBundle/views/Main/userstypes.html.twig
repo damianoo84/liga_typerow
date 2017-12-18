@@ -12,9 +12,11 @@
 
     <table class="tab_types">
       <tr class="type_header">
-        <th>Mecze/Gracze</th>
+        <th class="team_matchday">Mecze/Gracze</th>
+        <th class="team_matchday_short">M/G</th>
         {% for user in get_users() %}
-            <th>{{ user }}</th>
+            <th class="team_user">{{ user }}</th>
+            <th class="team_user_shortname">{{ user[:1] }}</th>
         {% endfor %}
       </tr>
         {% for key,type in types %}

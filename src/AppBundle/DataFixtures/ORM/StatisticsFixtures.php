@@ -143,7 +143,18 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Marcin',   'm2'=>66,'m4'=>12,'tP'=>180,'p'=>8, 'q'=> 15,'s'=>'Sezon 12'),
             array('n'=>'Piotrek 3','m2'=>62,'m4'=>10,'tP'=>164,'p'=>9, 'q'=> 14,'s'=>'Sezon 12'),
             array('n'=>'Wojtek',   'm2'=>44,'m4'=>10,'tP'=>128,'p'=>10, 'q'=> 10,'s'=>'Sezon 12'),
-        );
+        
+            array('n'=>'Marcin',   'm2'=>62,'m4'=>19,'tP'=>200,'p'=>1, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Krystian', 'm2'=>55,'m4'=>22,'tP'=>198,'p'=>2, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Piotrek 3','m2'=>58,'m4'=>19,'tP'=>192,'p'=>3, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Piotrek 1','m2'=>63,'m4'=>16,'tP'=>190,'p'=>4, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Damian',   'm2'=>59,'m4'=>18,'tP'=>190,'p'=>4, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Kuba',     'm2'=>55,'m4'=>18,'tP'=>182,'p'=>6, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Arek',     'm2'=>54,'m4'=>18,'tP'=>180,'p'=>7, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Przemek 2','m2'=>49,'m4'=>14,'tP'=>154,'p'=>8, 'q'=> 15,'s'=>'Sezon 13'),
+            array('n'=>'Wojtek',   'm2'=>6, 'm4'=>1, 'tP'=>16, 'p'=>9, 'q'=> 2, 's'=>'Sezon 13'),
+            
+            );
             
         
         foreach ($statisticsList as $statisticDetails => $stat) {

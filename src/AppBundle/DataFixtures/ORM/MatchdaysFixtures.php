@@ -18,26 +18,26 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2017-12-20',
-                'dateTo' => '2017-12-22',
+                'dateFrom' => '2018-01-06',
+                'dateTo' => '2018-01-08',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2017-12-23',
-                'dateTo' => '2017-12-25',
+                'dateFrom' => '2018-01-09',
+                'dateTo' => '2018-01-11',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2017-12-26',
-                'dateTo' => '2017-12-28',
+                'dateFrom' => '2018-01-12',
+                'dateTo' => '2018-01-14',
                 'season_name' => 'Sezon 13'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2017-12-29',
-                'dateTo' => '2017-12-31',
+                'dateFrom' => '2018-01-15',
+                'dateTo' => '2018-01-17',
                 'season_name' => 'Sezon 13'
             ),
             array(

@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ loop.index }}.</td>
                 <td class="rank_username">{{ rank.username }}</td>
-                <td class="rank_ptk">{{ rank.avgPtsForMatch|round(2,'floor') }}</td>
+                <td class="rank_ptk">{{ rank.avgPtsForMatch|number_format(2, '.', ',') }}</td>
                 <td class="rank_seasons">{{ rank.seasons }}</td>
                 <td class="rank_queue">{{ rank.numOfQue }}</td>
                 <td class="rank_total">{{ rank.totalpoints }}</td>

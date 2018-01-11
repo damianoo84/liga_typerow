@@ -8,33 +8,26 @@
         {% set nextMatchday = false %}
     {% endif %}
     
-
-
-    <table class="tab_types">
-      <tr class="type_header">
-        <th class="team_matchday">Mecze/Gracze</th>
-        <th class="team_matchday_short">M/G</th>
-        {% for user in get_users() %}
-            <th class="team_user">{{ user }}</th>
-            <th class="team_user_shortname">{{ user[:1] }}</th>
-        {% endfor %}
-      </tr>
-        {% for key,type in types %}
-        <tr>
-            <td class="team_fullname">{{ type.host }} - {{ type.guest }}</td>
-            <td class="team_shortname">{{ type.host_shortname }} - {{ type.guest_shortname }}</td>
-            {% for tp in type.types %}
-                {% if nextMatchday == true and tp != '-' %}
-                    <td class="type_type">*</td>
-                {% else %}
+    {% if types is not empty %}
+        <table>
+            <tr class="type_header">
+                <th class="team_matchday">Mecze/Gracze</th>
+                <th class="team_matchday_short">M/G</th>
+                {% for user in get_users() %}
+                <th class="team_user">{{ user }}</th>
+                <th class="team_user_shortname">{{ user[:1] }}</th>
+                {% endfor %}
+            </tr>
+            {% for key,type in types %}
+                <tr>
+                    <td class="team_fullname">{{ key }}</td>
+                    {% for k,tp in type %}
                     <td class="type_type">{{ tp }}</td> 
-                {% endif %}
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
-    
- 
+                    {% endfor %} 
+                </tr>
+            {% endfor %}  
+        </table>
+    {% endif %}
     
 {% endblock %}
 

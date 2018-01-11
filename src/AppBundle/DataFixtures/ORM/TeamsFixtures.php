@@ -38,7 +38,7 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'league' => 'Liga Hiszpańska'
             ),
             array(
-                'team_name' => 'Villareal CF',
+                'team_name' => 'Villarreal CF',
                 'shortname' => 'VIL',
                 'league' => 'Liga Hiszpańska'
             ),
@@ -95,28 +95,38 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Liverpool FC',
                 'shortname' => 'LIV',
-                'league' => 'Liga Niemiecka'
+                'league' => 'Liga Angielska'
             ), 
             array(
                 'team_name' => 'Chelsea Londyn',
                 'shortname' => 'CHS',
-                'league' => 'Liga Niemiecka'
+                'league' => 'Liga Angielska'
             ), 
             array(
                 'team_name' => 'Tottenham Londyn',
                 'shortname' => 'TOT',
-                'league' => 'Liga Niemiecka'
+                'league' => 'Liga Angielska'
             ), 
             array(
                 'team_name' => 'Leicester City',
                 'shortname' => 'LSC',
-                'league' => 'Liga Niemiecka'
+                'league' => 'Liga Angielska'
             ), 
             array(
                 'team_name' => 'Everton FC',
                 'shortname' => 'EVE',
-                'league' => 'Liga Niemiecka'
+                'league' => 'Liga Angielska'
             ), 
+            array(
+                'team_name' => 'Newcastle United',
+                'shortname' => 'NEW',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Southampton FC',
+                'shortname' => 'SOU',
+                'league' => 'Liga Angielska'
+            ),
             array(
                 'team_name' => 'Bayern Monachium',
                 'shortname' => 'BAY',
@@ -128,7 +138,7 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'league' => 'Liga Niemiecka'
             ), 
             array(
-                'team_name' => 'Bayer Leverkusen',
+                'team_name' => 'Bayer 04 Leverkusen',
                 'shortname' => 'LEV',
                 'league' => 'Liga Niemiecka'
             ), 
@@ -160,6 +170,11 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'VFB Stuttgart',
                 'shortname' => 'STU',
+                'league' => 'Liga Niemiecka'
+            ), 
+            array(
+                'team_name' => 'VFL Wolfsburg',
+                'shortname' => 'WOL',
                 'league' => 'Liga Niemiecka'
             ), 
             array(

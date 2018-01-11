@@ -17,6 +17,7 @@ class MeetRepository extends EntityRepository
                     ,'tm2.shortname AS guest_shortname'
                     ,'l.name AS league'
                     ,'m.term'
+                    ,'md.id AS matchday_id'
             )
             ->innerJoin('m.hostTeam', 'tm1')
             ->innerJoin('m.guestTeam', 'tm2')

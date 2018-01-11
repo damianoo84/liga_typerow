@@ -19,12 +19,12 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             'Piotrek 3',
             'Kuba',
             'Wojtek',
-            'Piotrek 2',
-            'Krystian',
+            'Marcin',
+//            'Krystian',
             'Piotrek 1',
-            'Przemek 2',
-            'Adam 2',
-            'Mateusz',
+//            'Przemek 2',
+            'Arek',
+//            'Mateusz',
             'Damian'
         );
         

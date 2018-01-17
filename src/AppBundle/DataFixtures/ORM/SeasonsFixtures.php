@@ -93,7 +93,7 @@ class SeasonsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'season_name' => 'Sezon 13',
                 'dateStart' => '2017-09-11',
                 'dateEnd' => '2017-12-24',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Sezon 14',

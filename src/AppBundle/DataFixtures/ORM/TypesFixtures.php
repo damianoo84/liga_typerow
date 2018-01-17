@@ -16,15 +16,15 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager) {
         
         $usersList = array(
-            'Piotrek 3',
+            'Piotrek3',
             'Kuba',
             'Wojtek',
             'Marcin',
-//            'Krystian',
-            'Piotrek 1',
-//            'Przemek 2',
+            'Krystian',
+            'Piotrek1',
+            'Przemek2',
             'Arek',
-//            'Mateusz',
+            'Mateusz',
             'Damian'
         );
         
@@ -46,6 +46,6 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             }
         }
             
-        $manager->flush();   
+//        $manager->flush();   
     }
 }

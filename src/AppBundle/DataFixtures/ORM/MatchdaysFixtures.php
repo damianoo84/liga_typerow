@@ -18,93 +18,93 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2018-01-06',
-                'dateTo' => '2018-01-08',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-01-17',
+                'dateTo' => '2018-01-19',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2018-01-09',
-                'dateTo' => '2018-01-11',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-01-20',
+                'dateTo' => '2018-01-22',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2018-01-12',
-                'dateTo' => '2018-01-14',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-01-23',
+                'dateTo' => '2018-01-25',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2018-01-15',
-                'dateTo' => '2018-01-17',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-01-26',
+                'dateTo' => '2018-01-28',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2018-01-01',
-                'dateTo' => '2018-01-03',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-01-29',
+                'dateTo' => '2018-01-31',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2018-01-04',
-                'dateTo' => '2018-01-06',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-01',
+                'dateTo' => '2018-02-03',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2018-01-07',
-                'dateTo' => '2018-01-09',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-04',
+                'dateTo' => '2018-02-06',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2017-12-22',
-                'dateTo' => '2017-12-24',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-07',
+                'dateTo' => '2018-02-09',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2017-12-25',
-                'dateTo' => '2017-12-27',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-10',
+                'dateTo' => '2018-02-12',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2017-12-28',
-                'dateTo' => '2017-12-30',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-13',
+                'dateTo' => '2018-02-15',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2017-12-31',
-                'dateTo' => '2018-01-02',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-16',
+                'dateTo' => '2018-02-18',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2018-01-03',
-                'dateTo' => '2018-01-05',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-19',
+                'dateTo' => '2018-02-21',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2018-01-06',
-                'dateTo' => '2018-01-08',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-22',
+                'dateTo' => '2018-02-24',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2018-01-09',
-                'dateTo' => '2018-01-11',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-25',
+                'dateTo' => '2018-02-27',
+                'season_name' => 'Sezon 14'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2017-12-12',
-                'dateTo' => '2017-12-14',
-                'season_name' => 'Sezon 13'
+                'dateFrom' => '2018-02-28',
+                'dateTo' => '2018-02-30',
+                'season_name' => 'Sezon 14'
             )
         );
         

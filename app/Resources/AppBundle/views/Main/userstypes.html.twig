@@ -22,7 +22,12 @@
                 <tr>
                     <td class="team_fullname">{{ key }}</td>
                     {% for k,tp in type %}
-                    <td class="type_type">{{ tp }}</td> 
+{#                    <td class="type_type">{{ tp }}</td> #}
+                        {% if nextMatchday == true and tp != '-' %}
+                            <td class="type_type">*</td>
+                        {% else %}
+                            <td class="type_type">{{ tp }}</td> 
+                        {% endif %}
                     {% endfor %} 
                 </tr>
             {% endfor %}  

@@ -43,18 +43,12 @@ class AppExtension extends \Twig_Extension{
         return $matchday;
     }
     
-    // get users by season
+    // get all users
     public function getUsers(){
-        $repoUser = $this->doctrine->getRepository('AppBundle:User');
-        $users = $repoUser->findBy(array('status' => 1), array('id' => 'ASC'));
-
-        $usersList = array();
+        $userRepo = $this->doctrine->getRepository('AppBundle:User');
+        $users = $userRepo->findByStatus(1);
         
-        foreach($users as $user){
-            $usersList[] = $user->getUsername();
-        }
-        
-        return $usersList;
+        return $users;
     }
     
     // get current logged users

@@ -9,18 +9,19 @@
     {% endif %}
     
     {% if types is not empty %}
-        <table>
+        <table class="tab_types">
             <tr class="type_header">
                 <th class="team_matchday">Mecze/Gracze</th>
                 <th class="team_matchday_short">M/G</th>
                 {% for user in get_users() %}
-                <th class="team_user">{{ user }}</th>
-                <th class="team_user_shortname">{{ user[:1] }}</th>
+                <th class="team_user">{{ user.username }}</th>
+                <th class="team_user_shortname">{{ user.shortname[:1] }}</th>
                 {% endfor %}
             </tr>
             {% for key,type in types %}
                 <tr>
-                    <td class="team_fullname">{{ key }}</td>
+                    <td class="team_name_2">{{ key[9:] }}</td>
+                    <td class="team_name_short_2">{{ key[:7] }}</td>
                     {% for k,tp in type %}
 {#                    <td class="type_type">{{ tp }}</td> #}
                         {% if nextMatchday == true and tp != '-' %}

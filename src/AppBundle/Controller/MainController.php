@@ -82,7 +82,7 @@ class MainController extends Controller{
             $isTyped = true;
         }
         
-        if($isTyped == true){
+        if($isTyped){
             return array('types' => $types);
         }
         

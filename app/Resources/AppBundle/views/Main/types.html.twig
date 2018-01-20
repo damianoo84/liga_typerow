@@ -18,10 +18,12 @@
             <tr class="big_screen">          
                 <td class="league">{{ type.name }}</td>
                 <td class="team_name">{{ type.host }}</td>
+                <td class="team_name_short">{{ type.hostShort }}</td>
                 <td class="user_type">{{ type.hostType }}</td>
                 <td class="gap">-</td>
                 <td class="user_type">{{ type.guestType }}</td>
                 <td class="team_name">{{ type.guest }}</td>
+                <td class="team_name_short">{{ type.guestShort }}</td>
                 <td class="term">{{ type.term }}</td>
             </tr>
             {% endfor %}
@@ -35,6 +37,7 @@
             <tr class="big_screen">
                 <td class="league">{{ meet.league }}</td>
                 <td class="team_name">{{ meet.host }}</td>
+                <td class="team_name_short">{{ meet.hostShort }}</td>
                 <td class="user_type">
                     <input type="text" class="tp" name="hostType[]" maxlength='1' />
                 </td>
@@ -43,6 +46,7 @@
                     <input type="text" class="tp" name="guestType[]" maxlength='1' />
                 </td>
                 <td class="team_name">{{ meet.guest }}</td>
+                <td class="team_name_short">{{ meet.guestShort }}</td>
                 <td class="term">{{ meet.term }}</td>
             </tr>
             {% endfor %}

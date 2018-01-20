@@ -124,7 +124,11 @@ class TypeRepository extends EntityRepository {
             // 4. Utworzenie macierzy gdzie klucze to nazwy meczy i nazwy użytkowników
             foreach($meets as $meet){
                 foreach ($users as $user){
-                    $hostGuest = $meet->getHostTeam()->getName() . "-" . $meet->getGuestTeam()->getName();
+                    
+                    $names = $meet->getHostTeam()->getName() . "-" . $meet->getGuestTeam()->getName();
+                    $shortNames = $meet->getHostTeam()->getShortname() . "-" . $meet->getGuestTeam()->getShortname();
+                    $hostGuest = $shortNames.' | '.$names;
+                    
                     $matrix[$hostGuest][$user->getUsername()] = '-';
                 }
             }
@@ -144,7 +148,10 @@ class TypeRepository extends EntityRepository {
     function getUserTypes($matchday, $user) {
 
         // Pobranie typów użytkownika
-        $sql = 'SELECT tm1.name AS host, tm2.name AS guest,t.host_type AS hostType,t.guest_type AS guestType, l.name, m.term '
+        $sql = 'SELECT tm1.name AS host, tm1.shortname AS hostShort, '
+                . 'tm2.name AS guest, tm2.shortname AS guestShort, '
+                . 't.host_type AS hostType,'
+                . 't.guest_type AS guestType, l.name, m.term '
                 . 'FROM user u '
                 . 'LEFT JOIN type t ON t.user_id = u.id '
                 . 'LEFT JOIN meet m ON m.id = t.meet_id '

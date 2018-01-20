@@ -23,15 +23,15 @@
         <div id="info_02">
             {% block info %} 
                 
-                14 sezon Ligi Typerów od 29 Stycznia
+{#                14 sezon Ligi Typerów od 29 Stycznia#}
                 
-   {#             {% if curr_matchday() is empty %}
+                {% if curr_matchday() is empty %}
                     Kolejny sezon już wkrótce
                 {% else %}
                     Kolejka {{ curr_matchday().name }}/15
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 
                     {{ curr_matchday().dateTo|date('d-m-Y') }}
-                {% endif %}#}
+                {% endif %}
             {% endblock %}
         </div>
         
@@ -63,10 +63,11 @@
         
         <div id="logged_users_06">
             {% if app.user %}
-                <b>Obecnie zalogowani</b>:
+                <p class="p_log_user"><b>Obecnie zalogowani</b>:
                 {% for user in log_users() %}
                      {{ user.username }}
                 {% endfor %}
+                </p>
             {% endif %}
         </div>
         

@@ -19,7 +19,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        liga_typerow_security:
+        main:
             switch_user: true
             pattern:    ^/
             anonymous: ~

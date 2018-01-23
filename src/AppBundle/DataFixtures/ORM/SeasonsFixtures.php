@@ -18,85 +18,85 @@ class SeasonsFixtures extends AbstractFixture implements OrderedFixtureInterface
         
         $seasonsList = array(
             array(
-                'season_name' => 'Sezon 1',
+                'season_name' => 'Jesień 2011',
                 'dateStart' => '2011-09-01',
                 'dateEnd' => '2011-12-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 2',
+                'season_name' => 'Wiosna 2012',
                 'dateStart' => '2012-02-01',
                 'dateEnd' => '2012-05-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 3',
+                'season_name' => 'Jesień 2012',
                 'dateStart' => '2012-09-01',
                 'dateEnd' => '2012-12-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 4',
+                'season_name' => 'Wiosna 2013',
                 'dateStart' => '2013-02-01',
                 'dateEnd' => '2013-05-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 5',
+                'season_name' => 'Jesień 2013',
                 'dateStart' => '2013-09-01',
                 'dateEnd' => '2013-12-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 6',
+                'season_name' => 'Wiosna 2014',
                 'dateStart' => '2014-02-01',
                 'dateEnd' => '2014-05-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 7',
+                'season_name' => 'Jesień 2014',
                 'dateStart' => '2014-09-01',
                 'dateEnd' => '2014-12-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 8',
+                'season_name' => 'Wiosna 2015',
                 'dateStart' => '2015-02-01',
                 'dateEnd' => '2015-05-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 9',
+                'season_name' => 'Jesień 2015',
                 'dateStart' => '2015-09-07',
                 'dateEnd' => '2015-12-20',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 10',
+                'season_name' => 'Wiosna 2016',
                 'dateStart' => '2016-02-01',
                 'dateEnd' => '2016-05-16',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 11',
+                'season_name' => 'Jesień 2016',
                 'dateStart' => '2016-09-05',
                 'dateEnd' => '2016-12-18',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 12',
+                'season_name' => 'Wiosna 2017',
                 'dateStart' => '2017-02-06',
                 'dateEnd' => '2017-05-21',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 13',
+                'season_name' => 'Jesień 2017',
                 'dateStart' => '2017-09-11',
                 'dateEnd' => '2017-12-24',
                 'active' => false
             ),
             array(
-                'season_name' => 'Sezon 14',
+                'season_name' => 'Wiosna 2018',
                 'dateStart' => '2018-02-05',
                 'dateEnd' => '2018-05-20',
                 'active' => true

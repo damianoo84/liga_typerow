@@ -245,7 +245,11 @@ class MainController extends Controller{
                 $comment = new Comment();
                 $comment->setUser($this->getUser());
                 $comment->setSeason($season);
-                $comment->setText($request->request->get('user_comment'));
+                $comment->setText(
+                            htmlspecialchars(
+                            stripslashes(
+                            trim(
+                            strip_tags($request->request->get('user_comment'))))));
                 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($comment);

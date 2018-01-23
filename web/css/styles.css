@@ -301,10 +301,11 @@ td.team_name_2{
 
     td.team_shortname,a.type_matchday_small_screen,
     a.history_season_small_screen,
-    td.team_name_short,td.team_name_short_2,
+    td.team_name_short,td.team_name_short_2,img.img2,
     th.team_user_shortname,th.team_matchday_short{
         display: none;
     }
+    
 }
 
 /* USTAWIENIA DLA MAŁEGO EKRANU   */
@@ -321,7 +322,7 @@ td.team_name_2{
     th.th_rank_seasons,th.th_rank_queue,
     th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
     th.th_rank_total,th.th_rank_win,td.table_pkt, 
-    td.team_name,td.team_name_2,
+    td.team_name,td.team_name_2,img.img1,
     th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number{
         display: none;
     }

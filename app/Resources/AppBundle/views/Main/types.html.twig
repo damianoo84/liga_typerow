@@ -32,6 +32,15 @@
     {% else %}
         <form id="form">
         <table class="tab_types">
+            <tr class="col_name">
+                <th>Opis</th>
+                <th>Gospodarz</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Gość</th>
+                <th>Termin</th>
+            </tr>
             {% for key,meet in meets %}
             <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  
             <tr class="big_screen">

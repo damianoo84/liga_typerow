@@ -144,6 +144,10 @@ p.left_date{
     display: block;
 }
 
+p.error_page{
+    text-align: center;
+}
+
 p.right_date{
     float: right;
     font-size: xx-small;

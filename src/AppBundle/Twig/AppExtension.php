@@ -23,7 +23,8 @@ class AppExtension extends \Twig_Extension{
             new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday')),
             new \Twig_SimpleFunction('is_typed', array($this, 'isTyped')),
             new \Twig_SimpleFunction('sum_comments', array($this, 'getSumComments')),
-            new \Twig_SimpleFunction('get_season', array($this, 'getSeasonId'))
+            new \Twig_SimpleFunction('get_season', array($this, 'getSeasonId')),
+            new \Twig_SimpleFunction('get_season_name', array($this, 'getSeasonName')),
         );
     }
     
@@ -92,9 +93,20 @@ class AppExtension extends \Twig_Extension{
     public function getSeasonId(){
         
         $repository = $this->doctrine->getRepository('AppBundle:Season');
-        $season = $repository->find(13);
+        $season = $repository->getMatchday();
         
-        return $season->getId();
+        return $season;
+        
+    }
+    
+    public function getSeasonName($seasonId){
+        
+        $repository = $this->doctrine->getRepository('AppBundle:Season');
+        $seasonName = $repository->find($seasonId);
+        
+//        var_dump($seasonName);
+        
+        return $seasonName->getName();
         
     }
     

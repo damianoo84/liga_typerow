@@ -88,6 +88,7 @@ class MainController extends Controller{
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
+        
         if ($request->getMethod() == 'POST') {
             
             $request = $this->getRequest();

@@ -73,9 +73,9 @@
         </div>
         
         <div id="footer_07">
+            {% if app.user %}
             <a class="a_footer" href="{{ path('liga_typerow_principles') }}">ZASADY</a>
             <a class="a_footer" href="{{ path('liga_typerow_account') }}">KONTO</a>
-            {% if app.user %}
             <a class="a_footer" href="{{ path('_logout') }}">WYLOGUJ</a>
             {% endif %}
         </div>

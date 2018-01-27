@@ -8,16 +8,6 @@
         {% set nextMatchday = false %}
     {% endif %}
     
-    {{ dump('now') }}
-    {{ dump(nextMatchday) }}
-    {{ dump(app.request.get('matchday')) }}
-    {{ dump(find_matchday(app.request.get('matchday')).dateFrom) }}
-    {{ dump(find_matchday(app.request.get('matchday')).dateTo) }}
-    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom) }}
-    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo) }}
-    
-    
-    
     {% if types is not empty %}
         <table class="tab_types">
             <tr class="type_header">

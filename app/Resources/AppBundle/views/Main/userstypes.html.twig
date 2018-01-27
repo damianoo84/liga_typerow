@@ -2,19 +2,19 @@
 
 {% block content %}
     
-    {% if 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y') and 'now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y') %}
+    {% if 'now' <  find_matchday(app.request.get('matchday')).dateFrom and 'now' <  find_matchday(app.request.get('matchday')).dateTo %}
         {% set nextMatchday = true %}
     {% else %}
         {% set nextMatchday = false %}
     {% endif %}
     
-{#    {{ dump('now'|date('d-m-Y')) }}
+    {{ dump('now') }}
     {{ dump(nextMatchday) }}
     {{ dump(app.request.get('matchday')) }}
-    {{ dump(find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y')) }}
-    {{ dump(find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y')) }}
-    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y')) }}
-    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y')) }}#}
+    {{ dump(find_matchday(app.request.get('matchday')).dateFrom) }}
+    {{ dump(find_matchday(app.request.get('matchday')).dateTo) }}
+    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom) }}
+    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo) }}
     
     
     

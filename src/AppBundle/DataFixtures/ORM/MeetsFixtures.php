@@ -119,7 +119,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Tottenham Londyn',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,13-12-2016,20:45',
+                'term' => 'Wtorek,13-02-2018,20:45',
                 'position' => 1,
             ),
             array(
@@ -128,7 +128,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Liverpool FC',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Środa,14-12-2016,20:45',
+                'term' => 'Środa,14-02-2018,20:45',
                 'position' => 2,
             ),
             array(
@@ -137,7 +137,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Paris Saint-Germain',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Środa,14-12-2016,20:45',
+                'term' => 'Środa,14-02-2018,20:45',
                 'position' => 3,
             ), 
             array(
@@ -146,7 +146,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Villarreal CF',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Europy',
-                'term' => 'Czwartek,15-12-2016,21:05',
+                'term' => 'Czwartek,15-02-2018,21:05',
                 'position' => 4,
             ), 
             array(
@@ -155,7 +155,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Athletic Bilbao',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Hiszpańska',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Niedziela,18-02-2018,16:15',
                 'position' => 5,
             ), 
             array(
@@ -164,7 +164,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Bayer 04 Leverkusen',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Niemiecka',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Sobota,17-02-2018,15:30',
                 'position' => 6,
             ), 
             array(
@@ -173,7 +173,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Bayern Monachium',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Sobota,17-02-2018,15:30',
                 'position' => 7,
             ), 
             array(
@@ -182,7 +182,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Girondins Bordeaux',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Francuska',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Sobota,17-02-2018,20:00',
                 'position' => 8,
             ),
             array(
@@ -191,7 +191,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Borussia Dortmund',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Wtorek,18-02-2018,18:00',
                 'position' => 9,
             ),
             array(
@@ -200,7 +200,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'AS Roma',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Wtorek,17-02-2018,15:00',
                 'position' => 10,
             ),
             

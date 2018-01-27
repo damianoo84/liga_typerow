@@ -177,6 +177,11 @@ div.forum_comment{
 
 div.forum_form{
     width:100%;
+    text-align: center;
+}
+
+b.red{
+    color: red;
 }
 
 textarea{
@@ -299,6 +304,40 @@ td.team_name_2{
     text-align: left;
 }
 
+td.team_name{
+    text-align: center;
+}
+
+td.league{
+    width: 23%;
+}
+
+td.team_name{
+    width: 24%;
+}
+
+td.team_name_short{
+    width: 45%;
+}
+
+td.user_type{
+    width: 2%;
+}
+
+td.gap{
+    width: 2%;
+}
+
+td.term{
+    width: 23%;
+}
+
+p.button_send{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 
 @media screen and (min-width:680px) {
@@ -306,7 +345,7 @@ td.team_name_2{
     td.team_shortname,a.type_matchday_small_screen,
     a.history_season_small_screen,
     td.team_name_short,td.team_name_short_2,img.img2,
-    th.team_user_shortname,th.team_matchday_short{
+    th.team_user_shortname,th.team_matchday_short,td.user_type_short,td.type_type_short{
         display: none;
     }
     
@@ -327,11 +366,13 @@ td.team_name_2{
     th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
     th.th_rank_total,th.th_rank_win,td.table_pkt, 
     td.team_name,td.team_name_2,img.img1,
-    th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number{
+    th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number,td.type_type,td.user_type_2{
         display: none;
     }
     
-    td.team_shortname,th.team_user_shortname, th.team_matchday_short,td.team_name_short_2{
+    td.team_shortname,th.team_user_shortname, th.team_matchday_short,
+    td.team_name_short_2,td.team_name_short,td.user_type_short,
+    td.type_type_short{
        font-size: xx-small;
     }
     

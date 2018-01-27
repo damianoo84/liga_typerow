@@ -16,7 +16,11 @@
         {% for rank in ranks %}
             <tr>
                 <td>{{ loop.index }}.</td>
-                <td class="rank_username">{{ rank.username }}</td>
+                {% if(rank.status == 1) %}
+                    <td class="rank_username">{{ rank.username }} *</td>
+                {% else %}
+                    <td class="rank_username">{{ rank.username }}</td>
+                {% endif %}
                 <td class="rank_ptk">{{ rank.avgPtsForMatch|number_format(2, '.', ',') }}</td>
                 <td class="rank_seasons">{{ rank.seasons }}</td>
                 <td class="rank_queue">{{ rank.numOfQue }}</td>
@@ -29,3 +33,7 @@
         <tr>
     </table>
 {% endblock %}
+
+{% block infobar %}
+    <p style="text-align: center;padding:0;margin:0">Stan na dzień: 28-01-2018</p>
+{% endblock infobar %}

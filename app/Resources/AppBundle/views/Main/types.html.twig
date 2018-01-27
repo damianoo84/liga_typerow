@@ -18,12 +18,14 @@
             <tr class="big_screen">          
                 <td class="league">{{ type.name }}</td>
                 <td class="team_name">{{ type.host }}</td>
-                <td class="team_name_short">{{ type.hostShort }}</td>
-                <td class="user_type">{{ type.hostType }}</td>
+                <td class="team_name_short">{{ type.host }}</td>
+                <td class="user_type_2">{{ type.hostType }}</td>
+                <td class="user_type_short">{{ type.hostType }}</td>
                 <td class="gap">-</td>
-                <td class="user_type">{{ type.guestType }}</td>
+                <td class="user_type_2">{{ type.guestType }}</td>
+                <td class="user_type_short">{{ type.guestType }}</td>
                 <td class="team_name">{{ type.guest }}</td>
-                <td class="team_name_short">{{ type.guestShort }}</td>
+                <td class="team_name_short">{{ type.guest }}</td>
                 <td class="term">{{ type.term }}</td>
             </tr>
             {% endfor %}
@@ -46,26 +48,22 @@
             <tr class="big_screen">
                 <td class="league">{{ meet.league }}</td>
                 <td class="team_name">{{ meet.host }}</td>
-                <td class="team_name_short">{{ meet.hostShort }}</td>
-                <td class="user_type">
-                    <input type="text" class="tp" name="hostType[]" maxlength='1' />
-                </td>
+                <td class="team_name_short">{{ meet.host }}</td>
+                <td class="user_type"><input type="text" class="tp" name="hostType[]" maxlength='1' /></td>
+{#                <td class="user_type_short"><input type="text" class="tp" name="hostType[]" maxlength='1' /></td>#}
                 <td class="gap">-</td>
-                <td class="user_type">
-                    <input type="text" class="tp" name="guestType[]" maxlength='1' />
-                </td>
+                <td class="user_type"><input type="text" class="tp" name="guestType[]" maxlength='1' /></td>
+{#                <td class="user_type_short"><input type="text" class="tp" name="guestType[]" maxlength='1' /></td>#}
                 <td class="team_name">{{ meet.guest }}</td>
-                <td class="team_name_short">{{ meet.guestShort }}</td>
+                <td class="team_name_short">{{ meet.guest }}</td>
                 <td class="term">{{ meet.term }}</td>
             </tr>
             {% endfor %}
-            <tr>
-                <td><input type="submit"  value="Wyślij"/></td>
-            </tr>
         </table>
+            <p class="button_send"><input type="submit" value="Wyślij"/></p>
         </form>
     {% endif %}
-                 
+       
         <script type="text/javascript">
             $(function(){
                $("#form").submit(function(e){

@@ -49,7 +49,7 @@ class LeagueFixtures extends AbstractFixture implements OrderedFixtureInterface{
         foreach ($leaguesList as $leagueDetails){
             $League = new League();
             $League->setName($leagueDetails);
-            $this->addReference('League '.$i, $League);
+            $this->addReference('League-'.$leagueDetails, $League);
             
             $manager->persist($League);
             $i++;

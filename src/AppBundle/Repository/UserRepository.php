@@ -25,6 +25,7 @@ class UserRepository extends EntityRepository
       
         $sql = 'SELECT '
             .'u.username AS username, '
+            .'u.status AS status, '
             .'(sum(s.total_points) / sum(s.num_of_que)) AS avgPtsForMatch, '
             .'count(u.id) AS seasons, '
             . 'sum(s.num_of_que) AS numOfQue, '

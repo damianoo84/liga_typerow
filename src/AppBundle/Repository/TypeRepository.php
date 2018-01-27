@@ -93,7 +93,9 @@ class TypeRepository extends EntityRepository {
         // 1. Pobieram typy użytkowników
         $sql = 'SELECT  '
                      .'tm1.name AS host,  '
+                     .'tm1.shortname AS shortNameTm1,'
                      .'tm2.name AS guest, ' 
+                     .'tm2.shortname AS shortNameTm2,' 
                      .'u.username AS username, ' 
                      .'t.host_type AS hostType, ' 
                      .'t.guest_type AS guestType,  '
@@ -136,7 +138,12 @@ class TypeRepository extends EntityRepository {
             // 5. Wypełnienie macierzy typami
             foreach ($usersTypes as $type){
                 if($type['matchday_id'] == $matchday){
-                    $matrix[$type['host'] . "-" . $type['guest']][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
+                    
+                    $names = $type['shortNameTm1'] . "-" . $type['shortNameTm2'];
+                    $shortNames = $type['host'] . "-" . $type['guest'];
+                    $hostGuest = $names.' | '.$shortNames;
+                    
+                    $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
                 }
             }
         }

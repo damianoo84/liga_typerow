@@ -23,7 +23,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Real Sociedad',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Hiszpańska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,20:45',
                 'position' => 1,
             ),
             array(
@@ -32,7 +32,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Arsenal Londyn',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Angielska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,13:30',
                 'position' => 2,
             ),
             array(
@@ -41,7 +41,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Manchester United',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Angielska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Niedziela,11-02-2018,15:15',
                 'position' => 3,
             ),  
             array(
@@ -50,7 +50,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Liverpool FC',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Angielska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Niedziela,11-02-2018,17:30',
                 'position' => 4,
             ),  
             array(
@@ -59,7 +59,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Leicester City',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Angielska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,18:30',
                 'position' => 5,
             ),         
             array(
@@ -68,7 +68,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Hamburger SV',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,15:30',
                 'position' => 6,
             ),  
             array(
@@ -77,7 +77,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Schalke 04 Gelsenkirchen',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,18:30',
                 'position' => 7,
             ),    
             array(
@@ -86,7 +86,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'VFL Wolfsburg',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Niedziela,11-02-2018,18:00',
                 'position' => 8,
             ),  
             array(
@@ -95,7 +95,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Juventus Turyn',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Włoska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Piątek,09-02-2018,20:45',
                 'position' => 9,
             ),  
             array(
@@ -104,7 +104,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Lazio Rzym',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Włoska',
-                'term' => 'Wtorek,12-02-2018,21:00',
+                'term' => 'Sobota,10-02-2018,20:45',
                 'position' => 10,
             ), 
             
@@ -119,7 +119,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Tottenham Londyn',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Wtorek,13-12-2016,20:45',
                 'position' => 1,
             ),
             array(
@@ -128,7 +128,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Liverpool FC',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Środa,14-12-2016,20:45',
                 'position' => 2,
             ),
             array(
@@ -137,7 +137,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Paris Saint-Germain',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Środa,14-12-2016,20:45',
                 'position' => 3,
             ), 
             array(
@@ -146,7 +146,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name_2' => 'Villarreal CF',
                 'matchday_name' => 'Kolejka 2',
                 'description' => 'Liga Europy',
-                'term' => 'Wtorek,12-12-2016,21:00',
+                'term' => 'Czwartek,15-12-2016,21:05',
                 'position' => 4,
             ), 
             array(
@@ -216,7 +216,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                         ->setHostTeam($this->getReference('team-'.$meetsDetails['team_name_1']))
                         ->setGuestTeam($this->getReference('team-'.$meetsDetails['team_name_2']))
                         ->setName('Mecz '.$i)
-                        ->setLeague($this->getReference('League 1'));
+                        ->setLeague($this->getReference('League-'.$meetsDetails['description']));
                         ;
                 $this->addReference('meet-Mecz '.$i, $Meet);
                 

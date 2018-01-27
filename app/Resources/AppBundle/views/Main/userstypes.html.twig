@@ -8,6 +8,16 @@
         {% set nextMatchday = false %}
     {% endif %}
     
+{#    {{ dump('now'|date('d-m-Y')) }}
+    {{ dump(nextMatchday) }}
+    {{ dump(app.request.get('matchday')) }}
+    {{ dump(find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y')) }}
+    {{ dump(find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y')) }}
+    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateFrom|date('d-m-Y')) }}
+    {{ dump('now'|date('d-m-Y') <  find_matchday(app.request.get('matchday')).dateTo|date('d-m-Y')) }}#}
+    
+    
+    
     {% if types is not empty %}
         <table class="tab_types">
             <tr class="type_header">
@@ -23,11 +33,13 @@
                     <td class="team_name_2">{{ key[9:] }}</td>
                     <td class="team_name_short_2">{{ key[:7] }}</td>
                     {% for k,tp in type %}
-{#                    <td class="type_type">{{ tp }}</td> #}
                         {% if nextMatchday == true and tp != '-' %}
+                            
                             <td class="type_type">*</td>
+                            <td class="type_type_short">*</td>
                         {% else %}
                             <td class="type_type">{{ tp }}</td> 
+                            <td class="type_type_short">{{ tp }}</td> 
                         {% endif %}
                     {% endfor %} 
                 </tr>

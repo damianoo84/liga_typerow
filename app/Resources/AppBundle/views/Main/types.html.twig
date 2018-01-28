@@ -31,7 +31,7 @@
             {% endfor %}
         </table>
     {# w innym przypadku wyświetl formularz do wypełnienia #} 
-    {% else %}
+    {% elseif (is_typed(curr_matchday().id, app.user.id)) == false %}
         <form id="form">
         <table class="tab_types">
             <tr class="col_name">
@@ -62,6 +62,8 @@
         </table>
             <p class="button_send"><input type="submit" value="Wyślij"/></p>
         </form>
+        {% else %}
+            <p style="text-align: center">Sezon zakończony</p>
     {% endif %}
        
         <script type="text/javascript">

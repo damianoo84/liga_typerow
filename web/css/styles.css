@@ -99,6 +99,13 @@ div.div_change_pass_box{
     float: left;
 }
 
+div.div_change_pass_box_small_screen{
+    width:5%;
+    height: 100px;
+    /*background-color: green;*/
+    float: left; 
+}
+
 
 div.div_change_pass{
     padding-top: 40px;
@@ -358,6 +365,7 @@ p.button_send{
 
     td.team_shortname,a.type_matchday_small_screen,
     a.history_season_small_screen,
+    div.div_change_pass_box_small_screen,
     td.team_name_short,td.team_name_short_2,img.img2,
     th.team_user_shortname,th.team_matchday_short,td.user_type_short,td.type_type_short{
         display: none;
@@ -380,6 +388,7 @@ p.button_send{
     th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
     th.th_rank_total,th.th_rank_win,td.table_pkt, 
     td.team_name,td.team_name_2,img.img1,
+    div.div_change_pass_box,
     th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number,td.type_type,td.user_type_2{
         display: none;
     }

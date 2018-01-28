@@ -92,10 +92,24 @@ div.div_login{
     text-align: center;
 }
 
+div.div_change_pass_box{
+    width:40%;
+    height: 100px;
+    /*background-color: green;*/
+    float: left;
+}
+
+
 div.div_change_pass{
     padding-top: 40px;
-    text-align: center;
+    text-align: left;
+    width: 50%;
+    height: 100px;
+    /*background-color: red;*/
+    float: left;
 }
+
+
 
 div.forum_panel{
     overflow-y: scroll;

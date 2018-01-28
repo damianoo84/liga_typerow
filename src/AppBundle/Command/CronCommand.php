@@ -32,12 +32,14 @@ class CronCommand extends ContainerAwareCommand{
         $arAccount = array("login" => "damcio","pass" => "gutek246");
         $arMessages = array(array(
             "recipients" => $usersPhones,
-            "message" => "FC Barcelona rządzi :) ",
+            "message" => "Przypomnienie o typowaniu",
             "sender"=> "Damian",
             "msgType" => 1,
             "unicode" => false,
             "sandbox" => false
         ));
+        
+        echo "sms powinien zostac wyslany";
         
         // wysłanie smsów o ustalonym w CRON terminie
         $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;

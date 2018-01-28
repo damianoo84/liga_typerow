@@ -178,7 +178,7 @@ class TypeRepository extends EntityRepository {
     public function getNoTypedUsersList($matchday) {
 
         // Pobranie listy telefonów użytkowników, którzy jeszcze nie podali typów
-        $sql = 'SELECT u.phone '
+        $sql = 'SELECT u.phone, u.id '
                 . 'FROM type t '
                 . 'INNER JOIN user u ON t.user_id = u.id '
                 . 'INNER JOIN meet m ON t.meet_id = m.id '
@@ -190,15 +190,25 @@ class TypeRepository extends EntityRepository {
         $params = array('matchday' => $matchday);
         $userTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
+        // Pobieram wszystkich aktywnych użytkowników 
+        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+        $users = $userRepo->findByStatus(1);
+        
         $phones = array();
 
-//        var_dump($phones);
-
-        foreach ($userTypes as $phone) {
-            $phones[] = $phone['phone'];
+        foreach ($userTypes as $userT) {
+            $userIdTyped[] = $userT['phone'];
         }
-
-        return $phones;
+        
+        foreach($users as $user){
+            $userIdAll[] = $user->getPhone();
+        }
+        
+        $result = array_diff($userIdAll, $userIdTyped);
+        
+//        var_dump($result);
+        
+        return $result;
     }
 
     function checkTypes($matchday) {

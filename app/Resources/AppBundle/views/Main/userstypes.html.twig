@@ -2,12 +2,12 @@
 
 {% block content %}
     
-    {% if 'now' <  find_matchday(app.request.get('matchday')).dateFrom and 'now' <  find_matchday(app.request.get('matchday')).dateTo %}
+    {% if compare_date(app.request.get('matchday')) %}
         {% set nextMatchday = true %}
     {% else %}
         {% set nextMatchday = false %}
     {% endif %}
-    
+
     {% if types is not empty %}
         <table class="tab_types">
             <tr class="type_header">

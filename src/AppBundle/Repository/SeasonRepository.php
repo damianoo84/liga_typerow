@@ -7,17 +7,17 @@ use Doctrine\ORM\EntityRepository;
 class SeasonRepository extends EntityRepository
 {
     // pobranie obecnego sezonu
-    public function getMatchday(){
+    public function getSeason(){
         $today = new \DateTime('now');
         $qb = $this->createQueryBuilder('s');
         $qb->select('s.id AS season_id')     
-           ->where('s.dateStart > :today')
+           ->where('s.dateEnd > :today')
            ->setMaxResults(1)
-           ->setParameter('today', $today->format('Y-m-d H:i:s'))
+           ->setParameter('today', $today->format('Y-m-d'))
         ;
         
         $result = $qb->getQuery()->getOneOrNullResult();
-        
+
         return $result['season_id'];
     }
     

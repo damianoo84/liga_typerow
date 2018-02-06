@@ -31,8 +31,9 @@ class CronCommand extends ContainerAwareCommand{
         $client = new \SoapClient("http://api.gsmservice.pl/soap/v2/gateway.php?wsdl");
         $arAccount = array("login" => "damcio","pass" => "gutek246");
         $arMessages = array(array(
-            "recipients" => $usersPhones,
-            "message" => "Przypomnienie o typowaniu",
+//            "recipients" => $usersPhones,
+            "recipients" => "606119978",
+            "message" => "to jest test",
             "sender"=> "Damian",
             "msgType" => 1,
             "unicode" => false,

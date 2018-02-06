@@ -15,7 +15,12 @@
         <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') }}"></script>
     </head>
     <body>
+        
         {% set season = get_season() %}
+        {% if season == null %}
+            {% set season = 1 %}
+        {% endif %}
+        
         <div id="header_01">
             <img class="img1" src="{{ asset('images/mainphoto.jpg') }}" />
             <img class="img2" src="{{ asset('images/mainphoto2.jpg') }}" />
@@ -23,11 +28,9 @@
         
         <div id="info_02">
             {% block info %} 
-                
-{#                14 sezon Ligi Typerów od 29 Stycznia#}
-                
                 {% if curr_matchday() is empty %}
                     Kolejny sezon już wkrótce
+                    {% set matchday = 15 %}
                 {% else %}
                     Kolejka {{ curr_matchday().name }}/15
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 
@@ -42,9 +45,10 @@
                 {% if curr_matchday() is not empty %}
                 <li><a href="{{ path('liga_typerow_types') }}">TYP</a></li>
                 {% endif %}
-                <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : 1}) }}">TYPY</a></li>
+                {# Jeśli koniec ostatniej kolejki to ustawiaj ostatnią 15 (uwaga! zastosowano short if) #}
+                <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : curr_matchday().name is empty ? 15 : curr_matchday().name }) }}">TYPY</a></li>
                 <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
-                <li><a href="{{ path('liga_typerow_history', {'season' : 13}) }}">HISTORIA</a></li>
+                <li><a href="{{ path('liga_typerow_history', {'season' : season == 1 ? season : season-1}) }}">HISTORIA</a></li>
                 <li><a href="{{ path('liga_typerow_forum') }}">FORUM <b class="red">({{ sum_comments(season) }})</b></a></li>
                 <li class="icon">
                     <a href="javascript:void(0);" >&#9776;</a>

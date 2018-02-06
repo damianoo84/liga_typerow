@@ -17,9 +17,21 @@
                     <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
-                        <td class="table_pkt">{{ pt }}</td>
+                        <td class="table_pkt">
+                            {% if curr_matchday().name == loop.index %}
+                                {{ pt == 0 ? '' : pt }}
+                            {% else %}
+                                {{ pt }}
+                            {% endif %}
+                        </td>
                     {% else %}
-                        <td class="table_pkt">{{ pt }}</td>
+                        <td class="table_pkt">
+                            {% if curr_matchday().name == loop.index %}
+                                {{ pt == 0 ? '' : pt }}
+                            {% else %}
+                                {{ pt }}
+                            {% endif %}
+                        </td>
                     {% endif %}
                     {% set sum = sum + pt %}
                 {% endfor %}

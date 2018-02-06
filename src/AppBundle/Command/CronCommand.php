@@ -32,8 +32,8 @@ class CronCommand extends ContainerAwareCommand{
         $arAccount = array("login" => "damcio","pass" => "gutek246");
         $arMessages = array(array(
             "recipients" => $usersPhones,
-//            "message" => "Przypomnienie o typowaniu",
-            "message" => "To jest test. Można zignorować lub potwierdzić że doszło. Można też dopisać: nie lubię Realu i CR7 :) ",
+            "message" => "Przypomnienie o typowaniu",
+//            "message" => "To jest test. Można zignorować lub potwierdzić że doszło. Można też dopisać: nie lubię Realu i CR7 :) ",
             "sender"=> "Damian",
             "msgType" => 1,
             "unicode" => false,

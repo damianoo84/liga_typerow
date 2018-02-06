@@ -206,9 +206,11 @@ class TypeRepository extends EntityRepository {
         
         $result = array_diff($userIdAll, $userIdTyped);
         
-//        var_dump($result);
+        foreach ($result as $res){
+            $phones[] = $res;
+        }
         
-        return $result;
+        return $phones;
     }
 
     function checkTypes($matchday) {

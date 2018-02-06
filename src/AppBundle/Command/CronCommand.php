@@ -26,20 +26,19 @@ class CronCommand extends ContainerAwareCommand{
         
         // pobranie listy numerów tel. użytkowników, którzy jeszcze nie wytypowali 
         $usersPhones = $em->getRepository('AppBundle:Type')->getNoTypedUsersList($matchdayObject['name']);
-        
+
         ini_set("soap.wsdl_cache_enabled", "0");
         $client = new \SoapClient("http://api.gsmservice.pl/soap/v2/gateway.php?wsdl");
         $arAccount = array("login" => "damcio","pass" => "gutek246");
         $arMessages = array(array(
             "recipients" => $usersPhones,
+//            "message" => "Przypomnienie o typowaniu",
             "message" => "To jest test. Można zignorować lub potwierdzić że doszło. Można też dopisać: nie lubię Realu i CR7 :) ",
             "sender"=> "Damian",
             "msgType" => 1,
             "unicode" => false,
             "sandbox" => false
         ));
-        
-        echo "sms powinien zostac wyslany";
         
         // wysłanie smsów o ustalonym w CRON terminie
         $client->SendSMS(array("account" => $arAccount,"messages"=> $arMessages))->return;

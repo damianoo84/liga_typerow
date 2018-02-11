@@ -21,7 +21,7 @@
             </tr>
             {% for key,type in types %}
                 <tr>
-                    <td class="team_name_2">{{ key[9:]|slice(1, (key|length)-14) }}</td>
+                    <td class="team_name_2">{{ key[9:]|slice(1, (key|length)-15) }}</td>
                     <td class="team_name_short_2">{{ key[:7] }}</td>
                     <td class="team_score">{{ key|slice((key|length)-5,5) }}</td>
                     {% for k,tp in type %}

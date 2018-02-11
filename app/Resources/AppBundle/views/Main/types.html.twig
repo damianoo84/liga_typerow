@@ -6,13 +6,13 @@
     {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
         <table class="tab_types">
             <tr class="col_name">
-                <th>Opis</th>
-                <th>Gospodarz</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Gość</th>
-                <th>Termin</th>
+                <th class="type_desc">Opis</th>
+                <th class="type_host">Gospodarz</th>
+                <th class="type_type_host"></th>
+                <th class="type_gap"></th>
+                <th class="type_type_guest"></th>
+                <th class="type_guest">Gość</th>
+                <th class="type_term">Termin</th>
             </tr>
             {% for key,type in types %}
             <tr class="big_screen">          
@@ -35,13 +35,13 @@
         <form id="form">
         <table class="tab_types">
             <tr class="col_name">
-                <th>Opis</th>
-                <th>Gospodarz</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Gość</th>
-                <th>Termin</th>
+                <th class="type_desc">Opis</th>
+                <th class="type_host">Gospodarz</th>
+                <th class="type_type_host"></th>
+                <th class="type_gap"></th>
+                <th class="type_type_guest"></th>
+                <th class="type_guest">Gość</th>
+                <th class="type_term">Termin</th>
             </tr>
             {% for key,meet in meets %}
             <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  

@@ -99,7 +99,9 @@ class TypeRepository extends EntityRepository {
                      .'u.username AS username, ' 
                      .'t.host_type AS hostType, ' 
                      .'t.guest_type AS guestType,  '
-                     .'m.matchday_id '
+                     .'m.matchday_id, '
+                     .'m.host_goals AS hostGoals, '
+                     .'m.guest_goals AS guestGoals '
                      .'FROM user u  '
                      .'INNER JOIN type t ON t.user_id = u.id  '
                      .'INNER JOIN meet m ON t.meet_id = m.id ' 
@@ -129,8 +131,12 @@ class TypeRepository extends EntityRepository {
                     
                     $names = $meet->getHostTeam()->getName() . "-" . $meet->getGuestTeam()->getName();
                     $shortNames = $meet->getHostTeam()->getShortname() . "-" . $meet->getGuestTeam()->getShortname();
-                    $hostGuest = $shortNames.' | '.$names;
+                    $score = 
+                             (null!==$meet->getHostGoals()?$meet->getHostGoals():" ")
+                            ." - "
+                            .(null!==$meet->getGuestGoals()?$meet->getGuestGoals():" ");
                     
+                    $hostGuest = $shortNames.' | '.$names.$score;
                     $matrix[$hostGuest][$user->getUsername()] = '-';
                 }
             }
@@ -141,8 +147,12 @@ class TypeRepository extends EntityRepository {
                     
                     $names = $type['shortNameTm1'] . "-" . $type['shortNameTm2'];
                     $shortNames = $type['host'] . "-" . $type['guest'];
-                    $hostGuest = $names.' | '.$shortNames;
+                    $score = 
+                             (null!==$type['hostGoals']?$type['hostGoals']:" ")
+                            ." - "
+                            .(null!==$type['guestGoals']?$type['guestGoals']:" ");
                     
+                    $hostGuest = $names.' | '.$shortNames.$score;
                     $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
                 }
             }

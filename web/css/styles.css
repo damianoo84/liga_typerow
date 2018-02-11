@@ -359,6 +359,16 @@ p.button_send{
     padding: 0;
 }
 
+th.team_score{
+    color: grey;
+}
+
+td.team_score{
+    background-color: grey;
+}
+
+
+
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 
 @media screen and (min-width:680px) {
@@ -367,7 +377,8 @@ p.button_send{
     a.history_season_small_screen,
     div.div_change_pass_box_small_screen,
     td.team_name_short,td.team_name_short_2,img.img2,
-    th.team_user_shortname,th.team_matchday_short,td.user_type_short,td.type_type_short{
+    th.team_user_shortname,th.team_matchday_short,
+    td.user_type_short,td.type_type_short{
         display: none;
     }
     
@@ -378,7 +389,8 @@ p.button_send{
 @media screen and (max-width:680px) {
 
     /* niewidoczne */
-    tr.col_name,td.gap,td.term,
+    th.type_desc,th.type_term,th.type_gap,
+    td.gap,td.term,
     td.league,td.team_fullname,
     a.type_matchday_big_screen,
     a.history_season_big_screen,
@@ -388,14 +400,14 @@ p.button_send{
     th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
     th.th_rank_total,th.th_rank_win,td.table_pkt, 
     td.team_name,td.team_name_2,img.img1,
-    div.div_change_pass_box,
+    div.div_change_pass_box,th.team_score,td.team_score,
     th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number,td.type_type,td.user_type_2{
         display: none;
     }
     
     td.team_shortname,th.team_user_shortname, th.team_matchday_short,
     td.team_name_short_2,td.team_name_short,td.user_type_short,
-    td.type_type_short{
+    td.type_type_short, th.type_guest, th.type_host{
        font-size: xx-small;
     }
     

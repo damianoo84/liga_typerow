@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    
+    {% if curr_matchday() == null %}
+        {% set matchday = 15 %}
+    {% else %}
+        {% set matchday = curr_matchday().name %}
+    {% endif %}
+    
     <table class="tab_types">
       <tr>
         <th></th>
@@ -18,7 +25,7 @@
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
                         <td class="table_pkt">
-                            {% if curr_matchday().name == loop.index %}
+                            {% if matchday == loop.index %}
                                 {{ pt == 0 ? '' : pt }}
                             {% else %}
                                 {{ pt }}
@@ -26,7 +33,7 @@
                         </td>
                     {% else %}
                         <td class="table_pkt">
-                            {% if curr_matchday().name == loop.index %}
+                            {% if matchday == loop.index %}
                                 {{ pt == 0 ? '' : pt }}
                             {% else %}
                                 {{ pt }}

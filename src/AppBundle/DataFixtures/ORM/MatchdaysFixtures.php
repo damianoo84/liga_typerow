@@ -18,92 +18,92 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2018-02-05',
-                'dateTo' => '2018-02-11',
+                'dateFrom' => '2018-03-01',
+                'dateTo' => '2018-03-02',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2018-02-12',
-                'dateTo' => '2018-02-18',
-                'season_name' => 'Wiosna 2018'
-            ),
-            array(
-                'matchday_name' => '3',
-                'dateFrom' => '2018-02-19',
-                'dateTo' => '2018-02-25',
-                'season_name' => 'Wiosna 2018'
-            ),
-            array(
-                'matchday_name' => '4',
-                'dateFrom' => '2018-02-26',
+                'dateFrom' => '2018-03-03',
                 'dateTo' => '2018-03-04',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
-                'matchday_name' => '5',
+                'matchday_name' => '3',
                 'dateFrom' => '2018-03-05',
-                'dateTo' => '2018-03-11',
+                'dateTo' => '2018-03-06',
+                'season_name' => 'Wiosna 2018'
+            ),
+            array(
+                'matchday_name' => '4',
+                'dateFrom' => '2018-03-07',
+                'dateTo' => '2018-03-08',
+                'season_name' => 'Wiosna 2018'
+            ),
+            array(
+                'matchday_name' => '5',
+                'dateFrom' => '2018-03-09',
+                'dateTo' => '2018-03-10',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2018-03-12',
-                'dateTo' => '2018-03-18',
+                'dateFrom' => '2018-03-11',
+                'dateTo' => '2018-03-12',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2018-03-19',
-                'dateTo' => '2018-03-25',
+                'dateFrom' => '2018-03-13',
+                'dateTo' => '2018-03-14',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2018-03-26',
-                'dateTo' => '2018-04-01',
+                'dateFrom' => '2018-03-15',
+                'dateTo' => '2018-03-16',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2018-04-02',
-                'dateTo' => '2018-04-08',
+                'dateFrom' => '2018-03-17',
+                'dateTo' => '2018-03-18',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2018-04-09',
-                'dateTo' => '2018-04-15',
+                'dateFrom' => '2018-03-19',
+                'dateTo' => '2018-03-20',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2018-04-16',
-                'dateTo' => '2018-04-22',
+                'dateFrom' => '2018-03-21',
+                'dateTo' => '2018-03-22',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2018-04-23',
-                'dateTo' => '2018-04-29',
+                'dateFrom' => '2018-03-23',
+                'dateTo' => '2018-03-24',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2018-04-30',
-                'dateTo' => '2018-05-06',
+                'dateFrom' => '2018-03-25',
+                'dateTo' => '2018-03-26',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2018-05-07',
-                'dateTo' => '2018-05-13',
+                'dateFrom' => '2018-03-27',
+                'dateTo' => '2018-03-28',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2018-05-14',
-                'dateTo' => '2018-05-20',
+                'dateFrom' => '2018-03-29',
+                'dateTo' => '2018-03-30',
                 'season_name' => 'Wiosna 2018'
             )
         );

@@ -317,6 +317,117 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'shortname' => 'BES',
                 'league' => 'Liga Turecka'
             ), 
+            array(
+                'team_name' => 'Glasgow Rangers',
+                'shortname' => 'GLA',
+                'league' => 'Liga Szkocka'
+            ), 
+            array(
+                'team_name' => 'Celtic GLasgow',
+                'shortname' => 'CEL',
+                'league' => 'Liga Szkocka'
+            ),
+            array(
+                'team_name' => 'Niemcy',
+                'shortname' => 'NIE',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Hiszpania',
+                'shortname' => 'HIS',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Holandia',
+                'shortname' => 'HOL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Anglia',
+                'shortname' => 'ANG',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Włochy',
+                'shortname' => 'WŁO',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Argentyna',
+                'shortname' => 'ARG',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Rosja',
+                'shortname' => 'ROS',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Brazylia',
+                'shortname' => 'BRA',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Turcja',
+                'shortname' => 'TUR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Irlandia',
+                'shortname' => 'IRL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Polska',
+                'shortname' => 'POL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Nigeria',
+                'shortname' => 'NIG',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Austria',
+                'shortname' => 'AUS',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Słowenia',
+                'shortname' => 'SŁO',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Francja',
+                'shortname' => 'FRA',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Kolumbia',
+                'shortname' => 'KOL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Meksyk',
+                'shortname' => 'MEK',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Islandia',
+                'shortname' => 'ISL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Szwecja',
+                'shortname' => 'SZW',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Chile',
+                'shortname' => 'CHI',
+                'league' => 'Mecz towarzyski'
+            )
+            
             
             
             

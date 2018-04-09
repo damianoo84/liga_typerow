@@ -34,6 +34,12 @@ class AppExtension extends \Twig_Extension{
         $repository = $this->doctrine->getRepository('AppBundle:Matchday');
         $matchday = $repository->getMatchday();
         
+        if($matchday == NULL){
+            $matchday['id'] = 15;
+            $matchday['name'] = 15;
+            $matchday['finish'] = "finish";
+        }
+        
         return $matchday;
     }
     

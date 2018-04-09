@@ -28,14 +28,12 @@
         
         <div id="info_02">
             {% block info %} 
-                {% if curr_matchday() is null %}
+                {% if curr_matchday().finish is defined %}
                     Kolejny sezon już wkrótce
-                    {% set matchday = 15 %}
                 {% else %}
                     Kolejka {{ curr_matchday().name }}/15
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 
                     {{ curr_matchday().dateTo|date('d-m-Y') }}
-                    {% set matchday = curr_matchday().name %}
                 {% endif %}
             {% endblock %}
         </div>
@@ -43,11 +41,11 @@
         <div id="menu_03">
             <ul class="navigation" id="myNav">
                 <li><a href="{{ path('liga_typerow_table') }}">TABELA</a></li>
-                {% if curr_matchday() is not empty %}
+                {% if curr_matchday().finish is not defined %}
                 <li><a href="{{ path('liga_typerow_types') }}">TYP</a></li>
                 {% endif %}
-                {# Jeśli koniec ostatniej kolejki to ustawiaj ostatnią 15 (uwaga! zastosowano short if) #}
-                <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : curr_matchday() is null ? 15 : curr_matchday().name }) }}">TYPY</a></li>
+                {# Jeśli koniec ostatniej kolejki to ustawiaj ostatnią 15 #}
+                <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : curr_matchday().name }) }}">TYPY</a></li>
                 <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
                 <li><a href="{{ path('liga_typerow_history', {'season' : season == 1 ? season : season-1}) }}">HISTORIA</a></li>
                 <li><a href="{{ path('liga_typerow_forum') }}">FORUM <b class="red">({{ sum_comments(season) }})</b></a></li>

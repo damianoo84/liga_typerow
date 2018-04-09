@@ -233,14 +233,16 @@ class MainController extends Controller{
     public function forumAction(Request $request){
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
-        
-        if($matchday == NULL){
-            $matchday['season_id'] = 15;
+
+        $repoSeason = $this->getDoctrine()->getRepository('AppBundle:Season');
+        $lastSeasonId = $repoSeason->getLastSeason();
+            
+        if(isset($matchday)){
+            $matchday['season_id'] = $lastSeasonId;
         }
         
         $repoComment = $this->getDoctrine()->getRepository('AppBundle:Comment');
         $comments = $repoComment->getCommentsBySeason($matchday['season_id']);
-        $repoSeason = $this->getDoctrine()->getRepository('AppBundle:Season');
         
         if ($request->getMethod() == 'POST') {
             

@@ -21,4 +21,16 @@ class SeasonRepository extends EntityRepository
         return $result['season_id'];
     }
     
+    // pobranie ostatniego sezonu
+    public function getLastSeason(){
+        
+        $qb = $this->createQueryBuilder('s');
+        $qb->select('max(s.id) AS last');
+        
+        $result = $qb->getQuery()->getOneOrNullResult();
+        
+        return $result['last'];
+    }
+    
+    
 }

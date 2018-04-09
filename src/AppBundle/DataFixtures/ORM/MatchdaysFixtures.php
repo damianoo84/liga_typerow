@@ -96,14 +96,14 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2018-03-27',
-                'dateTo' => '2018-03-28',
+                'dateFrom' => '2018-04-03',
+                'dateTo' => '2018-04-10',
                 'season_name' => 'Wiosna 2018'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2018-03-29',
-                'dateTo' => '2018-03-30',
+                'dateFrom' => '2018-04-11',
+                'dateTo' => '2018-04-15',
                 'season_name' => 'Wiosna 2018'
             )
         );

@@ -2,12 +2,6 @@
 
 {% block content %}
     
-    {% if curr_matchday() == null %}
-        {% set matchday = 15 %}
-    {% else %}
-        {% set matchday = curr_matchday().name %}
-    {% endif %}
-    
     <table class="tab_types">
       <tr>
         <th></th>
@@ -25,7 +19,7 @@
                 {% for pt in point.suma %}
                     {% if loop.index % 2 %}
                         <td class="table_pkt">
-                            {% if matchday == loop.index %}
+                            {% if curr_matchday().id == loop.index %}
                                 {{ pt == 0 ? '' : pt }}
                             {% else %}
                                 {{ pt }}
@@ -33,7 +27,7 @@
                         </td>
                     {% else %}
                         <td class="table_pkt">
-                            {% if matchday == loop.index %}
+                            {% if curr_matchday().id == loop.index %}
                                 {{ pt == 0 ? '' : pt }}
                             {% else %}
                                 {{ pt }}

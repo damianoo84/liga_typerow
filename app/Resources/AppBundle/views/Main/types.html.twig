@@ -2,7 +2,10 @@
 
 {% block content %}
     
-    {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
+    {% if curr_matchday().finish is defined %}
+        <p style="text-align: center"></p>
+    {% else %}
+        {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
     {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
         <table class="tab_types">
             <tr class="col_name">
@@ -62,9 +65,11 @@
         </table>
             <p class="button_send"><input type="submit" value="Wyślij"/></p>
         </form>
-        {% else %}
-            <p style="text-align: center">Sezon zakończony</p>
+
     {% endif %}
+    {% endif %}
+        
+    
        
         <script type="text/javascript">
             $(function(){

@@ -11,13 +11,13 @@
         {% endfor %}
         <th class="th_table_sum">Suma</th>
       </tr>
+        {#  #}
         {% for key,point in points %}
             <tr>
                 <td class="table_loop">{{ loop.index }}.</td>
                 {% set sum = 0 %}
                     <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
-                    {% if loop.index % 2 %}
                         <td class="table_pkt">
                             {% if curr_matchday().id == loop.index %}
                                 {{ pt == 0 ? '' : pt }}
@@ -25,18 +25,9 @@
                                 {{ pt }}
                             {% endif %}
                         </td>
-                    {% else %}
-                        <td class="table_pkt">
-                            {% if curr_matchday().id == loop.index %}
-                                {{ pt == 0 ? '' : pt }}
-                            {% else %}
-                                {{ pt }}
-                            {% endif %}
-                        </td>
-                    {% endif %}
                     {% set sum = sum + pt %}
                 {% endfor %}
-                {% if point.suma|length < 14 %}
+                {% if point.suma|length <= 15 %}
                     {% for i in 0..(14-point.suma|length) %}
                         <td class="table_pkt"></td>
                     {% endfor %}

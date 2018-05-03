@@ -106,123 +106,128 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'description' => 'Liga Włoska',
                 'term' => 'Sobota,10-02-2018,20:45',
                 'position' => 10,
-            ), 
+            )
+//            , 
             
             
             // 2 kolejka
             
             
-            
-            array(
-                'meet_name' => 'Mecz 11',
-                'team_name_1' => 'Juventus Turyn',
-                'team_name_2' => 'Tottenham Londyn',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,13-02-2018,20:45',
-                'position' => 1,
-            ),
-            array(
-                'meet_name' => 'Mecz 12',
-                'team_name_1' => 'FC Porto',
-                'team_name_2' => 'Liverpool FC',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Środa,14-02-2018,20:45',
-                'position' => 2,
-            ),
-            array(
-                'meet_name' => 'Mecz 13',
-                'team_name_1' => 'Real Madryt',
-                'team_name_2' => 'Paris Saint-Germain',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Środa,14-02-2018,20:45',
-                'position' => 3,
-            ), 
-            array(
-                'meet_name' => 'Mecz 14',
-                'team_name_1' => 'Olympique Lyon',
-                'team_name_2' => 'Villarreal CF',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Europy',
-                'term' => 'Czwartek,15-02-2018,21:05',
-                'position' => 4,
-            ), 
-            array(
-                'meet_name' => 'Mecz 15',
-                'team_name_1' => 'Atletico Madryt',
-                'team_name_2' => 'Athletic Bilbao',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Hiszpańska',
-                'term' => 'Niedziela,18-02-2018,16:15',
-                'position' => 5,
-            ), 
-            array(
-                'meet_name' => 'Mecz 16',
-                'team_name_1' => 'Hamburger SV',
-                'team_name_2' => 'Bayer 04 Leverkusen',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Niemiecka',
-                'term' => 'Sobota,17-02-2018,15:30',
-                'position' => 6,
-            ), 
-            array(
-                'meet_name' => 'Mecz 17',
-                'team_name_1' => 'VFL Wolfsburg',
-                'team_name_2' => 'Bayern Monachium',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Sobota,17-02-2018,15:30',
-                'position' => 7,
-            ), 
-            array(
-                'meet_name' => 'Mecz 18',
-                'team_name_1' => 'Olympique Marsylia',
-                'team_name_2' => 'Girondins Bordeaux',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Francuska',
-                'term' => 'Sobota,17-02-2018,20:00',
-                'position' => 8,
-            ),
-            array(
-                'meet_name' => 'Mecz 19',
-                'team_name_1' => 'Borussia Moenchengladbach',
-                'team_name_2' => 'Borussia Dortmund',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,18-02-2018,18:00',
-                'position' => 9,
-            ),
-            array(
-                'meet_name' => 'Mecz 20',
-                'team_name_1' => 'Udinese Calcio',
-                'team_name_2' => 'AS Roma',
-                'matchday_name' => 'Kolejka 2',
-                'description' => 'Liga Mistrzów',
-                'term' => 'Wtorek,17-02-2018,15:00',
-                'position' => 10,
-            ),
+//            
+//            array(
+//                'meet_name' => 'Mecz 11',
+//                'team_name_1' => 'Juventus Turyn',
+//                'team_name_2' => 'Tottenham Londyn',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Wtorek,13-02-2018,20:45',
+//                'position' => 1,
+//            ),
+//            array(
+//                'meet_name' => 'Mecz 12',
+//                'team_name_1' => 'FC Porto',
+//                'team_name_2' => 'Liverpool FC',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Środa,14-02-2018,20:45',
+//                'position' => 2,
+//            ),
+//            array(
+//                'meet_name' => 'Mecz 13',
+//                'team_name_1' => 'Real Madryt',
+//                'team_name_2' => 'Paris Saint-Germain',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Środa,14-02-2018,20:45',
+//                'position' => 3,
+//            ), 
+//            array(
+//                'meet_name' => 'Mecz 14',
+//                'team_name_1' => 'Olympique Lyon',
+//                'team_name_2' => 'Villarreal CF',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Europy',
+//                'term' => 'Czwartek,15-02-2018,21:05',
+//                'position' => 4,
+//            ), 
+//            array(
+//                'meet_name' => 'Mecz 15',
+//                'team_name_1' => 'Atletico Madryt',
+//                'team_name_2' => 'Athletic Bilbao',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Hiszpańska',
+//                'term' => 'Niedziela,18-02-2018,16:15',
+//                'position' => 5,
+//            ), 
+//            array(
+//                'meet_name' => 'Mecz 16',
+//                'team_name_1' => 'Hamburger SV',
+//                'team_name_2' => 'Bayer 04 Leverkusen',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Niemiecka',
+//                'term' => 'Sobota,17-02-2018,15:30',
+//                'position' => 6,
+//            ), 
+//            array(
+//                'meet_name' => 'Mecz 17',
+//                'team_name_1' => 'VFL Wolfsburg',
+//                'team_name_2' => 'Bayern Monachium',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Sobota,17-02-2018,15:30',
+//                'position' => 7,
+//            ), 
+//            array(
+//                'meet_name' => 'Mecz 18',
+//                'team_name_1' => 'Olympique Marsylia',
+//                'team_name_2' => 'Girondins Bordeaux',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Francuska',
+//                'term' => 'Sobota,17-02-2018,20:00',
+//                'position' => 8,
+//            ),
+//            array(
+//                'meet_name' => 'Mecz 19',
+//                'team_name_1' => 'Borussia Moenchengladbach',
+//                'team_name_2' => 'Borussia Dortmund',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Wtorek,18-02-2018,18:00',
+//                'position' => 9,
+//            ),
+//            array(
+//                'meet_name' => 'Mecz 20',
+//                'team_name_1' => 'Udinese Calcio',
+//                'team_name_2' => 'AS Roma',
+//                'matchday_name' => 'Kolejka 2',
+//                'description' => 'Liga Mistrzów',
+//                'term' => 'Wtorek,17-02-2018,15:00',
+//                'position' => 10,
+//            ),
             
             
         );
         
-        $i = 1;
+        $counter = 1;
+        $matchdays = 14;
+        
+        for($i=1;$i<=$matchdays;$i++){
             foreach ($meetsList as $meetsDetails) {
                 $Meet = new Meet();
                 $Meet->setPosition($meetsDetails['position'])
                         ->setTerm($meetsDetails['term'])
-                        ->setMatchday($this->getReference('matchday-'.$meetsDetails['matchday_name']))
+                        ->setMatchday($this->getReference('matchday-Kolejka '.$i))
                         ->setHostTeam($this->getReference('team-'.$meetsDetails['team_name_1']))
                         ->setGuestTeam($this->getReference('team-'.$meetsDetails['team_name_2']))
-                        ->setName('Mecz '.$i)
+                        ->setName('Mecz '.$counter)
                         ->setLeague($this->getReference('League-'.$meetsDetails['description']));
                         ;
-                $this->addReference('meet-Mecz '.$i, $Meet);
+                $this->addReference('meet-Mecz '.$counter, $Meet);
                 
                 $manager->persist($Meet);
-                $i++;
+                $counter++;
             }
+        }
         $manager->flush();
         
     }

@@ -18,13 +18,12 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
         $usersList = array(
             'Piotrek3',
             'Kuba',
-            'Wojtek',
             'Marcin',
             'Krystian',
             'Piotrek1',
             'Przemek2',
             'Arek',
-            'Mateusz',
+            'Zbyszek',
             'Damian'
         );
         
@@ -32,13 +31,13 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
         $points = array(0,2,4);
         
         foreach ($usersList as $user){
-            for($i=1;$i<=10;$i++){
+            for($i=1;$i<=130;$i++){
                 $Type = new Type();
                 $Type->setHostType($goals[array_rand($goals)])
                      ->setGuestType($goals[array_rand($goals)])
                      ->setUser($this->getReference('user-'.$user))
                      ->setMeet($this->getReference('meet-Mecz '.$i))
-//                     ->setNumberOfPoints($points[array_rand($points)])
+                     ->setNumberOfPoints($points[array_rand($points)])
                     ;
                 $manager->persist($Type);
 //                var_dump($Type->getNumberOfPoints());
@@ -46,6 +45,6 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             }
         }
             
-//        $manager->flush();   
+        $manager->flush();   
     }
 }

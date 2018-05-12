@@ -19,8 +19,8 @@
                     <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                         <td class="table_pkt">
-                           {# {{ dump(curr_matchday().id) }}
-                            {{ dump(loop.index) }}#}
+                            {{ dump(curr_matchday().id) }}
+                            {{ dump(loop.index) }}
 {#                            {% if curr_matchday().id == loop.index %}#}
                                 {{ pt == 0 ? '' : pt }}
 {#                            {% else %}#}

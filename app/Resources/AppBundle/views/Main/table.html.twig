@@ -19,14 +19,17 @@
                     <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                         <td class="table_pkt">
-                            {% if curr_matchday().id == loop.index %}
+                           {# {{ dump(curr_matchday().id) }}
+                            {{ dump(loop.index) }}#}
+{#                            {% if curr_matchday().id == loop.index %}#}
                                 {{ pt == 0 ? '' : pt }}
-                            {% else %}
-                                {{ pt }}
-                            {% endif %}
+{#                            {% else %}#}
+{#                                {{ pt }}#}
+{#                            {% endif %}#}
                         </td>
                     {% set sum = sum + pt %}
                 {% endfor %}
+                {# tutaj uzupełniam o brakujące kolumny #}
                 {% if point.suma|length <= 15 %}
                     {% for i in 0..(14-point.suma|length) %}
                         <td class="table_pkt"></td>

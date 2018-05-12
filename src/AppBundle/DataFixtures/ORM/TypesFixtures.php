@@ -43,6 +43,18 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
 //                var_dump($Type->getNumberOfPoints());
                 
             }
+            
+            for($i=1;$i<=10;$i++){
+                $Type = new Type();
+                $Type->setHostType($goals[array_rand($goals)])
+                     ->setGuestType($goals[array_rand($goals)])
+                     ->setUser($this->getReference('user-'.$user))
+                     ->setMeet($this->getReference('meet-Mecz '.$i))
+                    ;
+                $manager->persist($Type);
+            }
+            
+            
         }
             
         $manager->flush();   

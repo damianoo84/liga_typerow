@@ -373,7 +373,37 @@ td.team_score{
     background-color: grey;
 }
 
+a:link.history_season_big_screen{
+    color: black;
+}
 
+a:link.history_season_small_screen{
+    color: black;
+}
+
+a:visited.history_season_big_screen{
+    color: black;
+}
+
+a:visited.history_season_small_screen{
+    color: black;
+}
+
+a:link.type_matchday_big_screen{
+    color: black;
+}
+
+a:link.type_matchday_big_screen{
+    color: black;
+}
+
+a:visited.type_matchday_big_screen{
+    color: black;
+}
+
+a:visited.type_matchday_big_screen{
+    color: black;
+}
 
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 

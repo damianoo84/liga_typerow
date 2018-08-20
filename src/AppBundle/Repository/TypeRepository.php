@@ -7,7 +7,7 @@ use Doctrine\ORM\EntityRepository;
 class TypeRepository extends EntityRepository {
 
     // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
-    public function getPointsPerMatchday() {
+    public function getPointsPerMatchday($seasonId) {
 
         // 1. Pobieram sumę punktów każdego użytkownika w każdej kolejce
         $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, md.id AS matchday '
@@ -16,7 +16,7 @@ class TypeRepository extends EntityRepository {
                 . 'LEFT JOIN meet m ON t.meet_id = m.id '
                 . 'LEFT JOIN matchday md ON m.matchday_id = md.id '
                 . 'WHERE u.STATUS = :status '
-                . 'GROUP BY u.username, md.id '
+                . ' GROUP BY u.username, md.id '
                 . 'ORDER BY md.id, u.id ';
         $params = array('status' => 1);
         $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
@@ -88,7 +88,7 @@ class TypeRepository extends EntityRepository {
     // Uwaga! tutaj musiał być NativeSQL ponieważ zwykły QueryBuilder zwracał złe dane, 
     // a potrzeba była złączenia entity User z entity Type w celu znalezienia tych userów 
     // którzy jeszcze nie wytypowali
-    public function getUsersTypes($matchday) {
+    public function getUsersTypes($matchday,$seasonId) {
 
         // 1. Pobieram typy użytkowników
         $sql = 'SELECT  '
@@ -107,7 +107,11 @@ class TypeRepository extends EntityRepository {
                      .'INNER JOIN meet m ON t.meet_id = m.id ' 
                      .'INNER JOIN team tm1 ON m.hostTeam_id = tm1.id  '
                      .'INNER JOIN team tm2 ON m.guestTeam_id = tm2.id  '
-                     .'ORDER BY u.id ';
+                     .'INNER JOIN matchday md ON m.matchday_id = md.id '
+//                     .'INNER JOIN season s ON s.id = md.season_id '
+//                     .'WHERE s.is_active = 1 '
+                     .'WHERE md.season_id = '.$seasonId
+                     .' ORDER BY u.id ';
         
         $params = array('matchday' => $matchday);
         $usersTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();

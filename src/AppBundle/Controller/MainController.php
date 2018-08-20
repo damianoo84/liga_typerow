@@ -38,8 +38,10 @@ class MainController extends Controller{
      */
     public function tableAction(){
         
+        $seasonId = $this->get('app.twig_extension')->getSeasonId();
+        
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $points = $repository->getPointsPerMatchday();
+        $points = $repository->getPointsPerMatchday($seasonId);
 
         return array('points' => $points);
     }
@@ -57,7 +59,7 @@ class MainController extends Controller{
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $types = $repository->getUsersTypes($matchdayRepo->getName());
+        $types = $repository->getUsersTypes($matchdayRepo->getName(), $matchdayRepo->getSeason()->getId());
         
         return array('types' => $types);
     }

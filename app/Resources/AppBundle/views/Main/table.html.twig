@@ -16,10 +16,21 @@
             <tr>
                 <td class="table_loop">{{ loop.index }}.</td>
                 {% set sum = 0 %}
+                {% set counter = 1 %}
                     <td class="table_username">{{ point.username }}</td>
                 {% for pt in point.suma %}
                     <td class="table_pkt">
-                        {{ pt == 0 ? '' : pt }}
+                        {# poprawka z dnia 25-11-2018 w sytuacji gdy nie wyświetlane było 0(zero) dla Kuby za niewytypowanie #}
+                        {% if pt == 0 and curr_matchday().name <= counter %}
+                             {{''}}
+                        {% elseif pt == 0 and curr_matchday().name > counter %}  
+                             {{'0'}}
+                        {% else %}
+                             {{ pt }}
+                        {% endif %}
+                        {# to było przed poprawką z dnia 25-11-2018 #}
+{#                        {{ pt == 0 ? '0' : pt }}#}
+                    {% set counter =  counter + 1%}
                     </td>
                     {% set sum = sum + pt %}
                 {% endfor %}

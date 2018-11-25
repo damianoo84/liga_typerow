@@ -426,7 +426,43 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Chile',
                 'shortname' => 'CHI',
                 'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Ukraina',
+                'shortname' => 'UKR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Portugalia',
+                'shortname' => 'PO',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Belgia',
+                'shortname' => 'BEL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Szwajcaria',
+                'shortname' => 'SZR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Słowacja',
+                'shortname' => 'SŁW',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Czechy',
+                'shortname' => 'CZE',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Szkocja',
+                'shortname' => 'SZK',
+                'league' => 'Mecz towarzyski'
             )
+            
             
             
             

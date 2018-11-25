@@ -43,6 +43,7 @@ class LeagueFixtures extends AbstractFixture implements OrderedFixtureInterface{
             'Puchar Ligi Angielskiej',
             'Puchar Ligi Francuskiej',
             'Puchar Puchar Polski',
+            'Liga Narodów',
         );
         
         $i = 1;

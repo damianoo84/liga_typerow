@@ -17,11 +17,11 @@
     <body>
         
         {% set season = get_season() %}
-{{ dump(season) }}
+
         {% if season == null %}
             {% set season = 1 %}
         {% endif %}
-        
+{{ dump(season) }}        
         <div id="header_01">
             <img class="img1" src="{{ asset('images/mainphoto.jpg') }}" />
             <img class="img2" src="{{ asset('images/mainphoto2.jpg') }}" />

@@ -17,6 +17,7 @@
     <body>
         
         {% set season = get_season() %}
+{{ dump(season) }}
         {% if season == null %}
             {% set season = 1 %}
         {% endif %}

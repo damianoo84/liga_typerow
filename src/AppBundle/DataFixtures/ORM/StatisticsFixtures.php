@@ -163,7 +163,18 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Przemek2', 'm2'=>61,'m4'=>14,'tP'=>178,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2018'),
             array('n'=>'Zbyszek',  'm2'=>58,'m4'=>14,'tP'=>172,'p'=>8, 'q'=> 15,'s'=>'Wiosna 2018'),
             array('n'=>'Damian',   'm2'=>63,'m4'=>11,'tP'=>170,'p'=>9, 'q'=> 15,'s'=>'Wiosna 2018'),
-            
+
+            array('n'=>'Piotrek1', 'm2'=>66,'m4'=>18,'tP'=>204,'p'=>1, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Damian',   'm2'=>63,'m4'=>19,'tP'=>202,'p'=>2, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Arek',     'm2'=>56,'m4'=>22,'tP'=>200,'p'=>3, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Piotrek3', 'm2'=>53,'m4'=>21,'tP'=>190,'p'=>4, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Krystian', 'm2'=>60,'m4'=>17,'tP'=>188,'p'=>5, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Przemek2', 'm2'=>60,'m4'=>17,'tP'=>188,'p'=>6, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Robert',   'm2'=>63,'m4'=>14,'tP'=>182,'p'=>7, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Zbyszek',  'm2'=>54,'m4'=>17,'tP'=>176,'p'=>8, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Marcin',   'm2'=>59,'m4'=>14,'tP'=>174,'p'=>9, 'q'=> 15,'s'=>'Jesień 2018'),
+            array('n'=>'Kuba',     'm2'=>63,'m4'=>12,'tP'=>174,'p'=>10,'q'=> 15,'s'=>'Jesień 2018'),
+
             );
             
         

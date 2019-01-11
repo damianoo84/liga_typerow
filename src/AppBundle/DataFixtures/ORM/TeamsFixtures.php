@@ -461,14 +461,43 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Szkocja',
                 'shortname' => 'SZK',
                 'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'West Ham United',
+                'shortname' => 'WST',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Urugwaj',
+                'shortname' => 'URU',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Serbia',
+                'shortname' => 'SER',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Czarnogóra',
+                'shortname' => 'CZA',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Saint Etienne',
+                'shortname' => 'SAI',
+                'league' => 'Liga Francuska'
+            ),
+            array(
+                'team_name' => 'Genoa FC',
+                'shortname' => 'GEN',
+                'league' => 'Liga Włoska'
+            ),
+            array(
+                'team_name' => 'Deportivo Alaves',
+                'shortname' => 'ALA',
+                'league' => 'Liga Hiszpańska'
             )
-            
-            
-            
-            
-            
-            
-            
+
         );
         
         foreach ($teamsList as $teamsDetails) {

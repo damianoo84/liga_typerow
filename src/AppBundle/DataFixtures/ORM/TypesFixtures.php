@@ -57,6 +57,6 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             
         }
             
-        $manager->flush();   
+//        $manager->flush();
     }
 }

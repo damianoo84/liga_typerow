@@ -22,7 +22,8 @@
                     <td class="table_pkt">
                         {# poprawka z dnia 25-11-2018 w sytuacji gdy nie wyświetlane było 0(zero) dla Kuby za niewytypowanie #}
                         {% if pt == 0 and curr_matchday().name <= counter %}
-                             {{''}}
+                           {#  {{''}} #}
+		              {{'0'}}
                         {% elseif pt == 0 and curr_matchday().name > counter %}  
                              {{'0'}}
                         {% else %}

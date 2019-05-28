@@ -18,9 +18,11 @@
                 {% set sum = 0 %}
                 {% set counter = 1 %}
                     <td class="table_username">{{ point.username }}</td>
+
+{{ dump(curr_matchday().name) }}
+
                 {% for pt in point.suma %}
                     <td class="table_pkt">
-
 
                         {# poprawka z dnia 25-11-2018 w sytuacji gdy nie wyświetlane było 0(zero) dla Kuby za niewytypowanie #}
                         {% if (pt == 0 or pt == '' or pt == null) and curr_matchday().name <= counter %}

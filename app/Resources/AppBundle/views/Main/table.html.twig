@@ -24,7 +24,7 @@
 {{ dump(pt) }}
 
                         {# poprawka z dnia 25-11-2018 w sytuacji gdy nie wyświetlane było 0(zero) dla Kuby za niewytypowanie #}
-                        {% if (pt == 0 or pt == '' or pt == NULL) and curr_matchday().name <= counter %}
+                        {% if (pt == 0 or pt == '' or pt == null) and curr_matchday().name <= counter %}
                            {#  {{''}} #}
 		              {{'0'}}
                         {% elseif pt == 0 and curr_matchday().name > counter %}  

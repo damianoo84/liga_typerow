@@ -26,7 +26,7 @@
                         {% if (pt == 0 or pt == '' or pt == null) and curr_matchday().name <= counter %}
                            {#  {{''}} #}
 		              {{'0'}}
-                        {% elseif pt == 0 and curr_matchday().name > counter %}  
+                        {% elseif (pt == 0 or pt == '' or pt == null) and curr_matchday().name > counter %}  
                              {{'0'}}
                         {% else %}
                              {{ pt }}

@@ -496,9 +496,74 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Deportivo Alaves',
                 'shortname' => 'ALA',
                 'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'FC Brugge',
+                'shortname' => 'BRU',
+                'league' => 'Liga Belgijska'
+            ),
+            array(
+                'team_name' => 'Węgry',
+                'shortname' => 'WGR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Japonia',
+                'shortname' => 'JAP',
+                'league' => 'Mecz towarzyski'
+            ),
+	    array(
+                'team_name' => 'Bułgaria',
+                'shortname' => 'BUL',
+                'league' => 'Mecz towarzyski'
+            ),
+	    array(
+                'team_name' => 'Rumunia',
+                'shortname' => 'RUM',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Eintracht Frankfurt',
+                'shortname' => 'EIN',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Stade Rennes',
+                'shortname' => 'REN',
+                'league' => 'Liga Francuska'
+            ),
+	    array(
+                'team_name' => 'Atalanta Bergamo',
+                'shortname' => 'ATA',
+                'league' => 'Liga Włoska'
+            ),
+	    array(
+                'team_name' => 'Watford FC',
+                'shortname' => 'WAT',
+                'league' => 'Liga Angielska'
+            ),
+	    array(
+                'team_name' => 'Lille OSC',
+                'shortname' => 'LIL',
+                'league' => 'Liga Francuska'
+            ),
+	    array(
+                'team_name' => 'Torino Calcio',
+                'shortname' => 'TOR',
+                'league' => 'Liga Włoska'
+            ),
+	    array(
+                'team_name' => 'AC Parma',
+                'shortname' => 'ACP',
+                'league' => 'Liga Włoska'
+            ),
+	    array(
+                'team_name' => 'Montpellier',
+                'shortname' => 'MOP',
+                'league' => 'Liga Francuska'
             )
-
         );
+
         
         foreach ($teamsList as $teamsDetails) {
             $Team = new Team();

@@ -30,7 +30,7 @@
         <div id="info_02">
             {% block info %} 
                 {% if curr_matchday().finish is defined %}
-                    Finał ligi typerów
+                    Kolejny sezon ligi typerów już wkrótce
                 {% else %}
                     Kolejka {{ curr_matchday().name }}/15
                     {{ curr_matchday().dateFrom|date('d-m-Y') }} 

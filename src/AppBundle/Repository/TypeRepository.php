@@ -9,7 +9,7 @@ class TypeRepository extends EntityRepository {
     // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
     public function getPointsPerMatchday($seasonId) {
 
-        // 1. Pobieram sumę punktów każdego użytkownika w każdej kolejce
+        // Pobieram sumę punktów każdego użytkownika w każdej kolejce
         $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, md.id AS matchday '
                 . 'FROM user u '
                 . 'LEFT JOIN type t ON t.user_id = u.id '
@@ -17,39 +17,50 @@ class TypeRepository extends EntityRepository {
                 . 'LEFT JOIN matchday md ON m.matchday_id = md.id '
                 . 'WHERE u.STATUS = :status '
                 . ' GROUP BY u.username, md.id '
-                . 'ORDER BY md.id, u.id ';
+                . 'ORDER BY u.id, md.id ';
         $params = array('status' => 1);
         $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
-
-        $users = array();
-
-        // 2. Sumuję łącznie wszystkie punkty ze wszystkich kolejek dla każdego usera
+	
+	$matchdays = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+	$users = array(1,4,5,6,13,14,16,17,18,19);	
+	$counter = 1;
+	
+        // Przygotowanie tablicy wyjściowej dla template'a
         foreach ($result as $details) {
-            if (!isset($users[$details['user_id']])) {
-                $users[$details['user_id']] = 0;
-            }
-            $users[$details['user_id']] += (int) $details['suma'];
+	   
+	   if($counter == 16){ $counter = 1; }
+	   	
+	   // problem jest taki że jak jeden z userów nie wytypuje w danej kolejce
+	   // to nie ma w tablicy $result rekordu z id brakującego usera ani id brakującej kolejki
+				
+	   if (!isset($points_per_matchday[$details['user_id']])) {
+              $points_per_matchday[$details['user_id']]['suma2'] = 0; // trzeba wyzerować to pole przed sumowaniem
+           }
+
+	   if($counter != $details['matchday']){
+		$diff = $details['matchday'] - $counter;
+		for($i=0;$i<$diff;$i++){
+           	   $points_per_matchday[$details['user_id']]['username'] = $details['username'];
+           	   $points_per_matchday[$details['user_id']]['suma'][] = 0;		
+		}
+	        $counter += $diff;
+           }
+	   
+           $points_per_matchday[$details['user_id']]['username'] = $details['username'];
+           $points_per_matchday[$details['user_id']]['suma'][] = (int) $details['suma'];
+           $points_per_matchday[$details['user_id']]['suma2'] += (int) $details['suma'];
+
+	   $counter++;		
+		
         }
-
-        // 3. Sortuję aby wiedzieć kto ma najwięcej punktów 
-        arsort($users);
-
-        $points_per_matchday = array();
-
-        // 4. Przypisuję punkty dla każdej kolejki osobno dla posortowanych już userów
-        //    według łącznej sumy wszystkich punktów ze wszystkich kolejek
-        foreach ($users as $key => $value) {
-            foreach ($result as $details) {
-                if ($key == $details['user_id']) {
-                    $points_per_matchday[$details['user_id']]['username'] = $details['username'];
-                    $points_per_matchday[$details['user_id']]['suma'][] = (int) $details['suma'];
-                }
-            }
-        }
-
+	
+	// sortujemy po sumie punktów
+	arsort($points_per_matchday);
+	
+        // exit(\Doctrine\Common\Util\Debug::dump($points_per_matchday));
         return $points_per_matchday;
     }
-
+    
     // pobranie sumy meczy za 2pkt i meczy za 4pkt (dla statystyk)
     public function getStatistics() {
 

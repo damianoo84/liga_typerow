@@ -32,9 +32,7 @@
                 {% if curr_matchday().finish is defined %}
                     Kolejny sezon ligi typerów już wkrótce
                 {% else %}
-                    Kolejka {{ curr_matchday().name }}/15
-                    {{ curr_matchday().dateFrom|date('d-m-Y') }} 
-                    {{ curr_matchday().dateTo|date('d-m-Y') }}
+                    Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}
                 {% endif %}
             {% endblock %}
         </div>

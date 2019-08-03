@@ -10,7 +10,8 @@ class TypeRepository extends EntityRepository {
     public function getPointsPerMatchday($seasonId) {
 
         // Pobieram sumę punktów każdego użytkownika w każdej kolejce
-        $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, md.id AS matchday '
+        $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, '
+                . 'md.id AS matchday, u.number_of_wins AS wins, u.max_point_per_queue, u.min_point_per_queue, u.rank_position '
                 . 'FROM user u '
                 . 'LEFT JOIN type t ON t.user_id = u.id '
                 . 'LEFT JOIN meet m ON t.meet_id = m.id '
@@ -20,35 +21,36 @@ class TypeRepository extends EntityRepository {
                 . 'ORDER BY u.id, md.id ';
         $params = array('status' => 1);
         $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
-	
-	$matchdays = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
-	$users = array(1,4,5,6,13,14,16,17,18,19);	
+
 	$counter = 1;
 	
         // Przygotowanie tablicy wyjściowej dla template'a
         foreach ($result as $details) {
 	   
 	   if($counter == 16){ $counter = 1; }
-	   	
-	   // problem jest taki że jak jeden z userów nie wytypuje w danej kolejce
-	   // to nie ma w tablicy $result rekordu z id brakującego usera ani id brakującej kolejki
-				
+
 	   if (!isset($points_per_matchday[$details['user_id']])) {
               $points_per_matchday[$details['user_id']]['suma2'] = 0; // trzeba wyzerować to pole przed sumowaniem
+           //$points_per_matchday[$details['user_id']]['wins'] = 0; // trzeba wyzerować to pole przed sumowaniem
            }
 
 	   if($counter != $details['matchday']){
 		$diff = $details['matchday'] - $counter;
 		for($i=0;$i<$diff;$i++){
            	   $points_per_matchday[$details['user_id']]['username'] = $details['username'];
+               //$points_per_matchday[$details['user_id']]['wins'][] = 0;
            	   $points_per_matchday[$details['user_id']]['suma'][] = 0;		
 		}
 	        $counter += $diff;
            }
 	   
            $points_per_matchday[$details['user_id']]['username'] = $details['username'];
+	       $points_per_matchday[$details['user_id']]['wins'] = $details['wins'];
            $points_per_matchday[$details['user_id']]['suma'][] = (int) $details['suma'];
            $points_per_matchday[$details['user_id']]['suma2'] += (int) $details['suma'];
+           $points_per_matchday[$details['user_id']]['max_point'] = $details['max_point_per_queue'];
+           $points_per_matchday[$details['user_id']]['min_point'] = $details['min_point_per_queue'];
+           $points_per_matchday[$details['user_id']]['rank'] = $details['rank_position'];
 
 	   $counter++;		
 		

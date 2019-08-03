@@ -12,35 +12,28 @@
         <th class="th_table_sum">Suma</th>
       </tr>
 
-      
-
         {% for key,point in points %}
-            <tr>
+            <tr class="tab_types_tr">
                 <td class="table_loop">{{ loop.index }}.</td>
                 {% set sum = 0 %}
                 {% set counter = 1 %}
-                    <td class="table_username">{{ point.username }}</td>
-
-
+                <td class="table_username">
+                    <span class="usr">{{ point.username }}</span><br/>
+                    <span class="wins">Ranking: {{ point.rank }}</span><br/>
+                    <span class="wins">Wygrane: {{ point.wins }}</span><br/>
+                    <span class="wins">Najwięcej pkt: {{ point.max_point }}</span><br/>
+                    <span class="wins">Najmniej pkt: {{ point.min_point }}</span>
+                </td>
 
                 {% for pt in point.suma %}
                     <td class="table_pkt">
-
-
-			{# curr_matchday().name <- to aktualna kolejka #}
-                        {# poprawka z dnia 25-11-2018 w sytuacji gdy nie wyświetlane było 0(zero) dla Kuby za niewytypowanie #}
                         {% if (pt == 0 or pt == '' or pt == null) and curr_matchday().name <= counter %}
-                        
 		              {{'0'}}
-                        {% elseif (pt == 0 or pt == '' or pt == null) and curr_matchday().name > counter %}  
-			
+                        {% elseif (pt == 0 or pt == '' or pt == null) and curr_matchday().name > counter %}
                              {{'0'}}
                         {% else %}
-			   
                              {{ pt }}
                         {% endif %}
-                        {# to było przed poprawką z dnia 25-11-2018 #}
-{#                        {{ pt == 0 ? '0' : pt }}#}
                     {% set counter =  counter + 1%}
                     </td>
                     {% set sum = sum + pt %}

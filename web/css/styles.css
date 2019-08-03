@@ -1,7 +1,7 @@
 body{
     position:relative;
     margin:0 auto;
-    background-color: black;
+    background-color: white;
     height: 100%;
 }
 
@@ -246,12 +246,10 @@ ul.ul_principles{
 #footer_07{
     z-index: 7;
     width:100%;
-    /*background-color: black;
-    height: 100%;
-    min-height: 200px;*/
-/*    max-height: max-content;*/
+    background-color: black;
     text-align: center;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 a.a_footer{
@@ -404,6 +402,18 @@ a:visited.type_matchday_big_screen{
 
 a:visited.type_matchday_big_screen{
     color: black;
+}
+
+.tab_types_tr {
+    height: 100px;
+}
+
+span.wins{
+    font-size: 12px;
+}
+
+span.usr{
+    font-weight: 700;
 }
 
 /* USTAWIENIA DLA DUŻEGO EKRANU   */

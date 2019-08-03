@@ -2,6 +2,7 @@ body{
     position:relative;
     margin:0 auto;
     background-color: black;
+    height: 100%;
 }
 
 #header_01{
@@ -86,7 +87,7 @@ ul.navigation li.icon {display: none;}
 #content_04{
     z-index: 3;
     width:100%;
-    min-height:200px;
+    /*min-height:200px;*/
     background-color: white;
 }
 
@@ -245,9 +246,9 @@ ul.ul_principles{
 #footer_07{
     z-index: 7;
     width:100%;
-    background-color: black;
+    /*background-color: black;
     height: 100%;
-    min-height: 200px;
+    min-height: 200px;*/
 /*    max-height: max-content;*/
     text-align: center;
     padding-top: 10px;

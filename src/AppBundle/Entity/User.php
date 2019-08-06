@@ -60,6 +60,24 @@ class User implements AdvancedUserInterface, \Serializable {
 
     /**
      *
+     * @ORM\Column(type="integer", nullable = true)
+     */
+    private $rankPosition;
+
+    /**
+     *
+     * @ORM\Column(type="integer", nullable = true)
+     */
+    private $minPointPerQueue;
+
+    /**
+     *
+     * @ORM\Column(type="integer", nullable = true)
+     */
+    private $maxPointPerQueue;
+
+    /**
+     *
      * @ORM\Column(type="integer")
      */
     private $status;
@@ -129,7 +147,7 @@ class User implements AdvancedUserInterface, \Serializable {
      * @ORM\Column(type="string", length=100, nullable = true)
      */
     private $avatar;
-    
+
     function __construct() {
         $this->registerDate = new \DateTime();
     }
@@ -666,4 +684,54 @@ class User implements AdvancedUserInterface, \Serializable {
     {
         return $this->phone;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRankPosition()
+    {
+        return $this->rankPosition;
+    }
+
+    /**
+     * @param mixed $rankPosition
+     */
+    public function setRankPosition($rankPosition)
+    {
+        $this->rankPosition = $rankPosition;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMinPointPerQueue()
+    {
+        return $this->minPointPerQueue;
+    }
+
+    /**
+     * @param mixed $minPointPerQueue
+     */
+    public function setMinPointPerQueue($minPointPerQueue)
+    {
+        $this->minPointPerQueue = $minPointPerQueue;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxPointPerQueue()
+    {
+        return $this->maxPointPerQueue;
+    }
+
+    /**
+     * @param mixed $maxPointPerQueue
+     */
+    public function setMaxPointPerQueue($maxPointPerQueue)
+    {
+        $this->maxPointPerQueue = $maxPointPerQueue;
+    }
+
+
 }

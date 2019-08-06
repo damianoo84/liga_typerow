@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     if($(".login-form").length){
         $("#logged_users_06").hide();
+        $("#footer_07").hide();
     }
 
 });

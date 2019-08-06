@@ -107,6 +107,100 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'term' => 'Sobota,10-02-2018,20:45',
                 'position' => 10,
             )
+//        ,
+
+            // druga kolejka testowa
+
+            /*array(
+                'meet_name' => 'Mecz 1',
+                'team_name_1' => 'Manchester United',
+                'team_name_2' => 'Leicester City',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Hiszpańska',
+                'term' => 'Sobota,10-02-2018,20:45',
+                'position' => 1,
+            ),
+            array(
+                'meet_name' => 'Mecz 2',
+                'team_name_1' => 'Borussia Dortmund',
+                'team_name_2' => 'Bayer 04 Leverkusen',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Angielska',
+                'term' => 'Sobota,10-02-2018,13:30',
+                'position' => 2,
+            ),
+            array(
+                'meet_name' => 'Mecz 3',
+                'team_name_1' => 'RB Lipsk',
+                'team_name_2' => 'Bayern Monachium',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Angielska',
+                'term' => 'Niedziela,11-02-2018,15:15',
+                'position' => 3,
+            ),
+            array(
+                'meet_name' => 'Mecz 4',
+                'team_name_1' => 'Inter Mediolan',
+                'team_name_2' => 'Udinese Calcio',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Angielska',
+                'term' => 'Niedziela,11-02-2018,17:30',
+                'position' => 4,
+            ),
+            array(
+                'meet_name' => 'Mecz 5',
+                'team_name_1' => 'SSC Napoli',
+                'team_name_2' => 'Sampdoria Genua',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Angielska',
+                'term' => 'Sobota,10-02-2018,18:30',
+                'position' => 5,
+            ),
+            array(
+                'meet_name' => 'Mecz 6',
+                'team_name_1' => 'Fiorentina',
+                'team_name_2' => 'Juventus Turyn',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Niemiecka',
+                'term' => 'Sobota,10-02-2018,15:30',
+                'position' => 6,
+            ),
+            array(
+                'meet_name' => 'Mecz 7',
+                'team_name_1' => 'FC Barcelona',
+                'team_name_2' => 'Valencia CF',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Niemiecka',
+                'term' => 'Sobota,10-02-2018,18:30',
+                'position' => 7,
+            ),
+            array(
+                'meet_name' => 'Mecz 8',
+                'team_name_1' => 'Real Sociedad',
+                'team_name_2' => 'Atletico Madryt',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Niemiecka',
+                'term' => 'Niedziela,11-02-2018,18:00',
+                'position' => 8,
+            ),
+            array(
+                'meet_name' => 'Mecz 9',
+                'team_name_1' => 'AS Monaco',
+                'team_name_2' => 'Olympique Marsylia',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Włoska',
+                'term' => 'Piątek,09-02-2018,20:45',
+                'position' => 9,
+            ),
+            array(
+                'meet_name' => 'Mecz 10',
+                'team_name_1' => 'Deportivo Alaves',
+                'team_name_2' => 'Sevilla FC',
+                'matchday_name' => 'Kolejka 2',
+                'description' => 'Liga Włoska',
+                'term' => 'Sobota,10-02-2018,20:45',
+                'position' => 10,
+            )*/
 
         );
         
@@ -130,7 +224,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 $counter++;
             }
         }
-//        $manager->flush();
+        $manager->flush();
         
     }
     

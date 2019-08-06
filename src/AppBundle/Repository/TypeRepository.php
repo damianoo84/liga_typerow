@@ -11,7 +11,8 @@ class TypeRepository extends EntityRepository {
 
         // Pobieram sumę punktów każdego użytkownika w każdej kolejce
         $sql = 'SELECT SUM(t.number_of_points) AS suma, u.username, u.id AS user_id, '
-                . 'md.id AS matchday, u.number_of_wins AS wins, u.max_point_per_queue, u.min_point_per_queue, u.rank_position '
+                . 'md.id AS matchday, u.number_of_wins AS wins, '
+                . 'u.rank_position, u.min_point_per_queue, u.max_point_per_queue '
                 . 'FROM user u '
                 . 'LEFT JOIN type t ON t.user_id = u.id '
                 . 'LEFT JOIN meet m ON t.meet_id = m.id '

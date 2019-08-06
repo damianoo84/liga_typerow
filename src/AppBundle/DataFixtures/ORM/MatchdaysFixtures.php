@@ -18,20 +18,20 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2019-09-09',
-                'dateTo' => '2019-09-15',
+                'dateFrom' => '2019-09-05',
+                'dateTo' => '2019-09-06',
                 'season_name' => 'Jesień 2019'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2019-09-16',
-                'dateTo' => '2019-09-22',
+                'dateFrom' => '2019-09-07',
+                'dateTo' => '2019-09-08',
                 'season_name' => 'Jesień 2019'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2019-09-23',
-                'dateTo' => '2019-09-29',
+                'dateFrom' => '2019-09-09',
+                'dateTo' => '2019-09-10',
                 'season_name' => 'Jesień 2019'
             ),
             array(

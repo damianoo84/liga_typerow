@@ -130,7 +130,7 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 $counter++;
             }
         }
-//        $manager->flush();
+        $manager->flush();
         
     }
     

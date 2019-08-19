@@ -113,23 +113,23 @@ class MeetsFixtures extends AbstractFixture implements OrderedFixtureInterface
         $counter = 1;
         $matchdays = 15;
         
-        for($i=1;$i<=$matchdays;$i++){
+//        for($i=1;$i<=$matchdays;$i++){
             foreach ($meetsList as $meetsDetails) {
                 $Meet = new Meet();
                 $Meet->setPosition($meetsDetails['position'])
                         ->setTerm($meetsDetails['term'])
-                        ->setMatchday($this->getReference('matchday-Kolejka '.$i))
+                        ->setMatchday($this->getReference('matchday-'.$meetsDetails['matchday_name']))
                         ->setHostTeam($this->getReference('team-'.$meetsDetails['team_name_1']))
                         ->setGuestTeam($this->getReference('team-'.$meetsDetails['team_name_2']))
                         ->setName('Mecz '.$counter)
                         ->setLeague($this->getReference('League-'.$meetsDetails['description']));
                         ;
                 $this->addReference('meet-Mecz '.$counter, $Meet);
-                
+//                var_dump($counter);
                 $manager->persist($Meet);
                 $counter++;
             }
-        }
+//        }
         $manager->flush();
         
     }

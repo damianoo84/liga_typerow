@@ -30,7 +30,7 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
         $goals = array(0,1,2);
         $points = array(0,2,4);
         
-        foreach ($usersList as $user){
+        /* foreach ($usersList as $user){
             for($i=1;$i<=130;$i++){
                 $Type = new Type();
                 $Type->setHostType($goals[array_rand($goals)])
@@ -40,7 +40,7 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
                      ->setNumberOfPoints($points[array_rand($points)])
                     ;
                 $manager->persist($Type);
-//                var_dump($Type->getNumberOfPoints());
+                var_dump($Type->getNumberOfPoints());
                 
             }
             
@@ -55,7 +55,7 @@ class TypesFixtures extends AbstractFixture implements OrderedFixtureInterface
             }
             
             
-        }
+        } */
             
 //        $manager->flush();
     }

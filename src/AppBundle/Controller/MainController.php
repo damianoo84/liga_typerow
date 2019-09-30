@@ -37,11 +37,14 @@ class MainController extends Controller{
      * @Template()
      */
     public function tableAction(){
-        
-        $seasonId = $this->get('app.twig_extension')->getSeasonId();
-        
+
+        $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
+
+//        $usr = $this->get('app.twig_extension')->getUsers();
+//        exit(\Doctrine\Common\Util\Debug::dump($usr));
+
         $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
-        $points = $repository->getPointsPerMatchday($seasonId);
+        $points = $repository->getPointsPerMatchday($matchday['id']);
 
         return array('points' => $points);
     }

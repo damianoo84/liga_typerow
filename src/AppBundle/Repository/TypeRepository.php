@@ -21,22 +21,15 @@ class TypeRepository extends EntityRepository {
             $params = array('status' => 1);
             $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
-//            $usr = $this->get('app.twig_extension')->getUsers();
-//            exit(\Doctrine\Common\Util\Debug::dump($usr));
+            // pobieram aktywnych uzytkownikow
+            $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+            $usr = $userRepo->findByStatus(1);
 
-            // tutaj pobieram liste grajacych w danym sezonie uzytkownikow
-            $users = array(
-                1 => 'Damian',
-                4 => 'Marcin',
-                5 => 'Krystian',
-                6 => 'Piotrek1',
-                13 => 'Kuba',
-                14 => 'Przemek2',
-                16 => 'Piotrek3',
-                17 => 'Arek',
-                18 => 'Zbyszek',
-                19 => 'Robert'
-            );
+            // tworze tablice gdzie kluczem jest id usera a wartoscia jego nazwa
+            $users = array();
+            foreach ($usr as $us){
+                $users[$us->getId()] = $us->getUsername();
+            }
 
             // iteruje po aktualnej liczbie kolejek
             for ($i=1;$i<=$matchdayId-1;$i++) {
@@ -81,43 +74,8 @@ class TypeRepository extends EntityRepository {
 
             }
 
-
-        /*$counter = 1;
-
-        // Przygotowanie tablicy wyjściowej dla template'a
-        foreach ($result as $details) {
-
-            if($counter == 16){ $counter = 1; }
-
-            // problem jest taki że jak jeden z userów nie wytypuje w danej kolejce
-            // to nie ma w tablicy $result rekordu z id brakującego usera ani id brakującej kolejki
-
-            if (!isset($points_per_matchday[$details['user_id']])) {
-                $points_per_matchday[$details['user_id']]['suma2'] = 0; // trzeba wyzerować to pole przed sumowaniem
-            }
-
-            if($counter != $details['matchday']){
-                $diff = $details['matchday'] - $counter;
-                for($i=0;$i<$diff;$i++){
-                    $points_per_matchday[$details['user_id']]['username'] = $details['username'];
-                    $points_per_matchday[$details['user_id']]['suma'][] = 0;
-                }
-                $counter += $diff;
-            }
-
-            $points_per_matchday[$details['user_id']]['username'] = $details['username'];
-            $points_per_matchday[$details['user_id']]['suma'][] = (int) $details['suma'];
-            $points_per_matchday[$details['user_id']]['suma2'] += (int) $details['suma'];
-
-            $counter++;
-
-        }
- */
-
         // sortujemy po sumie punktów
         arsort($points_per_matchday);
-
-
 
 //         exit(\Doctrine\Common\Util\Debug::dump($points_per_matchday));
         return $points_per_matchday;

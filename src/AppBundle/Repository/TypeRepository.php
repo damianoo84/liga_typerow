@@ -32,7 +32,7 @@ class TypeRepository extends EntityRepository {
             }
 
             // iteruje po aktualnej liczbie kolejek
-            for ($i=1;$i<=$matchdayId-1;$i++) {
+            for ($i=1;$i<=$matchdayId;$i++) {
 
                 // iteruje po aktywnych uzytkownikach
                 foreach ($users as $key => $value) {

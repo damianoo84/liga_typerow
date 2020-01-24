@@ -561,10 +561,69 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Montpellier',
                 'shortname' => 'MOP',
                 'league' => 'Liga Francuska'
+            ),
+        array(
+                'team_name' => 'Paragwaj',
+                'shortname' => 'PAG',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Chorwacja',
+                'shortname' => 'CHO',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Łotwa',
+                'shortname' => 'ŁOT',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Izrael',
+                'shortname' => 'IZR',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Dania',
+                'shortname' => 'DAN',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Irlandia Płn.',
+                'shortname' => 'IRP',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Kosowo',
+                'shortname' => 'KOS',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Grecja',
+                'shortname' => 'GRE',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Bośnia i H.',
+                'shortname' => 'BOS',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Peru',
+                'shortname' => 'PER',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Norwegia',
+                'shortname' => 'NOR',
+                'league' => 'Mecz towarzyski'
+            ),
+        array(
+                'team_name' => 'Cagliari Calcio',
+                'shortname' => 'CAG',
+                'league' => 'Liga Włoska'
             )
         );
 
-        
         foreach ($teamsList as $teamsDetails) {
             $Team = new Team();
             $Team->setName($teamsDetails['team_name'])

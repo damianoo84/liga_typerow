@@ -32,7 +32,8 @@
                 {% if curr_matchday().finish is defined %}
                     Kolejny sezon ligi typerów już od 3 lutego
                 {% else %}
-                    Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}
+                    Liga typerów wstrzymana do odwołania
+                    <!--Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}-->
                 {% endif %}
             {% endblock %}
         </div>

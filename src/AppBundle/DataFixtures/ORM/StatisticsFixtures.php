@@ -195,8 +195,19 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Zbyszek',  'm2'=>46,'m4'=>17,'tP'=>160,'p'=>7, 'q'=> 15,'s'=>'Jesień 2019'), 
             array('n'=>'Marcin',   'm2'=>52,'m4'=>13,'tP'=>156,'p'=>8, 'q'=> 14,'s'=>'Jesień 2019'), 
             array('n'=>'Robert',   'm2'=>52,'m4'=>9, 'tP'=>140,'p'=>9, 'q'=> 14,'s'=>'Jesień 2019'), 
-            array('n'=>'Kuba',     'm2'=>45,'m4'=>12,'tP'=>138,'p'=>10,'q'=> 12,'s'=>'Jesień 2019')
-            
+            array('n'=>'Kuba',     'm2'=>45,'m4'=>12,'tP'=>138,'p'=>10,'q'=> 12,'s'=>'Jesień 2019'),
+
+            array('n'=>'Kuba',     'm2'=>52,'m4'=>21,'tP'=>188,'p'=>1, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Przemek2', 'm2'=>49,'m4'=>19,'tP'=>174,'p'=>2, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Arek',     'm2'=>48,'m4'=>19,'tP'=>172,'p'=>3, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Damian',   'm2'=>43,'m4'=>21,'tP'=>170,'p'=>4, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Krystian', 'm2'=>50,'m4'=>17,'tP'=>168,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Marcin',   'm2'=>58,'m4'=>12,'tP'=>164,'p'=>6, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Zbyszek',  'm2'=>47,'m4'=>14,'tP'=>150,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Piotrek1', 'm2'=>46,'m4'=>14,'tP'=>148,'p'=>8, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Piotrek3', 'm2'=>57,'m4'=>6, 'tP'=>138,'p'=>9, 'q'=> 15,'s'=>'Wiosna 2020'),
+            array('n'=>'Robert',   'm2'=>44,'m4'=>11,'tP'=>132,'p'=>10,'q'=> 15,'s'=>'Wiosna 2020')
+
             );
             
         

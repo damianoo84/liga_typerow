@@ -621,7 +621,83 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Cagliari Calcio',
                 'shortname' => 'CAG',
                 'league' => 'Liga Włoska'
+            ),
+            array(
+                'team_name' => 'RCD Mallorca',
+                'shortname' => 'MAL',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'SC Freiburg',
+                'shortname' => 'SCF',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Hertha Berlin',
+                'shortname' => 'HER',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Union Berlin',
+                'shortname' => 'UNI',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'TSG Hoffenheim',
+                'shortname' => 'TSG',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => '1. FC Koeln',
+                'shortname' => 'KOE',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Fortuna Düsseldorf',
+                'shortname' => 'FOR',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'FC Augsburg',
+                'shortname' => 'AUG',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'SC Paderborn 07',
+                'shortname' => 'PAD',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => '1. FSV Mainz 05',
+                'shortname' => 'MAI',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Lech Poznań',
+                'shortname' => 'LEC',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Legia Warszawa',
+                'shortname' => 'LEG',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Wisła Kraków',
+                'shortname' => 'WIS',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Osasuna Pampeluna',
+                'shortname' => 'OSA',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Bologna FC',
+                'shortname' => 'BOL',
+                'league' => 'Liga Włoska'
             )
+
         );
 
         foreach ($teamsList as $teamsDetails) {

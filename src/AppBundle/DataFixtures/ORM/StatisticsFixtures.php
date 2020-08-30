@@ -206,7 +206,7 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Zbyszek',  'm2'=>47,'m4'=>14,'tP'=>150,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2020'),
             array('n'=>'Piotrek1', 'm2'=>46,'m4'=>14,'tP'=>148,'p'=>8, 'q'=> 15,'s'=>'Wiosna 2020'),
             array('n'=>'Piotrek3', 'm2'=>57,'m4'=>6, 'tP'=>138,'p'=>9, 'q'=> 15,'s'=>'Wiosna 2020'),
-            array('n'=>'Robert',   'm2'=>44,'m4'=>11,'tP'=>132,'p'=>10,'q'=> 15,'s'=>'Wiosna 2020')
+            array('n'=>'Robert',   'm2'=>44,'m4'=>11,'tP'=>132,'p'=>10,'q'=> 14,'s'=>'Wiosna 2020')
 
             );
             

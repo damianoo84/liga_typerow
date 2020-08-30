@@ -696,7 +696,32 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Bologna FC',
                 'shortname' => 'BOL',
                 'league' => 'Liga Włoska'
-            )
+            ),
+            array(
+                'team_name' => 'Fulham FC',
+                'shortname' => 'FUL',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Crystal Palace',
+                'shortname' => 'CRY',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Leeds United',
+                'shortname' => 'LEE',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'West Bromwich Albion',
+                'shortname' => 'WBA',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'FC Nantes',
+                'shortname' => 'NAN',
+                'league' => 'Liga Francuska'
+            ),
 
         );
 

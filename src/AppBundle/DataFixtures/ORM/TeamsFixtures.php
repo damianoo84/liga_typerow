@@ -722,6 +722,11 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'shortname' => 'NAN',
                 'league' => 'Liga Francuska'
             ),
+			array(
+                'team_name' => 'Standard Liege',
+                'shortname' => 'STA',
+                'league' => 'Liga Belgijska'
+            )
 
         );
 

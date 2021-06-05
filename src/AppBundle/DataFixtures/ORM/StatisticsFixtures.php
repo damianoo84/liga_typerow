@@ -220,7 +220,18 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
 			array('n'=>'Marcin',   'm2'=>52,'m4'=>10,'tP'=>144,'p'=>8, 'q'=> 15,'s'=>'Jesień 2020'),
 			array('n'=>'Kuba',     'm2'=>56,'m4'=>8, 'tP'=>144,'p'=>8, 'q'=> 15,'s'=>'Jesień 2020'),
 			array('n'=>'Mateusz',  'm2'=>51,'m4'=>8, 'tP'=>134,'p'=>9, 'q'=> 15,'s'=>'Jesień 2020'),
-			
+
+            array('n'=>'Arek',     'm2'=>64,'m4'=>16,'tP'=>192,'p'=>1, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Piotrek3', 'm2'=>62,'m4'=>13,'tP'=>176,'p'=>2, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Damian',   'm2'=>46,'m4'=>19,'tP'=>168,'p'=>3, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Kuba',     'm2'=>57,'m4'=>13,'tP'=>166,'p'=>4, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Zbyszek',  'm2'=>51,'m4'=>15,'tP'=>162,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Krystian', 'm2'=>57,'m4'=>12,'tP'=>162,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Piotrek1', 'm2'=>51,'m4'=>13,'tP'=>154,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Przemek2', 'm2'=>45,'m4'=>12,'tP'=>138,'p'=>8, 'q'=> 15,'s'=>'Wiosna 2021'),
+            array('n'=>'Wojtek',   'm2'=>46,'m4'=>9, 'tP'=>128,'p'=>9, 'q'=> 13,'s'=>'Wiosna 2021'),
+            array('n'=>'Robert',   'm2'=>44,'m4'=>10,'tP'=>128,'p'=>9, 'q'=> 14,'s'=>'Wiosna 2021'),
+
             );
             
         

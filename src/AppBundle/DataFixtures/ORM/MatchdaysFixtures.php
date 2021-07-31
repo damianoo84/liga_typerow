@@ -18,93 +18,93 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2021-02-08',
-                'dateTo' => '2021-02-14',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-09-13',
+                'dateTo' => '2021-09-19',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2021-02-15',
-                'dateTo' => '2021-02-21',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-09-20',
+                'dateTo' => '2021-09-26',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2021-02-22',
-                'dateTo' => '2021-02-28',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-09-27',
+                'dateTo' => '2021-10-03',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2021-03-01',
-                'dateTo' => '2021-03-07',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-10-04',
+                'dateTo' => '2021-10-10',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2021-03-08',
-                'dateTo' => '2021-03-14',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-10-11',
+                'dateTo' => '2021-10-17',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2021-03-15',
-                'dateTo' => '2021-03-21',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-10-18',
+                'dateTo' => '2021-10-24',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2021-03-22',
-                'dateTo' => '2021-03-28',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-10-25',
+                'dateTo' => '2021-10-31',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2021-03-29',
-                'dateTo' => '2021-04-04',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-11-01',
+                'dateTo' => '2021-11-07',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2021-04-05',
-                'dateTo' => '2021-04-11',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-11-08',
+                'dateTo' => '2021-11-14',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2021-04-12',
-                'dateTo' => '2021-04-18',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-11-15',
+                'dateTo' => '2021-11-21',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2021-04-19',
-                'dateTo' => '2021-04-25',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-11-22',
+                'dateTo' => '2021-11-28',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2021-04-26',
-                'dateTo' => '2021-05-02',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-11-29',
+                'dateTo' => '2021-12-05',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2021-05-03',
-                'dateTo' => '2021-05-09',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-12-06',
+                'dateTo' => '2021-12-12',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2021-05-10',
-                'dateTo' => '2021-05-16',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-12-13',
+                'dateTo' => '2021-12-19',
+                'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2021-05-17',
-                'dateTo' => '2021-05-23',
-                'season_name' => 'Wiosna 2021'
+                'dateFrom' => '2021-12-20',
+                'dateTo' => '2021-12-26',
+                'season_name' => 'Jesień 2021'
             )
         );
         

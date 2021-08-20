@@ -305,6 +305,34 @@ td.table_username{
     width: 15%;
 }
 
+div.table_username_div1{
+    width: 50%;
+    height: 30px;
+    float:left;
+    /*background-color: red;*/
+}
+
+div.table_username_div2{
+    width: 50%;
+    height: 30px;
+    float:left;
+    /*background-color: red;*/
+}
+
+div.table_username_div3{
+    width: 50%;
+    height: 30px;
+    float:left;
+    /*background-color: red;*/
+}
+
+div.table_username_div4{
+    width: 50%;
+    height: 30px;
+    float:left;
+    /*background-color: red;*/
+}
+
 td.table_pkt{
     width: 5%;
 }

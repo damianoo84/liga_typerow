@@ -751,6 +751,11 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Aston Villa Birmingham',
                 'shortname' => 'AST',
                 'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Spartak Moskwa',
+                'shortname' => 'SPA',
+                'league' => 'Liga Rosyjska'
             )
 
         );

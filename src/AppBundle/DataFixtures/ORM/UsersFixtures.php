@@ -59,7 +59,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'email' => 'test3@test.pl',
                 'password' => 'dsjakdjslkd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 3,
                 'phone' => '730310189',
                 'role' => 'ROLE_USER'
@@ -70,7 +70,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'email' => 'test4@test.pl',
                 'password' => 'psw326',
                 'numberofwins' => 3,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 4,
                 'phone' => '881737984',
                 'role' => 'ROLE_USER'
@@ -164,8 +164,8 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'role' => 'ROLE_USER'
             ),
             array(
-                'nick' => 'Kuba',
-                'shortname' => 'KB',
+                'nick' => 'Kuba1',
+                'shortname' => 'K1',
                 'email' => 'test13@test.pl',
                 'password' => 'psw546',
                 'numberofwins' => 2,
@@ -262,6 +262,28 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'phone' => '537844037',
                 'role' => 'ROLE_USER'
             ),
+            array(
+                'nick' => 'Kuba2',
+                'shortname' => 'K2',
+                'email' => 'test22@test.pl',
+                'password' => 'fgdgfgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 22,
+                'phone' => '501652282',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Piotrek4',
+                'shortname' => 'P4',
+                'email' => 'test23test.pl',
+                'password' => 'fgdgfgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 23,
+                'phone' => '508438311',
+                'role' => 'ROLE_USER'
+            )
         );
         
         $encoderFactory = $this->container->get('security.encoder_factory');

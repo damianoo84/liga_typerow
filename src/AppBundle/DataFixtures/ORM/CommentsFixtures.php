@@ -25,7 +25,7 @@ class CommentsFixtures extends AbstractFixture implements OrderedFixtureInterfac
             ),
             array(
                 'text' => 'cos tam cos tam cos tam 2',
-                'nick' => 'Kuba',
+                'nick' => 'Kuba1',
                 'season_name' => 'Wiosna 2018'
             ),
             array(

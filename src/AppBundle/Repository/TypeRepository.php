@@ -132,7 +132,8 @@ class TypeRepository extends EntityRepository {
                      .'t.guest_type AS guestType,  '
                      .'m.matchday_id, '
                      .'m.host_goals AS hostGoals, '
-                     .'m.guest_goals AS guestGoals '
+                     .'m.guest_goals AS guestGoals, '
+                     .'m.term AS term '
                      .'FROM user u  '
                      .'INNER JOIN type t ON t.user_id = u.id  '
                      .'INNER JOIN meet m ON t.meet_id = m.id ' 
@@ -170,8 +171,10 @@ class TypeRepository extends EntityRepository {
                              (null!==$meet->getHostGoals()?$meet->getHostGoals():" ")
                             ." - "
                             .(null!==$meet->getGuestGoals()?$meet->getGuestGoals():" ");
-                    
-                    $hostGuest = $shortNames.' | '.$names.$score;
+
+                    # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
+                    $hostGuest = $shortNames.$meet->getTerm().' | '.$names.' | '.$score;
+
                     $matrix[$hostGuest][$user->getUsername()] = '-';
                 }
             }
@@ -186,8 +189,10 @@ class TypeRepository extends EntityRepository {
                              (null!==$type['hostGoals']?$type['hostGoals']:" ")
                             ." - "
                             .(null!==$type['guestGoals']?$type['guestGoals']:" ");
-                    
-                    $hostGuest = $names.' | '.$shortNames.$score;
+
+                    # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
+                    $hostGuest = $names.$type['term'].' | '.$shortNames.' | '.$score;
+
                     $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
                 }
             }

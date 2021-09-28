@@ -133,7 +133,8 @@ class TypeRepository extends EntityRepository {
                      .'m.matchday_id, '
                      .'m.host_goals AS hostGoals, '
                      .'m.guest_goals AS guestGoals, '
-                     .'m.term AS term '
+                     .'m.term AS term, '
+                     .'t.number_of_points AS numberOfPoints '
                      .'FROM user u  '
                      .'INNER JOIN type t ON t.user_id = u.id  '
                      .'INNER JOIN meet m ON t.meet_id = m.id ' 
@@ -193,7 +194,9 @@ class TypeRepository extends EntityRepository {
                     # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
                     $hostGuest = $names.$type['term'].' | '.$shortNames.' | '.$score;
 
-                    $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
+                    $isPoints = ($type['numberOfPoints'] == NULL) ? "" : $type['numberOfPoints'];
+
+                    $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'].' '.$isPoints;
                 }
             }
         }

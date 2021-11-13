@@ -14,6 +14,7 @@
                 <th class="team_matchday">Mecze/Gracze</th>
                 <th class="team_matchday_short">M/G</th>
                 <th class="team_score">wynik</th>
+                <th class="team_score_short"></th>
                 {% for user in get_users() %}
                 <th class="team_user">{{ user.username }}</th>
                 <th class="team_user_shortname">{{ user.shortname[:1] }}</th>

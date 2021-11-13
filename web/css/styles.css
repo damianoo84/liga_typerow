@@ -479,14 +479,13 @@ a:visited.type_matchday_big_screen{
 
 /* USTAWIENIA DLA DUŻEGO EKRANU   */
 
-/* @media screen and (min-width:680px) {  */
 @media screen and (min-width:680px) {
 
     td.team_shortname,a.type_matchday_small_screen,
     a.history_season_small_screen,
     div.div_change_pass_box_small_screen,
     td.team_name_short,td.team_name_short_2,img.img2,
-    td.user_type_short,td.type_type_short{
+    td.user_type_short,td.type_type_short, th.team_score_short{
         display: none;
     }
 
@@ -522,13 +521,13 @@ a:visited.type_matchday_big_screen{
     td.team_name,td.team_name_2,img.img1,
     div.div_change_pass_box,
     th.th_table_pkt,p.p_log_user,p.queque_number,
-    td.user_type_2, td.team_name, td.type_type{
+    td.user_type_2, td.team_name, td.type_type, th.team_score{
         display: none;
     }
 
     td.team_shortname,th.team_user_shortname, th.team_matchday_short,
     td.team_name_short_2,td.team_name_short,td.user_type_short,
-    td.type_type_short, th.type_guest, th.type_host{
+    td.type_type_short, th.type_guest, th.type_host, div.team_score_2_div_1{
        font-size: xx-small;
     }
 

@@ -30,7 +30,7 @@
         <div id="info_02">
             {% block info %} 
                 {% if curr_matchday().finish is defined %}
-                    21 Sezon Ligi typerów od 6 Września
+                    Finał Ligi Typerów
                 {% else %}
                     {#Liga typerów wstrzymana do odwołania#}
                     Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}

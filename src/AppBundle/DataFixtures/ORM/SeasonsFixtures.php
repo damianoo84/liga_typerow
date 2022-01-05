@@ -105,42 +105,48 @@ class SeasonsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'season_name' => 'Jesień 2018',
                 'dateStart' => '2018-09-01',
                 'dateEnd' => '2018-12-20',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Wiosna 2019',
                 'dateStart' => '2019-02-11',
                 'dateEnd' => '2019-05-26',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Jesień 2019',
                 'dateStart' => '2019-09-02',
                 'dateEnd' => '2019-12-22',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Wiosna 2020',
                 'dateStart' => '2020-02-10',
                 'dateEnd' => '2020-05-24',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Jesień 2020',
                 'dateStart' => '2020-09-07',
                 'dateEnd' => '2020-12-20',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Wiosna 2021',
                 'dateStart' => '2021-02-08',
                 'dateEnd' => '2021-05-31',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Jesień 2021',
                 'dateStart' => '2021-09-13',
                 'dateEnd' => '2021-12-26',
+                'active' => false
+            ),
+            array(
+                'season_name' => 'Wiosna 2022',
+                'dateStart' => '2022-02-07',
+                'dateEnd' => '2022-05-22',
                 'active' => true
             )
 

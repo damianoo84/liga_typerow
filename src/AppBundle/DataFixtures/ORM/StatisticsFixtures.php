@@ -232,6 +232,21 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Wojtek',   'm2'=>46,'m4'=>9, 'tP'=>128,'p'=>9, 'q'=> 13,'s'=>'Wiosna 2021'),
             array('n'=>'Robert',   'm2'=>44,'m4'=>10,'tP'=>128,'p'=>9, 'q'=> 14,'s'=>'Wiosna 2021'),
 
+            array('n'=>'Kuba1',    'm2'=>62,'m4'=>13,'tP'=>176,'p'=>1,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Piotrek3', 'm2'=>56,'m4'=>15,'tP'=>172,'p'=>2,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Arek',     'm2'=>57,'m4'=>12,'tP'=>162,'p'=>3,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Kuba2',    'm2'=>50,'m4'=>13,'tP'=>152,'p'=>4,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Adrian',   'm2'=>50,'m4'=>13,'tP'=>152,'p'=>4,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Piotrek1', 'm2'=>51,'m4'=>12,'tP'=>150,'p'=>6,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Damian',   'm2'=>46,'m4'=>14,'tP'=>148,'p'=>7,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Krystian', 'm2'=>49,'m4'=>12,'tP'=>146,'p'=>8,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Kamil',    'm2'=>43,'m4'=>15,'tP'=>146,'p'=>8,  'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Piotrek4', 'm2'=>55,'m4'=>8, 'tP'=>142,'p'=>10, 'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Wojtek',   'm2'=>43,'m4'=>13,'tP'=>138,'p'=>11, 'q'=> 14,'s'=>'Jesień 2021'),
+            array('n'=>'Zbyszek',  'm2'=>47,'m4'=>10,'tP'=>134,'p'=>12, 'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Przemek2', 'm2'=>39,'m4'=>12,'tP'=>126,'p'=>13, 'q'=> 15,'s'=>'Jesień 2021'),
+            array('n'=>'Robert',   'm2'=>48,'m4'=>6, 'tP'=>120,'p'=>14, 'q'=> 15,'s'=>'Jesień 2021'),
+
             );
             
         

@@ -756,6 +756,21 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Spartak Moskwa',
                 'shortname' => 'SPA',
                 'league' => 'Liga Rosyjska'
+            ),
+            array(
+                'team_name' => 'Kanada',
+                'shortname' => 'KAN',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Walia',
+                'shortname' => 'WAL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Finlandia',
+                'shortname' => 'FIN',
+                'league' => 'Mecz towarzyski'
             )
 
         );

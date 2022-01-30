@@ -176,16 +176,16 @@ class MainController extends Controller{
     public function principlesAction(){
         
         $principles = array(
-            'Liga trwa 15 kolejnych tygodni.', 'W każdym tygodniu typujemy 10 wybranych meczy, które odbędą się w tygodniu następnym. '
+            'Liga trwa 15 kolejnych tygodni,', 'W każdym tygodniu typujemy 10 wybranych meczy, które odbędą się w tygodniu następnym, '
             , 'Czas na typy to 7 dni liczony od poniedziałku '
-            . 'godz.00:00 do niedzieli godz. 23:59',
-            'W piątek o 20:00, sobotę o 20:00 i niedzielę o 18:00, 20:00 i 22:00 przychodzą smsowe przypomnienia do tych, którzy nie wytypowali',
+            . 'godz.00:00 do niedzieli godz. 23:59,',
+            'W piątek o 20:00, sobotę o 20:00 i niedzielę o 18:00, 20:00 i 22:00 przychodzą smsowe przypomnienia do tych, którzy nie wytypowali,',
             'Za prawidłowe wytypowanie rozstrzygnięcia meczu otrzymuje się 2 pkt. '
-            . 'Za prawidłowe wytypowanie wyniku bramkowego otrzymuje się 4 pkt.',
+            . 'Za prawidłowe wytypowanie wyniku bramkowego otrzymuje się 4 pkt,',
             'Jeżeli w meczu dojdzie do dogrywki lub rzutów karnych to liczy się '
-            . 'wynik meczu regulaminowych 90 minut.',
+            . 'wynik meczu regulaminowych 90 minut,',
             'Jeżeli mecz niezostanie rozegrany w danej kolejce lub przerwany (i nie dokończony) '
-            . 'lub zostanie uznany jako walkower, wtedy typy na ten mecz zostają anulowane.',
+            . 'lub zostanie uznany jako walkower, wtedy typy na ten mecz zostają anulowane,',
             'Jeżeli zwycięzcą po 15 kolejkach okażą się dwie lub więcej osób, '
             . 'które będą miały taką samą ilość punktów to zostanie przeprowadzona dogrywka między nimi.'
         );

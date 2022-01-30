@@ -96,10 +96,10 @@ div.div_login{
 }
 
 div.div_change_pass_box{
-    width:40%;
+    /*width:40%;*/
     height: 100px;
     /*background-color: green;*/
-    float: left;
+    /*float: left;*/
 }
 
 div.div_change_pass_box_small_screen{
@@ -112,7 +112,7 @@ div.div_change_pass_box_small_screen{
 
 div.div_change_pass{
     padding-top: 40px;
-    text-align: left;
+    text-align: right;
     width: 50%;
     height: 100px;
     /*background-color: red;*/
@@ -120,6 +120,20 @@ div.div_change_pass{
 }
 
 
+div.div_change_pass_box1{
+    padding-top: 40px;
+    height: 100px;
+    width: 55%;
+    float: left;
+    text-align: right;
+}
+
+div.div_change_pass_box2{
+    padding-top: 40px;
+    height: 100px;
+    width: 45%;
+    float: left;
+}
 
 div.forum_panel{
     overflow-y: scroll;
@@ -535,6 +549,20 @@ a:visited.type_matchday_big_screen{
        padding: 0px 30px 0px 0px;
     }
 
+    div.div_change_pass_box1{
+        padding-top: 40px;
+        height: 100px;
+        width: 80%;
+        float: left;
+        text-align: right;
+    }
+
+    div.div_change_pass_box2{
+        padding-top: 40px;
+        height: 100px;
+        width: 20%;
+        float: left;
+    }
 
 }
 

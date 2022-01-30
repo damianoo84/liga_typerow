@@ -16,7 +16,7 @@ class ChangePasswordType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
             ->add('currentPassword', 'password', array(
-                'label' => 'Aktualne hasło',
+                'label' => 'Aktualne hasło  ',
                 'mapped' => false,
                 'constraints' => array(
                     new UserPassword(array(
@@ -27,14 +27,14 @@ class ChangePasswordType extends AbstractType {
             ->add('plainPassword', 'repeated', array(
                 'type' => 'password',
                 'first_options' => array(
-                    'label' => 'Nowe hasło'
+                    'label' => 'Nowe hasło  '
                 ),
                 'second_options' => array(
-                    'label' => 'Powtórz hasło'
+                    'label' => 'Powtórz hasło  '
                 )
             ))
             ->add('submit', 'submit', array(
-                'label' => 'Zmień hasło'
+                'label' => 'Zmień hasło  '
             ));
     }
     

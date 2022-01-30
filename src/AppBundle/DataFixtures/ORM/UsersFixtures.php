@@ -65,12 +65,12 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'role' => 'ROLE_USER'
             ),
             array(
-                'nick' => 'Marcin',
+                'nick' => 'Marcin1',
                 'shortname' => 'M',
                 'email' => 'test4@test.pl',
                 'password' => 'psw326',
                 'numberofwins' => 3,
-                'status' => 0,
+                'status' => 1,
                 'priority' => 4,
                 'phone' => '881737984',
                 'role' => 'ROLE_USER'
@@ -142,7 +142,7 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'role' => 'ROLE_USER'
             ),
             array(
-                'nick' => 'Łukasz',
+                'nick' => 'Łukasz1',
                 'shortname' => 'Ł',
                 'email' => 'test11@test.pl',
                 'password' => 'hduahsd',
@@ -282,6 +282,50 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'status' => 1,
                 'priority' => 23,
                 'phone' => '508438311',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Łukasz2',
+                'shortname' => 'Ł2',
+                'email' => 'test24test.pl',
+                'password' => 'fgdgfsssagd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 24,
+                'phone' => '607173821',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Marcin2',
+                'shortname' => 'M2',
+                'email' => 'test25test.pl',
+                'password' => 'fgdgfsssasagd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 25,
+                'phone' => '502903704',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Grzegorz',
+                'shortname' => 'GR',
+                'email' => 'test26test.pl',
+                'password' => 'fgdgwwagd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 26,
+                'phone' => '573266025',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Łukasz3',
+                'shortname' => 'Ł3',
+                'email' => 'test27test.pl',
+                'password' => 'fgdqqgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 27,
+                'phone' => '602442968',
                 'role' => 'ROLE_USER'
             )
         );

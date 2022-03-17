@@ -287,6 +287,11 @@ table.tab_types2 {
     /*border-collapse: collapse;*/
 }
 
+table.tab_types3 {
+    width: 100%;
+    /*border-collapse: collapse;*/
+}
+
 tr.tab_types_row_2 {
     height: 50px;
 }
@@ -540,7 +545,7 @@ a:visited.type_matchday_big_screen{
     td.team_name,td.team_name_2,img.img1,
     div.div_change_pass_box,
     th.th_table_pkt,p.p_log_user,p.queque_number,
-    td.user_type_2, td.team_name, td.type_type, th.team_score, table.tab_types{
+    td.user_type_2, td.team_name, td.type_type, th.team_score, table.tab_types3{
         display: none;
     }
 

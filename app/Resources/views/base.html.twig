@@ -30,10 +30,12 @@
         <div id="info_02">
             {% block info %} 
                 {% if curr_matchday().finish is defined %}
-                    Finał Ligi Typerów
+{#                    Finał Ligi Typerów#}
+                    23 sezon Ligi Typerów już w krótce
                 {% else %}
                     {#Liga typerów wstrzymana do odwołania#}
-                    Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}
+
+{#                    Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}#}
                 {% endif %}
             {% endblock %}
         </div>

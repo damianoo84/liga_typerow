@@ -247,6 +247,24 @@ class StatisticsFixtures extends AbstractFixture implements OrderedFixtureInterf
             array('n'=>'Przemek2', 'm2'=>39,'m4'=>12,'tP'=>126,'p'=>13, 'q'=> 15,'s'=>'Jesień 2021'),
             array('n'=>'Robert',   'm2'=>48,'m4'=>6, 'tP'=>120,'p'=>14, 'q'=> 15,'s'=>'Jesień 2021'),
 
+            array('n'=>'Grzegorz', 'm2'=>63,'m4'=>12, 'tP'=>174,'p'=>1, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Wojtek', 'm2'=>55,'m4'=>15, 'tP'=>170,'p'=>2, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Kamil', 'm2'=>47,'m4'=>19, 'tP'=>170,'p'=>2, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Piotrek3', 'm2'=>49,'m4'=>17, 'tP'=>166,'p'=>4, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Piotrek1', 'm2'=>57,'m4'=>12, 'tP'=>162,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Krystian', 'm2'=>47,'m4'=>17, 'tP'=>162,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Zbyszek', 'm2'=>52,'m4'=>14, 'tP'=>160,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Marcin1', 'm2'=>48,'m4'=>16, 'tP'=>160,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Łukasz2', 'm2'=>43,'m4'=>18, 'tP'=>158,'p'=>9, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Damian', 'm2'=>55,'m4'=>12, 'tP'=>158,'p'=>9, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Kuba1', 'm2'=>58,'m4'=>10, 'tP'=>156,'p'=>11, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Robert', 'm2'=>48,'m4'=>14, 'tP'=>152,'p'=>12, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Arek', 'm2'=>48,'m4'=>14, 'tP'=>152,'p'=>12, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Przemek2', 'm2'=>41,'m4'=>17, 'tP'=>150,'p'=>14, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Piotrek4', 'm2'=>55,'m4'=>9, 'tP'=>146,'p'=>15, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Adrian', 'm2'=>49,'m4'=>11, 'tP'=>142,'p'=>16, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Kuba2', 'm2'=>46,'m4'=>12, 'tP'=>140,'p'=>17, 'q'=> 15,'s'=>'Wiosna 2022'),
+            array('n'=>'Marcin2', 'm2'=>43,'m4'=>12, 'tP'=>130,'p'=>18, 'q'=> 14,'s'=>'Wiosna 2022')
             );
             
         

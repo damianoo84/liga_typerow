@@ -311,21 +311,10 @@ class UsersFixtures extends AbstractFixture implements OrderedFixtureInterface, 
                 'shortname' => 'GR',
                 'email' => 'test26test.pl',
                 'password' => 'fgdgwwagd',
-                'numberofwins' => 0,
+                'numberofwins' => 1,
                 'status' => 1,
                 'priority' => 26,
                 'phone' => '573266025',
-                'role' => 'ROLE_USER'
-            ),
-            array(
-                'nick' => 'Łukasz3',
-                'shortname' => 'Ł3',
-                'email' => 'test27test.pl',
-                'password' => 'fgdqqgd',
-                'numberofwins' => 0,
-                'status' => 1,
-                'priority' => 27,
-                'phone' => '602442968',
                 'role' => 'ROLE_USER'
             )
         );

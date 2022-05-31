@@ -18,93 +18,93 @@ class MatchdaysFixtures extends AbstractFixture implements OrderedFixtureInterfa
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2022-02-07',
-                'dateTo' => '2022-02-13',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-08-01',
+                'dateTo' => '2022-08-07',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2022-02-14',
-                'dateTo' => '2022-02-20',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-08-08',
+                'dateTo' => '2022-08-14',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2022-02-21',
-                'dateTo' => '2022-02-27',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-08-15',
+                'dateTo' => '2022-08-21',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2022-02-28',
-                'dateTo' => '2022-03-06',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-08-22',
+                'dateTo' => '2022-08-28',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2022-03-07',
-                'dateTo' => '2022-03-13',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-08-29',
+                'dateTo' => '2022-09-04',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2022-03-14',
-                'dateTo' => '2022-03-20',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-09-05',
+                'dateTo' => '2022-09-11',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2022-03-21',
-                'dateTo' => '2022-03-27',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-09-12',
+                'dateTo' => '2022-09-18',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2022-03-28',
-                'dateTo' => '2022-04-03',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-09-19',
+                'dateTo' => '2022-09-25',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2022-04-04',
-                'dateTo' => '2022-04-10',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-09-26',
+                'dateTo' => '2022-10-02',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2022-04-11',
-                'dateTo' => '2022-04-17',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-10-03',
+                'dateTo' => '2022-10-09',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2022-04-18',
-                'dateTo' => '2022-04-24',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-10-10',
+                'dateTo' => '2022-10-16',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2022-04-25',
-                'dateTo' => '2022-05-01',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-10-17',
+                'dateTo' => '2022-10-23',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2022-05-02',
-                'dateTo' => '2022-05-08',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-10-24',
+                'dateTo' => '2022-10-30',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2022-05-09',
-                'dateTo' => '2022-05-15',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-10-31',
+                'dateTo' => '2022-11-06',
+                'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2022-05-16',
-                'dateTo' => '2022-05-22',
-                'season_name' => 'Wiosna 2022'
+                'dateFrom' => '2022-11-07',
+                'dateTo' => '2022-11-13',
+                'season_name' => 'Jesień 2022'
             )
         );
         

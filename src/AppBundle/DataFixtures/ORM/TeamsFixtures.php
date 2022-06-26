@@ -776,6 +776,16 @@ class TeamsFixtures extends AbstractFixture implements OrderedFixtureInterface
                 'team_name' => 'Bodo Glimt',
                 'shortname' => 'BOD',
                 'league' => 'Liga Norweska'
+            ),
+            array(
+                'team_name' => 'Stade de Reims',
+                'shortname' => 'REI',
+                'league' => 'Liga Francuska'
+            ),
+            array(
+                'team_name' => 'AJ Auxerre',
+                'shortname' => 'AUX',
+                'league' => 'Liga Francuska'
             )
 
         );
